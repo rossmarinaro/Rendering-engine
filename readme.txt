@@ -1,7 +1,5 @@
-Copyright Notice:
------------------
-The files within this zip file are copyrighted by Lazy Foo' Productions (2004-2020)
-and may not be redistributed without written permission.
+UI built with SDL2
+
 
 This project is linked against:
 ----------------------------------------

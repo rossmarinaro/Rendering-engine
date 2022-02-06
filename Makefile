@@ -1,5 +1,8 @@
+
+#run mingw32-make.exe to compile
+
 #OBJS specifies which files to compile as part of the project
-OBJS = 01_hello_SDL.cpp
+OBJS = main.cpp audio/audio.cpp inputs/inputs.cpp 
 
 #CC specifies which compiler we're using
 CC = g++
@@ -16,12 +19,15 @@ LIBRARY_PATHS = -LC:\libs\sdl_32\lib
 COMPILER_FLAGS = -w -Wl,-subsystem,windows
 
 #LINKER_FLAGS specifies the libraries we're linking against
-LINKER_FLAGS = -lmingw32 -lSDL2main -lSDL2
+LINKER_FLAGS = -lmingw32 -lSDL2main -lSDL2 -lSDL2_mixer -lSDL2_image
 
 #OBJ_NAME specifies the name of our exectuable
-OBJ_NAME = 01_hello_SDL
+OBJ_NAME = project.exe
 
 #This is the target that compiles our executable
 all : $(OBJS)
 	$(CC) $(OBJS) $(INCLUDE_PATHS) $(LIBRARY_PATHS) $(COMPILER_FLAGS) $(LINKER_FLAGS) -o $(OBJ_NAME)
 
+
+
+# test: gcc main.cpp -IC:\libs\sdl_32\include\SDL2 -LC:\libs\sdl_32\lib -w -Wl,-subsystem,windows -lmingw32 -lSDL2main -lSDL2 -o project -lstdc++
