@@ -2,7 +2,7 @@
 #run mingw32-make.exe to compile
 
 #OBJS specifies which files to compile as part of the project
-OBJS = main.cpp audio/audio.cpp inputs/inputs.cpp 
+OBJS = src/main.cpp src/app.cpp src/audio.cpp vendors/imgui/imgui.cpp vendors/imgui/imgui_widgets.cpp vendors/imgui/imgui_tables.cpp vendors/imgui/imgui_draw.cpp vendors/imgui/imgui_impl_sdl.cpp vendors/imgui/imgui_impl_opengl3.cpp
 
 #CC specifies which compiler we're using
 CC = g++
@@ -30,4 +30,5 @@ all : $(OBJS)
 
 
 
-# test: gcc main.cpp -IC:\libs\sdl_32\include\SDL2 -LC:\libs\sdl_32\lib -w -Wl,-subsystem,windows -lmingw32 -lSDL2main -lSDL2 -o project -lstdc++
+# compile: gcc main.cpp -IC:\libs\sdl_32\include\SDL2 -LC:\libs\sdl_32\lib -w -Wl,-subsystem,windows -lmingw32 -lSDL2main -lSDL2 -o project -lstdc++
+# dll: gcc sample.cpp -o -shared project -lstdc++

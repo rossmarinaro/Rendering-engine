@@ -4,9 +4,9 @@
 #include <SDL_audio.h>
 #include <SDL_mixer.h>
 
-#include "../logs/logs.h"
-#include "../audio/audio.h"
-#include "../window/window.h"
+#include "./logs.h"
+#include "./audio.h"
+#include "./window.h"
 
 
 
@@ -41,10 +41,10 @@ class Inputs{
                 switch (event.key.keysym.sym)
                 {
                     case SDLK_1 : Audio::play_sound(Audio::load_audio("sine.wav")); break;
-                    case SDLK_2 : new Window(); 
+                    //case SDLK_2 : new Window(); 
                         /* system("gnome-terminal");
                         system("PAUSE"); */
-                    break;
+                   // break;
                     case SDLK_LEFT: m_left = true; break;
                     case SDLK_RIGHT: m_right = true; break;
                     case SDLK_UP: m_up = true; break;
@@ -63,7 +63,7 @@ class Inputs{
             }
         };
   // Inputs() { pollInput(SDL_Event event); };
-    ~Inputs();
+    ~Inputs(){};
 };
     
 //#endif 

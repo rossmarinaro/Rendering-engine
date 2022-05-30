@@ -4,12 +4,13 @@
 #include <stdio.h>
 #include <string>
 #include <iostream>
-#include "audio/audio.h"
-#include "window/window.h"       
+#include <chrono>
+#include "./audio.h"
+#include "./window.h"       
 
-#include "inputs/inputs.h"
-#include "assets/assets.h"
-#include "entity.h"
+#include "./inputs.h"
+#include "./assets.h"
+#include "./entities/sprite.h"
 
 
 /****** Application *****/
@@ -19,11 +20,10 @@ class Application
 
 	public:
 
-		static Application* sInstance;
+		static Application* s_instance;
 		Window* m_winMgr;
 		Audio* m_audioMgr;
 		Inputs* m_inputMgr;
-
 
 		Sprite* background_image; 
 		Sprite* sprite; 
@@ -33,7 +33,6 @@ class Application
 		Application();
 	   ~Application();
 
-		void draw(Window* window, Sprite* images[2]);
-		void update(Sprite* entities[2]);
+		void update();
 
 };

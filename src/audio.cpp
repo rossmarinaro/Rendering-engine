@@ -2,8 +2,8 @@
 #include <SDL.h>
 #include <SDL_audio.h>
 #include <SDL_mixer.h>
-#include "audio.h"
-#include "../logs/logs.h"
+#include "../headers/audio.h"
+#include "../headers/logs.h"
 //#include "../main.h"
 
 
@@ -32,7 +32,7 @@
         Audio::BitDepth* buffer = new BitDepth[Audio::NUM_SAMPLES];
         memset(buffer, 0, Audio::NUM_SAMPLES * sizeof(BitDepth));
         sine_wave(buffer, 440.0);
-        std::ofstream stream(filename + std::string(".wav"), std::ios::binary);
+        std::ofstream stream(filename + std::string(".ogg"/* ".wav */), std::ios::binary);
         stream.write("RIFF", 4);
         ::write<int>(stream, 36 + (Audio::NUM_SAMPLES * sizeof(Audio::BitDepth)));
         stream.write("WAVEfmt ", 8);

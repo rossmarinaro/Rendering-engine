@@ -5,7 +5,8 @@
             "includePath": [
                 "${workspaceFolder}/**",
                 "C:\\libs\\sdl_32\\include",
-                "C:\\libs\\sdl_32\\include\\SDL2",
+                "C:\\libs\\sdl_32\\include\\SDL2",   
+                "C:\\libs\\glew",
                 "C:\\libs\\sdl_32\\lib"
             ],
             "defines": [
