@@ -1,4 +1,4 @@
-UI built with SDL2
+UI built with SDL2 and DearIMGUI
 
 
 This project is linked against:
