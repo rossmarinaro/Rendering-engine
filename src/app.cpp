@@ -10,7 +10,7 @@
 	// int mAnimFrame = 0; 
 	// const int m_WALKING_ANIMATION_FRAMES = 4;  
 	// SDL_Rect mSpriteClips[m_WALKING_ANIMATION_FRAMES];  
-
+	
     
     Application::Application()
 	{
@@ -23,7 +23,7 @@
 
 	////sprites
 	
-		background_image = new Sprite(m_winMgr, 0, 0, 640, 480, IMAGES_menu);
+		//background_image = new Sprite(m_winMgr, 0, 0, 640, 480, IMAGES_menu);
 		//sprite = new Sprite(m_winMgr, 0, 0, 196, 250, IMAGES_swanky_velvet);
 
 		// Log::write("Application initialized");
@@ -31,8 +31,11 @@
 		// Sprite* images[2] = { background_image, sprite };	
 		//Assets::loadAsset(m_winMgr, 0, 0, 196, 250, IMAGES_swanky_velvet);
 
-			
-		update();
+		// SDL_Window* window = m_winMgr->mWindow;
+		// SDL_GLContext context = m_winMgr->mContext;
+
+		
+		update(m_winMgr);    
 		
 	};
 
@@ -50,35 +53,38 @@
 
 //----------------------- update
 
-	void Application::update()
-	{
+	void Application::update(Window* &win)
+	{	
+
 	//Main loop flag
 		bool quit = false;  
 	//Event handler
-		SDL_Event event;
+		//SDL_Event event;
 	//While application is running
 		while( !quit )
 		{			
+			
 		//Handle events on queue
-			while( SDL_PollEvent( &event ) != 0 )
-			{ 
+			while( SDL_PollEvent( &m_winMgr->mEvent ) != 0 ) 
+			{
 			//User requests quit
-				if( event.type == SDL_QUIT ) 
+				if( m_winMgr->mEvent.type == SDL_QUIT ) 
 					quit = true;
 				else 
-					m_inputMgr -> pollInput(event, quit); 
+					{m_inputMgr -> pollInput(m_winMgr->mEvent, quit);    Log::write("yooo");}
 			}
 			////move image  
-				SDL_SetRenderDrawColor(m_winMgr->mRenderer, 158, 108, 196, 255); //black
-				SDL_RenderClear(m_winMgr->mRenderer);
+			//	SDL_SetRenderDrawColor(m_winMgr->mRenderer, 158, 108, 196, 255); //black
+		//		SDL_RenderClear(m_winMgr->mRenderer);
+
 
 //Set sprite clips
-				//SDL_Rect* currentClip = &sprite->mSpriteClips[ sprite->mAnimFrame / 10 ];
+			//	SDL_Rect* currentClip = &sprite->mSpriteClips[ sprite->mAnimFrame / 10 ];
 				
-				background_image->_render( m_winMgr, background_image->mX, background_image->mY, &background_image->mSrcQuad, NULL, NULL );
+			//	background_image->_render( m_winMgr, background_image->mX, background_image->mY, &background_image->mSrcQuad, NULL, NULL );
 
-				//sprite->_render( m_winMgr, sprite->mX, sprite->mY, currentClip, NULL, NULL );
-				//sprite->update(m_winMgr, m_inputMgr);
+			//	sprite->_render( m_winMgr, sprite->mX, sprite->mY, currentClip, NULL, NULL );
+			//	sprite->update(m_winMgr, m_inputMgr);
 //Go to next frame
 				
 			////draw to screen

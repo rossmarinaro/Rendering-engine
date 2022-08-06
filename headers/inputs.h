@@ -49,7 +49,7 @@ class Inputs{
                     case SDLK_RIGHT: m_right = true; break;
                     case SDLK_UP: m_up = true; break;
                     case SDLK_DOWN: m_down = true; break;
-                    case SDLK_3 : quit = true; break; 
+                    case SDLK_3 : quit = true; break; //exit
                     default: 
                         Log::error(Mix_GetError());
                     break; 

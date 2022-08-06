@@ -110,6 +110,7 @@
         if (sInstance == NULL) sInstance = new Audio();
         return sInstance;
     }
+    
 /******** CONSTRUCTOR / DESTRUCTOR ****/
     Audio::Audio()
     {

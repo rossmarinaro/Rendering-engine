@@ -2,16 +2,16 @@
 #run mingw32-make.exe to compile
 
 #OBJS specifies which files to compile as part of the project
-OBJS = src/main.cpp src/app.cpp src/audio.cpp vendors/imgui/imgui.cpp vendors/imgui/imgui_widgets.cpp vendors/imgui/imgui_tables.cpp vendors/imgui/imgui_draw.cpp vendors/imgui/imgui_impl_sdl.cpp vendors/imgui/imgui_impl_opengl3.cpp
+OBJS = src/main.cpp src/app.cpp src/audio.cpp src/window.cpp src/gui.cpp vendors/imgui/imgui.cpp vendors/imgui/imgui_demo.cpp vendors/imgui/imgui_widgets.cpp vendors/imgui/imgui_tables.cpp vendors/imgui/imgui_draw.cpp vendors/imgui/imgui_impl_sdl.cpp vendors/imgui/imgui_impl_opengl3.cpp 
 
 #CC specifies which compiler we're using
 CC = g++
 
 #INCLUDE_PATHS specifies the additional include paths we'll need
-INCLUDE_PATHS = -IC:\libs\sdl_32\include\SDL2
+INCLUDE_PATHS = -IC:\libs\sdl_32\include\SDL2 -IC:\libs\glew-2.2.0-win32\glew-2.2.0\include\GL
 
 #LIBRARY_PATHS specifies the additional library paths we'll need
-LIBRARY_PATHS = -LC:\libs\sdl_32\lib
+LIBRARY_PATHS = -LC:\libs\sdl_32\lib -LC:\libs\glew-2.2.0-win32\glew-2.2.0\lib\Release\Win32
 
 #COMPILER_FLAGS specifies the additional compilation options we're using
 # -w suppresses all warnings
@@ -19,7 +19,7 @@ LIBRARY_PATHS = -LC:\libs\sdl_32\lib
 COMPILER_FLAGS = -w -Wl,-subsystem,windows
 
 #LINKER_FLAGS specifies the libraries we're linking against
-LINKER_FLAGS = -lmingw32 -lSDL2main -lSDL2 -lSDL2_mixer -lSDL2_image
+LINKER_FLAGS = -lmingw32 -lSDL2main -lSDL2 -lSDL2_mixer -lSDL2_image #  -static-libgcc -static-libstdc++  -lmingw32 -lSDL2main -lSDL2 -mwindows -lm -ldinput8 -ldxguid -ldxerr8 -luser32 -lgdi32 -lwinmm -limm32 -lole32 -loleaut32 -lshell32 -lversion -luuid -static-libgcc -lSDL2_mixer -lSDL2_image
 
 #OBJ_NAME specifies the name of our exectuable
 OBJ_NAME = project.exe

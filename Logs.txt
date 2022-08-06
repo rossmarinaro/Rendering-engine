@@ -1,254 +1,39 @@
 coin flipped true
-Time stamp: Sun May 29 19:02:52 2022
+Time stamp: Sat Aug 06 14:20:16 2022
 
 audio initialized
-Time stamp: Sun May 29 19:02:52 2022
+Time stamp: Sat Aug 06 14:20:16 2022
 
 window initialized
-Time stamp: Sun May 29 19:02:52 2022
-
-Image created
-Time stamp: Sun May 29 19:02:52 2022
+Time stamp: Sat Aug 06 14:20:16 2022
 
 coin flipped true
-Time stamp: Sun May 29 19:03:57 2022
+Time stamp: Sat Aug 06 14:22:34 2022
 
 audio initialized
-Time stamp: Sun May 29 19:03:57 2022
+Time stamp: Sat Aug 06 14:22:34 2022
 
 window initialized
-Time stamp: Sun May 29 19:03:57 2022
-
-Image created
-Time stamp: Sun May 29 19:03:57 2022
-
-ErrorPPKc
-Sprite instantiated
-Time stamp: Sun May 29 19:03:57 2022
-
-audio closed
-Time stamp: Sun May 29 19:04:02 2022
+Time stamp: Sat Aug 06 14:22:35 2022
 
 coin flipped true
-Time stamp: Sun May 29 19:05:04 2022
+Time stamp: Sat Aug 06 14:23:23 2022
 
 audio initialized
-Time stamp: Sun May 29 19:05:04 2022
+Time stamp: Sat Aug 06 14:23:23 2022
 
 window initialized
-Time stamp: Sun May 29 19:05:04 2022
+Time stamp: Sat Aug 06 14:23:23 2022
 
-Image created
-Time stamp: Sun May 29 19:05:04 2022
-
-Sprite instantiated
-Time stamp: Sun May 29 19:05:04 2022
-
-audio closed
-Time stamp: Sun May 29 19:05:10 2022
+yooo!!!
+Time stamp: Sat Aug 06 14:23:27 2022
 
 coin flipped false
-Time stamp: Sun May 29 19:45:22 2022
+Time stamp: Sat Aug 06 14:42:14 2022
 
 audio initialized
-Time stamp: Sun May 29 19:45:22 2022
+Time stamp: Sat Aug 06 14:42:15 2022
 
 window initialized
-Time stamp: Sun May 29 19:45:22 2022
-
-Image created
-Time stamp: Sun May 29 19:45:22 2022
-
-ErrorPPKc
-Sprite instantiated
-Time stamp: Sun May 29 19:45:22 2022
-
-audio closed
-Time stamp: Sun May 29 19:45:25 2022
-
-coin flipped true
-Time stamp: Sun May 29 20:08:34 2022
-
-audio initialized
-Time stamp: Sun May 29 20:08:34 2022
-
-window initialized
-Time stamp: Sun May 29 20:08:34 2022
-
-Image created
-Time stamp: Sun May 29 20:08:34 2022
-
-Sprite instantiated
-Time stamp: Sun May 29 20:08:34 2022
-
-audio loaded
-Time stamp: Sun May 29 20:08:39 2022
-
-played
-Time stamp: Sun May 29 20:08:39 2022
-
-audio closed
-Time stamp: Sun May 29 20:08:41 2022
-
-coin flipped false
-Time stamp: Sun May 29 20:14:00 2022
-
-audio initialized
-Time stamp: Sun May 29 20:14:00 2022
-
-window initialized
-Time stamp: Sun May 29 20:14:00 2022
-
-Image created
-Time stamp: Sun May 29 20:14:00 2022
-
-Sprite instantiated
-Time stamp: Sun May 29 20:14:00 2022
-
-audio loaded
-Time stamp: Sun May 29 20:14:03 2022
-
-played
-Time stamp: Sun May 29 20:14:03 2022
-
-ErrorPPKc
-audio closed
-Time stamp: Sun May 29 20:14:06 2022
-
-coin flipped true
-Time stamp: Sun May 29 21:29:54 2022
-
-audio initialized
-Time stamp: Sun May 29 21:29:55 2022
-
-window initialized
-Time stamp: Sun May 29 21:29:55 2022
-
-Image created
-Time stamp: Sun May 29 21:29:55 2022
-
-Sprite instantiated
-Time stamp: Sun May 29 21:29:55 2022
-
-ErrorPPKc
-audio closed
-Time stamp: Sun May 29 21:30:00 2022
-
-coin flipped false
-Time stamp: Sun May 29 21:40:11 2022
-
-audio initialized
-Time stamp: Sun May 29 21:40:11 2022
-
-window initialized
-Time stamp: Sun May 29 21:40:11 2022
-
-Image created
-Time stamp: Sun May 29 21:40:11 2022
-
-Sprite instantiated
-Time stamp: Sun May 29 21:40:11 2022
-
-ErrorPPKc
-audio loaded
-Time stamp: Sun May 29 21:40:17 2022
-
-played
-Time stamp: Sun May 29 21:40:17 2022
-
-audio closed
-Time stamp: Sun May 29 21:40:18 2022
-
-coin flipped true
-Time stamp: Sun May 29 21:48:35 2022
-
-audio initialized
-Time stamp: Sun May 29 21:48:35 2022
-
-window initialized
-Time stamp: Sun May 29 21:48:35 2022
-
-Image created
-Time stamp: Sun May 29 21:48:35 2022
-
-Sprite instantiated
-Time stamp: Sun May 29 21:48:35 2022
-
-audio loaded
-Time stamp: Sun May 29 21:48:40 2022
-
-played
-Time stamp: Sun May 29 21:48:40 2022
-
-audio closed
-Time stamp: Sun May 29 21:48:42 2022
-
-coin flipped true
-Time stamp: Sun May 29 21:51:23 2022
-
-audio initialized
-Time stamp: Sun May 29 21:51:23 2022
-
-window initialized
-Time stamp: Sun May 29 21:51:23 2022
-
-coin flipped false
-Time stamp: Sun May 29 21:52:39 2022
-
-audio initialized
-Time stamp: Sun May 29 21:52:39 2022
-
-window initialized
-Time stamp: Sun May 29 21:52:39 2022
-
-coin flipped true
-Time stamp: Sun May 29 21:53:04 2022
-
-audio initialized
-Time stamp: Sun May 29 21:53:04 2022
-
-window initialized
-Time stamp: Sun May 29 21:53:04 2022
-
-Image created
-Time stamp: Sun May 29 21:53:04 2022
-
-Sprite instantiated
-Time stamp: Sun May 29 21:53:04 2022
-
-audio loaded
-Time stamp: Sun May 29 21:53:07 2022
-
-played
-Time stamp: Sun May 29 21:53:07 2022
-
-audio closed
-Time stamp: Sun May 29 21:53:08 2022
-
-coin flipped false
-Time stamp: Sun May 29 21:53:42 2022
-
-audio initialized
-Time stamp: Sun May 29 21:53:42 2022
-
-window initialized
-Time stamp: Sun May 29 21:53:42 2022
-
-object is: 1 bytes.
-object is of type: Pb.
-Image created
-Time stamp: Sun May 29 21:53:42 2022
-
-Sprite instantiated
-Time stamp: Sun May 29 21:53:42 2022
-
-ErrorPPKc
-audio loaded
-Time stamp: Sun May 29 21:53:45 2022
-
-played
-Time stamp: Sun May 29 21:53:45 2022
-
-audio closed
-Time stamp: Sun May 29 21:53:46 2022
+Time stamp: Sat Aug 06 14:42:15 2022
 

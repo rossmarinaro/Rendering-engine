@@ -33,6 +33,6 @@ class Application
 		Application();
 	   ~Application();
 
-		void update();
+		void update(Window* &win);
 
 };
