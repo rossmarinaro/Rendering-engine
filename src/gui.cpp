@@ -1,6 +1,6 @@
 #include "../headers/window.h"
 
-
+#include "../headers/audio.h"
 
 //---------- IMGui
 
@@ -37,7 +37,7 @@ Gui::Gui(/* SDL_Window* &window, SDL_GLContext &context */)
 
 
 
-void Gui::Launch(const char* glsl_version, SDL_Event event)
+void Gui::Launch(const char* glsl_version, Inputs* inputs, SDL_Event event)
 {
 
     // Create window with graphics context
@@ -81,6 +81,9 @@ void Gui::Launch(const char* glsl_version, SDL_Event event)
                 done = true;
             if (event.type == SDL_WINDOWEVENT && event.window.event == SDL_WINDOWEVENT_CLOSE && event.window.windowID == SDL_GetWindowID(window))
                 done = true;
+
+        //poll inputs
+            inputs->pollInput(event, done);
 
         // Start the Dear ImGui frame
             ImGui_ImplOpenGL3_NewFrame();

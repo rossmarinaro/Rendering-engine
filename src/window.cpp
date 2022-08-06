@@ -1,7 +1,7 @@
 #include "../headers/window.h"
 
 
-    Window::Window()
+    Window::Window(Inputs* inputs)
 	{
 		////Initialize SDL
 
@@ -40,7 +40,7 @@
 
 			mGui = new Gui();
                
-		 	mGui->Launch(glsl_version, mEvent);
+		 	mGui->Launch(glsl_version, inputs, mEvent);
 				
 		}
 	};

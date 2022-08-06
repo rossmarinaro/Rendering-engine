@@ -7,6 +7,7 @@
 #include <SDL_image.h>
 #include <GL/glew.h>
 #include <GL/gl.h> 
+#include "./inputs.h"
 
 #include "./logs.h"
 //#include "./gui.h"
@@ -27,20 +28,10 @@ class Gui {
 
     public:
        
-    void Launch(const char* glsl_version, SDL_Event event);
-    Gui(/* SDL_Window* &win, SDL_GLContext &con */);
-    ~Gui(){};
+    void Launch(const char* glsl_version, Inputs* inputs, SDL_Event event);
+    Gui();
+   ~Gui(){};
 
-// 	    public:
-//        // ImGuiIO& io;
-
-//         //IMGUI_CHECKVERSION(); Log::get_size(IMGUI_CHECKVERSION());
-//         //ImGui::CreateContext();
-// //ImGuiIO& io = ImGui::GetIO(); (void)io;
-
-//         Gui(SDL_Window* &win, SDL_GLContext &con);
-//        ~Gui(){};
-//      void Launch(SDL_Window* &win, bool &done);
 };
 
 
@@ -48,8 +39,7 @@ class Window {
 
 	private:    
 		
-		
-
+	
 	public:
 			SDL_Surface* mScreenSurface;
 			SDL_Window* mWindow; 
@@ -64,12 +54,12 @@ class Window {
 
 		//-----------------------------------
 
-				//Deallocate surfaces
-				// for( int i = 0; i < KEY_PRESS_SURFACE_TOTAL; ++i )
-				// {
-				// 	SDL_FreeSurface( gKeyPressSurfaces[ i ] );
-				// 	gKeyPressSurfaces[ i ] = NULL;
-				// }
+			//Deallocate surfaces
+			// for( int i = 0; i < KEY_PRESS_SURFACE_TOTAL; ++i )
+			// {
+			// 	SDL_FreeSurface( gKeyPressSurfaces[ i ] );
+			// 	gKeyPressSurfaces[ i ] = NULL;
+			// }
 	
 		//----------------------------------
 
@@ -80,7 +70,7 @@ class Window {
 			}
 
 
-		Window();
+		Window(Inputs* inputs);
 	    ~Window();
 };
 

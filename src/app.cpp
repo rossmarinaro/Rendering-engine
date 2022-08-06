@@ -18,8 +18,9 @@
 	//// init app
 
 		m_audioMgr = new Audio();
-		m_winMgr = new Window(); 
 		m_inputMgr = new Inputs();
+		m_winMgr = new Window(m_inputMgr); 
+		
 
 	////sprites
 	
@@ -35,7 +36,7 @@
 		// SDL_GLContext context = m_winMgr->mContext;
 
 		
-		update(m_winMgr);    
+		//update(m_winMgr);    
 		
 	};
 
@@ -57,22 +58,21 @@
 	{	
 
 	//Main loop flag
-		bool quit = false;  
-	//Event handler
-		//SDL_Event event;
-	//While application is running
-		while( !quit )
-		{			
-			
-		//Handle events on queue
-			while( SDL_PollEvent( &m_winMgr->mEvent ) != 0 ) 
-			{
-			//User requests quit
-				if( m_winMgr->mEvent.type == SDL_QUIT ) 
-					quit = true;
-				else 
-					{m_inputMgr -> pollInput(m_winMgr->mEvent, quit);    Log::write("yooo");}
-			}
+	// 	bool quit = false;  
+	// //Event handler
+	// 	//SDL_Event event;
+	// //While application is running
+	// 	while( !quit )
+	// 	{			
+	// 	//Handle events on queue
+	// 		while( SDL_PollEvent( &win->mEvent ) != 0 ) 
+	// 		{
+	// 		//User requests quit
+	// 			if( win->mEvent.type == SDL_QUIT ) 
+	// 				quit = true;
+	// 			else 
+	// 				{m_inputMgr -> pollInput(win->mEvent, quit);    Log::write("yooo");}
+	// 		}
 			////move image  
 			//	SDL_SetRenderDrawColor(m_winMgr->mRenderer, 158, 108, 196, 255); //black
 		//		SDL_RenderClear(m_winMgr->mRenderer);
@@ -88,7 +88,7 @@
 //Go to next frame
 				
 			////draw to screen
-				SDL_RenderPresent(m_winMgr->mRenderer);
+			//	SDL_RenderPresent(m_winMgr->mRenderer);
 
-		}
+		//}
 	}
