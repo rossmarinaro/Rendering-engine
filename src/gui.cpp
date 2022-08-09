@@ -67,7 +67,7 @@ void Gui::Launch(const char* glsl_version, Inputs* inputs, SDL_Event event)
         ImVec4 clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
         // Our state
         bool show_demo_window = true;
-        bool show_another_window = true;
+        bool show_another_window = false;
         bool done = false;
 
         while (!done)
@@ -130,11 +130,11 @@ void Gui::Launch(const char* glsl_version, Inputs* inputs, SDL_Event event)
 
                 // Rendering
                 ImGui::Render();
-            //  glViewport(0, 0, (int)io.DisplaySize.x, (int)io.DisplaySize.y);
-            // glClearColor(clear_color.x * clear_color.w, clear_color.y * clear_color.w, clear_color.z * clear_color.w, clear_color.w);
-            // glClear(GL_COLOR_BUFFER_BIT);
-            ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
-                SDL_GL_SwapWindow(window);
+                glViewport(0, 0, (int)io.DisplaySize.x, (int)io.DisplaySize.y);
+                glClearColor(clear_color.x * clear_color.w, clear_color.y * clear_color.w, clear_color.z * clear_color.w, clear_color.w);
+                glClear(GL_COLOR_BUFFER_BIT);
+                ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+                    SDL_GL_SwapWindow(window);
             }
         }
 
@@ -147,4 +147,5 @@ void Gui::Launch(const char* glsl_version, Inputs* inputs, SDL_Event event)
     SDL_DestroyWindow(window);
     SDL_Quit();
 
+ 
 };

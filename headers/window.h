@@ -7,6 +7,12 @@
 #include <SDL_image.h>
 #include <GL/glew.h>
 #include <GL/gl.h> 
+#include <stdio.h>
+#if defined(IMGUI_IMPL_OPENGL_ES2)   
+#include <SDL_opengles2.h>
+#else
+#include <SDL_opengl.h>
+#endif
 #include "./inputs.h"
 
 #include "./logs.h"
@@ -16,12 +22,7 @@
 #include "../vendors/imgui/imgui_impl_sdl.h"
 #include "../vendors/imgui/imgui_impl_opengl3.h"
 
-#include <stdio.h>
-#if defined(IMGUI_IMPL_OPENGL_ES2)   
-#include <SDL_opengles2.h>
-#else
-#include <SDL_opengl.h>
-#endif
+
 
 
 class Gui {

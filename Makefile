@@ -11,7 +11,7 @@ CC = g++
 INCLUDE_PATHS = -IC:\libs\sdl_32\include\SDL2 -IC:\libs\glew-2.2.0-win32\glew-2.2.0\include\GL
 
 #LIBRARY_PATHS specifies the additional library paths we'll need
-LIBRARY_PATHS = -LC:\libs\sdl_32\lib -LC:\libs\glew-2.2.0-win32\glew-2.2.0\lib\Release\Win32
+LIBRARY_PATHS = -LC:\libs\sdl_32\lib -LC:\libs\glew-2.2.0-win32\glew-2.2.0\lib\Release\Win32 -lopengl32
 
 #COMPILER_FLAGS specifies the additional compilation options we're using
 # -w suppresses all warnings
