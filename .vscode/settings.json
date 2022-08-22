@@ -43,6 +43,7 @@
         "cinttypes": "cpp",
         "map": "cpp",
         "chrono": "cpp",
-        "ratio": "cpp"
+        "ratio": "cpp",
+        "thread": "cpp"
     }
 }

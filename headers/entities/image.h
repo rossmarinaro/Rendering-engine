@@ -55,53 +55,54 @@ class Image {
 			return mHeight;
 		};
 
-		void _init(Window* &window, int x, int y, int width, int height)
-		{
-			mAssetMgr = IMG_Load(mFilepath);
-			if (mAssetMgr == NULL) 
-				Log::error(SDL_GetError()); 
-			else 
-			{
+		// void _init(Window* &window, int x, int y, int width, int height)
+		// {
+		// 	mAssetMgr = IMG_Load(mFilepath);
 
-				//mWidth = width; 
-				//mHeight = height;
-				mX = x;
-				mY = y;				
+		// 	if (mAssetMgr == NULL) 
+		// 		Log::error(SDL_GetError()); 
+		// 	else 
+		// 	{
+
+		// 		//mWidth = width; 
+		// 		//mHeight = height;
+		// 		mX = x;
+		// 		mY = y;				
 
 
-				//mSrcQuad = { 0, 0, width, height };
-				mTexture = SDL_CreateTextureFromSurface(window->mRenderer, mAssetMgr);
+		// 		//mSrcQuad = { 0, 0, width, height };
+		// 		mTexture = SDL_CreateTextureFromSurface(window->mRenderer, mAssetMgr);
 				
-			//Get image dimensions
-				mWidth = mAssetMgr->w;
-				mHeight = mAssetMgr->h;
+		// 	//Get image dimensions
+		// 		mWidth = mAssetMgr->w;
+		// 		mHeight = mAssetMgr->h;
 
-				mSrcQuad = { 0, 0, mWidth, mHeight};
+		// 		mSrcQuad = { 0, 0, mWidth, mHeight};
 
 	
-			//render image
-				_render( window, (window->SCREEN_WIDTH - this->_getWidth() ) / 2, (window->SCREEN_HEIGHT - this->_getHeight() ) / 2, NULL, mDegrees, NULL, mFliptype);
-			}
-		}
+		// 	//render image
+		// 		_render( window, (window->SCREEN_WIDTH - this->_getWidth() ) / 2, (window->SCREEN_HEIGHT - this->_getHeight() ) / 2, NULL, mDegrees, NULL, mFliptype);
+		// 	}
+		// }
 
-		void _render(Window* &window, int x, int y, SDL_Rect* clip = nullptr, double angle = 0.0, SDL_Point* center = nullptr, SDL_RendererFlip flip = SDL_FLIP_NONE)
-		{
+		// void _render(Window* &window, int x, int y, SDL_Rect* clip = nullptr, double angle = 0.0, SDL_Point* center = nullptr, SDL_RendererFlip flip = SDL_FLIP_NONE)
+		// {
 
-			mRenderQuad = { x, y, mWidth, mHeight };
+		// 	mRenderQuad = { x, y, mWidth, mHeight };
 
-		//set clip render dimensions
+		// //set clip render dimensions
 
-			if (clip != NULL)
-			{
-				mRenderQuad.w = clip->w;
-				mRenderQuad.h = clip->h;
-			}
-		//render to screen
+		// 	if (clip != NULL)
+		// 	{
+		// 		mRenderQuad.w = clip->w;
+		// 		mRenderQuad.h = clip->h;
+		// 	}
+		// //render to screen
 		
-			SDL_RenderCopyEx(window->mRenderer, mTexture, clip , &mRenderQuad, angle, center, flip);
+		// 	SDL_RenderCopyEx(window->mRenderer, mTexture, clip , &mRenderQuad, angle, center, flip);
 
 	
-		}
+		// }
 
 };
 

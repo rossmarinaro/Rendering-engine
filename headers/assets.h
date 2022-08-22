@@ -30,8 +30,8 @@ class Assets
     {
         auto load = [&](std::string name, const char* filepath/* std::wstring filename */)
         {
-            Sprite* sprite = new Sprite(window, _x, _y, _width, _height, filepath );
-            m_mapAsset[filepath] = sprite;
+            //Sprite* sprite = new Sprite(window, _x, _y, _width, _height, filepath );
+            //m_mapAsset[filepath] = sprite;
         };
     }
 

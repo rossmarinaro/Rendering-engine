@@ -34,35 +34,42 @@ class Inputs{
             KEY_PRESS_SURFACE_RIGHT,
             KEY_PRESS_SURFACE_TOTAL
         };
-        void pollInput(SDL_Event &event, bool &quit)
+
+        bool pollInput(SDL_Event &event, SDL_Window* window)
         {
+
             if(event.type == SDL_KEYDOWN)
             {
+                if (event.type == SDL_QUIT || event.type == SDL_WINDOWEVENT && event.window.event == SDL_WINDOWEVENT_CLOSE && event.window.windowID == SDL_GetWindowID(window))
+                    return false;
+
                 switch (event.key.keysym.sym)
                 {
                     case SDLK_1 : Audio::play_sound(Audio::load_audio("sine.wav")); break;
-                    //case SDLK_2 : new Window(); 
-                        /* system("gnome-terminal");
-                        system("PAUSE"); */
-                   // break;
+                    //case SDLK_2 :  /* system("gnome-terminal"); break;
                     case SDLK_LEFT: m_left = true; break;
                     case SDLK_RIGHT: m_right = true; break;
                     case SDLK_UP: m_up = true; break;
                     case SDLK_DOWN: m_down = true; break;
-                    case SDLK_3 : quit = true; break; //exit
+                    case SDLK_3 : 
+                        return false; 
                     default: 
                         Log::error(Mix_GetError());
                     break; 
                 }
             }
-            else{
+            else
+            {
                 m_left = false; 
                 m_right = false; 
                 m_up = false;
                 m_down = false;
             }
+
+            return true;
+            
         };
-  // Inputs() { pollInput(SDL_Event event); };
+
     ~Inputs(){};
 };
     
