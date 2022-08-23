@@ -29,8 +29,8 @@ class Application
 		Audio* m_audioMgr;
 		Inputs* m_inputMgr;
 
-		Sprite* background_image; 
-		Sprite* sprite; 
+		//Sprite* background_image; 
+		//Sprite* sprite; 
 
 		std::thread m_window_thread;
 

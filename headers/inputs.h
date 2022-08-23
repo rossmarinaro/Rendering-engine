@@ -9,7 +9,6 @@
 #include "./window.h"
 
 
-
 class Inputs{
 
     private:
@@ -37,6 +36,7 @@ class Inputs{
 
         bool pollInput(SDL_Event &event, SDL_Window* window)
         {
+        
 
             if(event.type == SDL_KEYDOWN)
             {

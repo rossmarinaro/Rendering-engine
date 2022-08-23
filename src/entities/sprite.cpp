@@ -1,25 +1,28 @@
-void Sprite::Animate(std::string animKey)
-		{
-			switch (parseString(animKey))
-			{
-				case idle:
+   
+   #include "../../headers/entities/sprite.h"
+   
+    void Sprite::Animate(std::string animKey)
+    {
+        switch (parseString(animKey))
+        {
+            case idle:
 
-				break;
-				case jump: 
-				
-				break;
-				case walk:
+            break;
+            case jump: 
+            
+            break;
+            case walk:
 
-					//Go to next frame 	/ Cycle animation
-						++mAnimFrame;
-						if( mAnimFrame / 3 >= m_WALKING_ANIMATION_FRAMES )
-							mAnimFrame = 0;
-				break;
-			}
-		};
+                //Go to next frame 	/ Cycle animation
+                    ++mAnimFrame;
+                    if( mAnimFrame / 3 >= m_WALKING_ANIMATION_FRAMES )
+                        mAnimFrame = 0;
+            break;
+        }
+    };
 
 
-    void Sprite::Update(Window* &window, Inputs* inputs)
+    void Sprite::Update(/* Window* &window,  */Inputs* inputs)
     {
         // Uint32 ticks = SDL_GetTicks();
         // Uint32 seconds = ticks / 1000;
@@ -33,29 +36,29 @@ void Sprite::Animate(std::string animKey)
         if (inputs -> m_right == true)
         {
             mX += 1;    
-            animate("walk");
+            Animate("walk");
         }
         if (inputs -> m_left == true)
         {
             mX -= 1;
-            animate("walk");
+            Animate("walk");
         }
         if (inputs -> m_down == true)
         {
             mY += 1; 
-            animate("jump");
+            Animate("jump");
         }
         if (inputs -> m_up == true)
         {
             mY -= 1;
-            animate("jump"); 
+            Animate("jump"); 
         }
     
 
 
     };
 
-    Sprite::Sprite(Window* &window, int _x, int _y, int _width, int _height, const char* filepath)
+    Sprite::Sprite(SDL_Window* &window, SDL_Renderer* renderer, int _x, int _y, int _width, int _height, const char* filepath)
     {
 
         mFilepath = filepath;
@@ -63,7 +66,7 @@ void Sprite::Animate(std::string animKey)
         mSrcQuad.y = _y;
         
     
-        _init( window, _x, _y, _width, _height);
+        _init( window, renderer, _x, _y, _width, _height);
 
 
         if (filepath != "assets/images/menu.png")

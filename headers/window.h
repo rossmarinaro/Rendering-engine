@@ -67,7 +67,7 @@ class Window {
 			static void Init(Inputs* inputs);
 
 
-		Window(/* bool &m_running */);
+		Window();
 	    ~Window();
 };
 

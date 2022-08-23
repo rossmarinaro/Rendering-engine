@@ -1,10 +1,38 @@
 #include "../headers/window.h"
 
-    // Window::Window(/* bool &isRunning */)
-    // {
-    //   //  m_isRunning = isRunning;
-    // }
+    const char* IMAGES_menu = "assets/images/menu2.png";
+    const char* IMAGES_swanky_velvet = "assets/images/swanky_velvet.png";
 
+
+    void RenderGame(SDL_Window* window, SDL_Renderer* renderer, SDL_Event event, SDL_GLContext gl_context, Inputs* inputs, bool isRunning)
+    {
+        //Sprite* sprite = new Sprite(window, renderer, 0, 0, 196, 250, IMAGES_swanky_velvet);
+        //SDL_Rect* currentClip = &sprite->mSpriteClips[ sprite->mAnimFrame / 10 ];
+
+        //sprite->_render( window, renderer, 100, 100, currentClip, NULL, NULL );
+        //sprite->Update( /* window, */ inputs);
+
+    //    sprite->_render( window, sprite->mX, sprite->mY, currentClip, NULL, NULL );
+    //    sprite->update( window, inputs);
+
+        // while (isRunning == true)
+        // {
+
+        //     while (SDL_PollEvent(&event))
+        //     {
+        //         //SDL_RenderPresent(renderer);
+        //         //SDL_GL_SwapWindow(window);
+        //         SDL_SetRenderTarget(renderer, NULL);
+        //     }
+        // }
+        // SDL_Surface* img = IMG_Load(IMAGES_swanky_velvet);
+        // SDL_Texture* texture = SDL_CreateTextureFromSurface(renderer, img);
+        // SDL_SetRenderTarget(renderer, texture);
+        // SDL_RenderCopy(renderer, texture, NULL, NULL);
+        // SDL_RenderPresent(renderer);
+    }
+
+    
 
     void LaunchGui(const char* glsl_version, Inputs* inputs, SDL_Event event)
     {
@@ -12,112 +40,184 @@
 
         // Create window with graphics context
 
-            SDL_GL_SetAttribute(SDL_GL_DOUBLEBUFFER, 1);
-            SDL_GL_SetAttribute(SDL_GL_DEPTH_SIZE, 24);
-            SDL_GL_SetAttribute(SDL_GL_STENCIL_SIZE, 8);
-            SDL_WindowFlags window_flags = (SDL_WindowFlags)(SDL_WINDOW_OPENGL | SDL_WINDOW_RESIZABLE | SDL_WINDOW_ALLOW_HIGHDPI);
-            SDL_Window* window = SDL_CreateWindow("Dear ImGui SDL2+OpenGL3 example", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 1280, 720, window_flags);
-            SDL_GLContext gl_context = SDL_GL_CreateContext(window);
-            SDL_GL_MakeCurrent(window, gl_context);
-            SDL_GL_SetSwapInterval(1); // Enable vsync
+        SDL_GL_SetAttribute(SDL_GL_DOUBLEBUFFER, 1);
+        SDL_GL_SetAttribute(SDL_GL_DEPTH_SIZE, 24);
+        SDL_GL_SetAttribute(SDL_GL_STENCIL_SIZE, 8);
 
-            IMGUI_CHECKVERSION(); 
-            ImGui::CreateContext();
-            ImGuiIO& io = ImGui::GetIO(); (void)io;
-            io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;     // Enable Keyboard Controls
-            io.ConfigFlags |= ImGuiConfigFlags_NavEnableGamepad;      // Enable Gamepad Controls
+        SDL_WindowFlags window_flags = (SDL_WindowFlags)(SDL_WINDOW_OPENGL | SDL_WINDOW_RESIZABLE | SDL_WINDOW_ALLOW_HIGHDPI);
+        SDL_Window* window = SDL_CreateWindow("Dear ImGui SDL2+OpenGL3 example", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 1280, 720, window_flags);
+        SDL_GLContext gl_context = SDL_GL_CreateContext(window);
+        SDL_Renderer* renderer = SDL_CreateRenderer( window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC );
 
-        //Setup Dear ImGui style
-            ImGui::StyleColorsDark();
-            ImGui::StyleColorsClassic();
+    //game
+       // std::thread render_thread(RenderGame, window, renderer, event, gl_context, inputs, isRunning);
 
-        // Setup Platform/Renderer backends
-            ImGui_ImplSDL2_InitForOpenGL(window, gl_context);
-            ImGui_ImplOpenGL3_Init(glsl_version);
 
-            ImVec4 clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
-            // Our state
-            bool show_demo_window = true;
-            bool show_another_window = false;
-        // bool isRunning = false;
+   
+    //extra window
+        // SDL_Window* window2 = SDL_CreateWindow("Game", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 800, 800, window_flags);
+        // SDL_GLContext gl_context2 = SDL_GL_CreateContext(window2);
+        // std::thread render_thread(RenderGame, window2, event, gl_context2, inputs, isRunning);
+        
+        SDL_GL_MakeCurrent(window, gl_context);
+        SDL_GL_SetSwapInterval(1); // Enable vsync
+        IMGUI_CHECKVERSION(); 
+        
+        ImGui::CreateContext();
+        ImGuiIO& io = ImGui::GetIO(); (void)io;
+        io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;     // Enable Keyboard Controls
+        io.ConfigFlags |= ImGuiConfigFlags_NavEnableGamepad;      // Enable Gamepad Controls
 
-            while (isRunning == true)
-            {
+    //Setup Dear ImGui style
 
-            //SDL_Event event;
+        ImGui::StyleColorsDark();
+        ImGui::StyleColorsClassic();
+
+    // Setup Platform/Renderer backends
+
+        ImGui_ImplSDL2_InitForOpenGL(window, gl_context);
+        ImGui_ImplOpenGL3_Init(glsl_version);
+
+        //ImVec4 clear_color = ImVec4(0.55f, 0.25f, 0.60f, 1.00f);
+
+        glEnable(GL_TEXTURE_2D);
+
+        GLuint TextureID = 0;
+
+        float X = -0.5, 
+              Y = -0.5;
+
+        int   Width = 1, 
+              Height = 1;
+
+ 
+      // You should probably use CSurface::OnLoad ... ;)
+    //-- and make sure the Surface pointer is good!
+
+        SDL_Surface* Surface = IMG_Load(IMAGES_menu);
+        
+        glGenTextures(1, &TextureID);
+        glBindTexture(GL_TEXTURE_2D, TextureID);
+        
+        int Mode = GL_RGB;
+        
+        if(Surface->format->BytesPerPixel == 4) {
+            Mode = GL_RGBA;
+        }
+
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+        
+        glTexImage2D(GL_TEXTURE_2D, 0, Mode, Surface->w, Surface->h, 0, Mode, GL_UNSIGNED_BYTE, Surface->pixels);
+        //glTexImage2D(GL_TEXTURE_2D, 0, Mode, 500, 500/* Surface->w, Surface->h */, 0, Mode, GL_UNSIGNED_SHORT_5_6_5/* GL_UNSIGNED_BYTE */, Surface->pixels);
+        
+        SDL_FreeSurface(Surface);
+        
+        //Any other glTex* stuff here
+
+
+    //state
+
+        bool show_demo_window = true;
+        bool show_another_window = false;
+
+
+        while (isRunning == true)
+        {
+
             while (SDL_PollEvent(&event))
             {
+            
                 ImGui_ImplSDL2_ProcessEvent(&event);
+                glClear(GL_COLOR_BUFFER_BIT);
 
             //poll inputs
+
                 bool res = inputs->pollInput(event, window);
 
                 if (res == false)
                     isRunning = false;
-
+                             
+            
             // Start the Dear ImGui frame
+
                 ImGui_ImplOpenGL3_NewFrame();
                 ImGui_ImplSDL2_NewFrame();
                 ImGui::NewFrame();
+
 
                 // 1. Show the big demo window (Most of the sample code is in ImGui::ShowDemoWindow()! You can browse its code to learn more about Dear ImGui!).
 
                 if (show_demo_window)
                     ImGui::ShowDemoWindow(&show_demo_window);
 
-                    // 2. Show a simple window that we create ourselves. We use a Begin/End pair to created a named window.
-                    {
-                        static float f = 0.0f;
-                        static int counter = 0;
+                    // // 2. Show a simple window that we create ourselves. We use a Begin/End pair to created a named window.
+                    // {
+                    //     static float f = 0.0f;
+                    //     static int counter = 0;
 
-                        ImGui::Begin("Hello, world!");                          // Create a window called "Hello, world!" and append into it.
+                    //     ImGui::Begin("Hello, world!");                          // Create a window called "Hello, world!" and append into it.
 
-                        ImGui::Text("This is some useful text.");               // Display some text (you can use a format strings too)
-                        ImGui::Checkbox("Demo Window", &show_demo_window);      // Edit bools storing our window open/close state
-                        ImGui::Checkbox("Another Window", &show_another_window);
+                    //     ImGui::Text("This is some useful text.");               // Display some text (you can use a format strings too)
+                    //     ImGui::Checkbox("Demo Window", &show_demo_window);      // Edit bools storing our window open/close state
+                    //     ImGui::Checkbox("Another Window", &show_another_window);
 
-                        ImGui::SliderFloat("float", &f, 0.0f, 1.0f);            // Edit 1 float using a slider from 0.0f to 1.0f
-                        ImGui::ColorEdit3("clear color", (float*)&clear_color); // Edit 3 floats representing a color
+                    //     ImGui::SliderFloat("float", &f, 0.0f, 1.0f);            // Edit 1 float using a slider from 0.0f to 1.0f
+                    //     //ImGui::ColorEdit3("clear color", (float*)&clear_color); // Edit 3 floats representing a color
 
-                        if (ImGui::Button("Button"))                            // Buttons return true when clicked (most widgets return true when edited/activated)
-                            counter++;
-                        ImGui::SameLine();
-                        ImGui::Text("counter = %d", counter);
+                    //     if (ImGui::Button("Button"))                            // Buttons return true when clicked (most widgets return true when edited/activated)
+                    //         counter++;
+                    //     ImGui::SameLine();
+                    //     ImGui::Text("counter = %d", counter);
 
-                        ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate);
-                        ImGui::End();
-                    }
+                    //     ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate);
 
-                    // 3. Show another simple window.
-                    if (show_another_window)
-                    {
-                        ImGui::Begin("Another Window", &show_another_window);   // Pass a pointer to our bool variable (the window will have a closing button that will clear the bool when clicked)
-                        ImGui::Text("Hello from another window!");
-                        if (ImGui::Button("Close Me"))
-                            show_another_window = false;
-                        ImGui::End();
-                    }
+                    //     ImGui::End();
+                    // }
 
-                    // Rendering
+                    // // 3. Show another simple window.
+                    // if (show_another_window)
+                    // {
+                    //     ImGui::Begin("Another Window", &show_another_window);   // Pass a pointer to our bool variable (the window will have a closing button that will clear the bool when clicked)
+                    //     ImGui::Text("Hello from another window!");
+                    //     if (ImGui::Button("Close Me"))
+                    //         show_another_window = false;
+                    //     ImGui::End();
+                    // }
+   
+                    glBegin(GL_QUADS);
+                        glTexCoord2f(0, 0); glVertex3f(X, Y, 0);
+                        glTexCoord2f(1, 0); glVertex3f(X + Width, Y, 0);
+                        glTexCoord2f(1, 1); glVertex3f(X + Width, Y + Height, 0);
+                        glTexCoord2f(0, 1); glVertex3f(X, Y + Height, 0);
+                    glEnd();
+                
+                // Rendering
+
                     ImGui::Render();
                     glViewport(0, 0, (int)io.DisplaySize.x, (int)io.DisplaySize.y);
-                    glClearColor(clear_color.x * clear_color.w, clear_color.y * clear_color.w, clear_color.z * clear_color.w, clear_color.w);
-                    glClear(GL_COLOR_BUFFER_BIT);
+                    //glClearColor(clear_color.x * clear_color.w, clear_color.y * clear_color.w, clear_color.z * clear_color.w, clear_color.w);
+                    //glClear(GL_COLOR_BUFFER_BIT);
                     ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
-                        SDL_GL_SwapWindow(window);
+                   
+      
+                    SDL_GL_SwapWindow(window);  
+                    //SDL_Delay( 2000 );
+
                 }
-            }
+        }
 
     // Cleanup
+
         ImGui_ImplOpenGL3_Shutdown();
         ImGui_ImplSDL2_Shutdown();
         ImGui::DestroyContext();
 
-        SDL_GL_DeleteContext(gl_context);
+        SDL_GL_DeleteContext(gl_context);           
         SDL_DestroyWindow(window);
         SDL_Quit();
 
-    
+        Log::write("GUI exited");
     };
 
 
