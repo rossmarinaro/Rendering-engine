@@ -65,21 +65,18 @@ class Image {
 				Log::error(SDL_GetError()); 
 			else 
 			{
+				
+			//Get image dimensions
 
 				mX = x;
 				mY = y;				
-
-				//mTexture = SDL_CreateTextureFromSurface(renderer, mAssetMgr);
 				
-			//Get image dimensions
 				mWidth = mAssetMgr->w;
 				mHeight = mAssetMgr->h;
 
 				mSrcQuad = { 0, 0, mWidth, mHeight};
 	
-			//render image
-				//_render( window, renderer, 100, 100, NULL, mDegrees, NULL, mFliptype);
-
+			//render image as opengl texture
 				
 				glEnable(GL_TEXTURE_2D);
 				glGenTextures(1, &TextureID);
@@ -98,7 +95,6 @@ class Image {
 				
 				SDL_FreeSurface(mAssetMgr);
 
-
 				mRenderQuad = { x, y, mWidth, mHeight };
 
 			//set clip render dimensions
@@ -112,26 +108,6 @@ class Image {
 				}
 			}
 		}
-
-		// void _render(SDL_Window* &window, SDL_Renderer* renderer, int x, int y, SDL_Rect* clip = nullptr, double angle = 0.0, SDL_Point* center = nullptr, SDL_RendererFlip flip = SDL_FLIP_NONE)
-		// {
-
-		// 	mRenderQuad = { x, y, mWidth, mHeight };
-
-		// //set clip render dimensions
-
-		// 	if (clip != NULL)
-		// 	{
-		// 		mRenderQuad.w = clip->w;
-		// 		mRenderQuad.h = clip->h;
-		// 	}
-		// render to screen
-
-		// 	SDL_RenderCopyEx(renderer, mTexture, clip , &mRenderQuad, angle, center, flip);
-
-	
-		// }
-
 };
 
 
