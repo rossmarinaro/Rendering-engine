@@ -17,7 +17,7 @@
 
 	int main(int argc, char* args[])
 	{   
-		Log::write(CoinFlip() == true ? "coin flipped true" : "coin flipped false");
+		//Log::write(CoinFlip() == true ? "coin flipped true" : "coin flipped false");
 		
 		Application* app = new Application();      
 		delete app;

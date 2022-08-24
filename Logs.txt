@@ -2229,3 +2229,279 @@ Time stamp: Tue Aug 23 13:40:51 2022
 audio closed
 Time stamp: Tue Aug 23 13:40:51 2022
 
+coin flipped false
+Time stamp: Tue Aug 23 18:20:35 2022
+
+audio initialized
+Time stamp: Tue Aug 23 18:20:35 2022
+
+window initialized
+Time stamp: Tue Aug 23 18:20:35 2022
+
+ErrorPPKc
+ErrorPPKc
+ErrorPPKc
+ErrorPPKc
+ErrorPPKc
+ErrorPPKc
+ErrorPPKc
+ErrorPPKc
+ErrorPPKc
+ErrorPPKc
+ErrorPPKc
+ErrorPPKc
+ErrorPPKc
+ErrorPPKc
+ErrorPPKc
+ErrorPPKc
+ErrorPPKc
+ErrorPPKc
+ErrorPPKc
+ErrorPPKc
+ErrorPPKc
+ErrorPPKc
+ErrorPPKc
+ErrorPPKc
+ErrorPPKc
+ErrorPPKc
+ErrorPPKc
+ErrorPPKc
+ErrorPPKc
+ErrorPPKc
+ErrorPPKc
+ErrorPPKc
+ErrorPPKc
+ErrorPPKc
+ErrorPPKc
+ErrorPPKc
+ErrorPPKc
+ErrorPPKc
+ErrorPPKc
+ErrorPPKc
+ErrorPPKc
+ErrorPPKc
+ErrorPPKc
+ErrorPPKc
+ErrorPPKc
+ErrorPPKc
+ErrorPPKc
+ErrorPPKc
+ErrorPPKc
+ErrorPPKc
+ErrorPPKc
+ErrorPPKc
+ErrorPPKc
+ErrorPPKc
+ErrorPPKc
+ErrorPPKc
+ErrorPPKc
+ErrorPPKc
+ErrorPPKc
+ErrorPPKc
+ErrorPPKc
+ErrorPPKc
+ErrorPPKc
+ErrorPPKc
+ErrorPPKc
+ErrorPPKc
+audio loaded
+Time stamp: Tue Aug 23 18:23:29 2022
+
+played
+Time stamp: Tue Aug 23 18:23:29 2022
+
+GUI exited
+Time stamp: Tue Aug 23 18:23:31 2022
+
+Application initialized
+Time stamp: Tue Aug 23 18:23:31 2022
+
+audio closed
+Time stamp: Tue Aug 23 18:23:31 2022
+
+coin flipped false
+Time stamp: Wed Aug 24 11:23:46 2022
+
+audio initialized
+Time stamp: Wed Aug 24 11:23:46 2022
+
+window initialized
+Time stamp: Wed Aug 24 11:23:46 2022
+
+audio loaded
+Time stamp: Wed Aug 24 11:23:53 2022
+
+played
+Time stamp: Wed Aug 24 11:23:53 2022
+
+audio loaded
+Time stamp: Wed Aug 24 11:23:54 2022
+
+played
+Time stamp: Wed Aug 24 11:23:54 2022
+
+audio loaded
+Time stamp: Wed Aug 24 11:23:54 2022
+
+played
+Time stamp: Wed Aug 24 11:23:54 2022
+
+audio loaded
+Time stamp: Wed Aug 24 11:23:57 2022
+
+played
+Time stamp: Wed Aug 24 11:23:57 2022
+
+audio loaded
+Time stamp: Wed Aug 24 11:23:57 2022
+
+played
+Time stamp: Wed Aug 24 11:23:57 2022
+
+audio loaded
+Time stamp: Wed Aug 24 11:23:58 2022
+
+played
+Time stamp: Wed Aug 24 11:23:58 2022
+
+audio loaded
+Time stamp: Wed Aug 24 11:23:58 2022
+
+played
+Time stamp: Wed Aug 24 11:23:58 2022
+
+audio loaded
+Time stamp: Wed Aug 24 11:23:58 2022
+
+played
+Time stamp: Wed Aug 24 11:23:58 2022
+
+audio loaded
+Time stamp: Wed Aug 24 11:23:59 2022
+
+played
+Time stamp: Wed Aug 24 11:23:59 2022
+
+audio loaded
+Time stamp: Wed Aug 24 11:23:59 2022
+
+played
+Time stamp: Wed Aug 24 11:23:59 2022
+
+audio loaded
+Time stamp: Wed Aug 24 11:24:06 2022
+
+played
+Time stamp: Wed Aug 24 11:24:06 2022
+
+audio loaded
+Time stamp: Wed Aug 24 11:24:06 2022
+
+played
+Time stamp: Wed Aug 24 11:24:06 2022
+
+audio loaded
+Time stamp: Wed Aug 24 11:24:07 2022
+
+played
+Time stamp: Wed Aug 24 11:24:07 2022
+
+audio loaded
+Time stamp: Wed Aug 24 11:24:07 2022
+
+played
+Time stamp: Wed Aug 24 11:24:07 2022
+
+audio loaded
+Time stamp: Wed Aug 24 11:24:07 2022
+
+played
+Time stamp: Wed Aug 24 11:24:07 2022
+
+audio loaded
+Time stamp: Wed Aug 24 11:24:07 2022
+
+played
+Time stamp: Wed Aug 24 11:24:07 2022
+
+audio loaded
+Time stamp: Wed Aug 24 11:24:07 2022
+
+played
+Time stamp: Wed Aug 24 11:24:07 2022
+
+audio loaded
+Time stamp: Wed Aug 24 11:24:07 2022
+
+played
+Time stamp: Wed Aug 24 11:24:07 2022
+
+audio loaded
+Time stamp: Wed Aug 24 11:24:07 2022
+
+played
+Time stamp: Wed Aug 24 11:24:07 2022
+
+GUI exited
+Time stamp: Wed Aug 24 11:24:08 2022
+
+coin flipped false
+Time stamp: Wed Aug 24 11:26:11 2022
+
+audio initialized
+Time stamp: Wed Aug 24 11:26:11 2022
+
+window initialized
+Time stamp: Wed Aug 24 11:26:12 2022
+
+GUI exited
+Time stamp: Wed Aug 24 11:26:17 2022
+
+Application initialized
+Time stamp: Wed Aug 24 11:26:17 2022
+
+audio closed
+Time stamp: Wed Aug 24 11:26:17 2022
+
+audio initialized
+Time stamp: Wed Aug 24 11:49:50 2022
+
+window initialized
+Time stamp: Wed Aug 24 11:49:50 2022
+
+Image created
+Time stamp: Wed Aug 24 11:49:51 2022
+
+Sprite instantiated
+Time stamp: Wed Aug 24 11:49:51 2022
+
+GUI exited
+Time stamp: Wed Aug 24 11:50:03 2022
+
+Application initialized
+Time stamp: Wed Aug 24 11:50:03 2022
+
+audio closed
+Time stamp: Wed Aug 24 11:50:03 2022
+
+audio initialized
+Time stamp: Wed Aug 24 12:21:23 2022
+
+window initialized
+Time stamp: Wed Aug 24 12:21:23 2022
+
+Image created
+Time stamp: Wed Aug 24 12:21:23 2022
+
+Sprite instantiated
+Time stamp: Wed Aug 24 12:21:23 2022
+
+GUI exited
+Time stamp: Wed Aug 24 12:21:27 2022
+
+Application initialized
+Time stamp: Wed Aug 24 12:21:27 2022
+
+audio closed
+Time stamp: Wed Aug 24 12:21:27 2022
+

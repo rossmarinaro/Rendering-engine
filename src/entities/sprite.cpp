@@ -58,7 +58,7 @@
 
     };
 
-    Sprite::Sprite(SDL_Window* &window, SDL_Renderer* renderer, int _x, int _y, int _width, int _height, const char* filepath)
+    Sprite::Sprite(SDL_Window* &window, int _x, int _y, int _width, int _height, const char* filepath)
     {
 
         mFilepath = filepath;
@@ -66,7 +66,7 @@
         mSrcQuad.y = _y;
         
     
-        _init( window, renderer, _x, _y, _width, _height);
+        _init( window, _x, _y, _width, _height);
 
 
         if (filepath != "assets/images/menu.png")

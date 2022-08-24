@@ -4,8 +4,8 @@
 
 #pragma once
 
-// const char* IMAGES_menu = "assets/images/menu.png";
-// const char* IMAGES_swanky_velvet = "assets/images/swanky_velvet.png";
+const char* IMAGES_menu = "assets/images/menu2.png";
+const char* IMAGES_swanky_velvet = "assets/images/swanky_velvet.png";
 
 
 /////singleton//

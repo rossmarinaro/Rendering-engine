@@ -4,14 +4,7 @@
 	#include "../headers/entities/sprite.h"
 
 
-//tmp
-	// int m_frame = 1;
-	// int mAnimFrame = 0; 
-	// const int m_WALKING_ANIMATION_FRAMES = 4;  
-	// SDL_Rect mSpriteClips[m_WALKING_ANIMATION_FRAMES];  
-	
-	
-    
+
     Application::Application()
 	{
 

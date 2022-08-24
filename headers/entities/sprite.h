@@ -33,11 +33,11 @@ class Sprite : public Image {
 
 		void Update(/* Window* &window,  */Inputs* inputs);
 		void Animate(std::string animKey);
-		Sprite(SDL_Window* &window, SDL_Renderer* renderer, int _x, int _y, int _width, int _height, const char* filepath);
+		Sprite(SDL_Window* &window, int _x, int _y, int _width, int _height, const char* filepath);
 	   ~Sprite();
        
 };
 
 
-//test singleton class
+
 

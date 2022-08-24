@@ -13,6 +13,8 @@ class Image {
         SDL_Surface* mAssetMgr;
 	
     public:
+
+		GLuint TextureID = 0;
 	
 		int mX;
 		int mY;
@@ -40,7 +42,7 @@ class Image {
 			delete mTexture;
 			Log::write("Image destroyed");
 	   	};
-	//// tmp methods
+
 		void _setColor(Uint8 red, Uint8 green, Uint8 blue);
 		void _setBlendMode( SDL_BlendMode blending );
 		void _setAlpha(Uint8 alpha);
@@ -55,7 +57,7 @@ class Image {
 			return mHeight;
 		};
 
-		void _init(SDL_Window* &window, SDL_Renderer* renderer, int x, int y, int width, int height)
+		void _init(SDL_Window* &window, int x, int y, int width, int height)
 		{
 			mAssetMgr = IMG_Load(mFilepath);
 
@@ -64,49 +66,71 @@ class Image {
 			else 
 			{
 
-				//mWidth = width; 
-				//mHeight = height;
 				mX = x;
 				mY = y;				
 
-
-				//mSrcQuad = { 0, 0, width, height };
-				//mTexture = SDL_CreateTextureFromSurface(window->mRenderer, mAssetMgr);
-				mTexture = SDL_CreateTextureFromSurface(renderer, mAssetMgr);
+				//mTexture = SDL_CreateTextureFromSurface(renderer, mAssetMgr);
 				
 			//Get image dimensions
 				mWidth = mAssetMgr->w;
 				mHeight = mAssetMgr->h;
 
 				mSrcQuad = { 0, 0, mWidth, mHeight};
-
 	
 			//render image
-				//_render( window, (window->SCREEN_WIDTH - this->_getWidth() ) / 2, (window->SCREEN_HEIGHT - this->_getHeight() ) / 2, NULL, mDegrees, NULL, mFliptype);
-				_render( window, renderer, 100, 100, NULL, mDegrees, NULL, mFliptype);
+				//_render( window, renderer, 100, 100, NULL, mDegrees, NULL, mFliptype);
 
+				
+				glEnable(GL_TEXTURE_2D);
+				glGenTextures(1, &TextureID);
+				glBindTexture(GL_TEXTURE_2D, TextureID);
+				
+				int Mode = GL_RGB;
+				
+				if(mAssetMgr->format->BytesPerPixel == 4) {
+					Mode = GL_RGBA;
+				}
+
+				glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+				glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+				
+				glTexImage2D(GL_TEXTURE_2D, 0, Mode, mAssetMgr->w, mAssetMgr->h, 0, Mode, GL_UNSIGNED_BYTE /* GL_UNSIGNED_SHORT_5_6_5 */, mAssetMgr->pixels);
+				
+				SDL_FreeSurface(mAssetMgr);
+
+
+				mRenderQuad = { x, y, mWidth, mHeight };
+
+			//set clip render dimensions
+			
+				SDL_Rect* clip = nullptr;
+
+				if (clip != NULL)
+				{
+					mRenderQuad.w = clip->w;
+					mRenderQuad.h = clip->h;
+				}
 			}
 		}
 
-		void _render(SDL_Window* &window, SDL_Renderer* renderer, int x, int y, SDL_Rect* clip = nullptr, double angle = 0.0, SDL_Point* center = nullptr, SDL_RendererFlip flip = SDL_FLIP_NONE)
-		{
+		// void _render(SDL_Window* &window, SDL_Renderer* renderer, int x, int y, SDL_Rect* clip = nullptr, double angle = 0.0, SDL_Point* center = nullptr, SDL_RendererFlip flip = SDL_FLIP_NONE)
+		// {
 
-			mRenderQuad = { x, y, mWidth, mHeight };
+		// 	mRenderQuad = { x, y, mWidth, mHeight };
 
-		//set clip render dimensions
+		// //set clip render dimensions
 
-			if (clip != NULL)
-			{
-				mRenderQuad.w = clip->w;
-				mRenderQuad.h = clip->h;
-			}
-		//render to screen
-		
-			//SDL_RenderCopyEx(window->mRenderer, mTexture, clip , &mRenderQuad, angle, center, flip);
-			SDL_RenderCopyEx(renderer, mTexture, clip , &mRenderQuad, angle, center, flip);
+		// 	if (clip != NULL)
+		// 	{
+		// 		mRenderQuad.w = clip->w;
+		// 		mRenderQuad.h = clip->h;
+		// 	}
+		// render to screen
+
+		// 	SDL_RenderCopyEx(renderer, mTexture, clip , &mRenderQuad, angle, center, flip);
 
 	
-		}
+		// }
 
 };
 

@@ -2,7 +2,7 @@
 #run mingw32-make.exe to compile
 
 #OBJS specifies which files to compile as part of the project
-OBJS = src/main.cpp src/app.cpp src/entities/sprite.cpp src/audio.cpp src/window.cpp src/gui.cpp vendors/imgui/imgui.cpp vendors/imgui/imgui_demo.cpp vendors/imgui/imgui_widgets.cpp vendors/imgui/imgui_tables.cpp vendors/imgui/imgui_draw.cpp vendors/imgui/imgui_impl_sdl.cpp vendors/imgui/imgui_impl_opengl3.cpp 
+OBJS = src/main.cpp src/app.cpp src/entities/sprite.cpp src/audio.cpp src/window.cpp src/gui.cpp src/game.cpp vendors/imgui/imgui.cpp vendors/imgui/imgui_demo.cpp vendors/imgui/imgui_widgets.cpp vendors/imgui/imgui_tables.cpp vendors/imgui/imgui_draw.cpp vendors/imgui/imgui_impl_sdl.cpp vendors/imgui/imgui_impl_opengl3.cpp 
 
 #CC specifies which compiler we're using
 CC = g++
