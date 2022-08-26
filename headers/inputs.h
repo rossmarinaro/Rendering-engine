@@ -37,12 +37,15 @@ class Inputs{
         bool pollInput(SDL_Event &event, SDL_Window* window)
         {
         
+        //on quit
+        
+            if (event.type == SDL_QUIT || event.type == SDL_WINDOWEVENT && event.window.event == SDL_WINDOWEVENT_CLOSE && event.window.windowID == SDL_GetWindowID(window))
+                return false;
+
+        //on key down
 
             if(event.type == SDL_KEYDOWN)
             {
-                if (event.type == SDL_QUIT || event.type == SDL_WINDOWEVENT && event.window.event == SDL_WINDOWEVENT_CLOSE && event.window.windowID == SDL_GetWindowID(window))
-                    return false;
-
                 switch (event.key.keysym.sym)
                 {
                     case SDLK_1 : Audio::play_sound(Audio::load_audio("sine.wav")); break;

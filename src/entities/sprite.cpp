@@ -22,7 +22,7 @@
     };
 
 
-    void Sprite::Update(/* Window* &window,  */Inputs* inputs)
+    void Sprite::Update(Inputs* inputs)
     {
         // Uint32 ticks = SDL_GetTicks();
         // Uint32 seconds = ticks / 1000;
@@ -101,3 +101,6 @@
             
         Log::write("Sprite instantiated");
     };
+
+
+

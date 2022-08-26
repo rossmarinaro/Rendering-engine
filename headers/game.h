@@ -14,16 +14,27 @@
 
 class Game {
 
+private:
+
+    //static Game* sInstance;
+
 public: 
 
+    static Sprite* background;
+    static Sprite* sprite;
+    static SDL_Rect* currentClip;
+    static Inputs* inputs;
+
     static constexpr float scaleX = -0.5, 
-                       scaleY = -0.5;
+                           scaleY = -0.5;
 
     static constexpr int srcWidth = 1, 
-                     srcHeight = 1;
+                         srcHeight = 1;
 
+    static void Render(SDL_Window* &window, Inputs* inputs);
+    static void Update(Inputs* inputs);
 
-    static void Render(SDL_Window* &window/* GLuint TextureID */);
-    static void Update(float x, float y, int w, int h);
+    Game(SDL_Window* &window, Inputs* inputs);
+   ~Game();
 
 };

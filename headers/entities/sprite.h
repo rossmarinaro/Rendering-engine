@@ -31,7 +31,7 @@ class Sprite : public Image {
 		static const int m_WALKING_ANIMATION_FRAMES = 4;  
 		SDL_Rect mSpriteClips[m_WALKING_ANIMATION_FRAMES]; 
 
-		void Update(/* Window* &window,  */Inputs* inputs);
+		void Update(Inputs* inputs);
 		void Animate(std::string animKey);
 		Sprite(SDL_Window* &window, int _x, int _y, int _width, int _height, const char* filepath);
 	   ~Sprite();
