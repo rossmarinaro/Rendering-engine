@@ -33,28 +33,28 @@
         
 
 
-        if (inputs -> m_right == true)
-        {
-            mX += 1;    
-            Animate("walk");
-        }
-        if (inputs -> m_left == true)
-        {
-            mX -= 1;
-            Animate("walk");
-        }
-        if (inputs -> m_down == true)
-        {
-            mY += 1; 
-            Animate("jump");
-        }
-        if (inputs -> m_up == true)
-        {
-            mY -= 1;
-            Animate("jump"); 
-        }
+        // if (inputs -> m_right == true)
+        // {
+        //     posX += 1;    
+        //     Animate("walk");
+        // }
+        // if (inputs -> m_left == true)
+        // {
+        //     posX -= 1;
+        //     Animate("walk");
+        // }
+        // if (inputs -> m_down == true)
+        // {
+        //     posY += 1; 
+        //     Animate("jump");
+        // }
+        // if (inputs -> m_up == true)
+        // {
+        //     posY -= 1;
+        //     Animate("jump"); 
+        // }
     
-
+        _render();
 
     };
 
@@ -69,7 +69,7 @@
         _init( window, _x, _y, _width, _height);
 
 
-        if (filepath != "assets/images/menu.png")
+        if (filepath != "assets/images/menu2.png")
         {
             mSpriteClips[ 0 ].x =   0;
             mSpriteClips[ 0 ].y =   0;

@@ -25,13 +25,12 @@ public:
     static SDL_Rect* currentClip;
     static Inputs* inputs;
 
-    static constexpr float scaleX = -0.5, 
-                           scaleY = -0.5;
+    static constexpr float posX = -0.5, 
+                           posY = -0.5;
 
     static constexpr int srcWidth = 1, 
                          srcHeight = 1;
 
-    static void Render(SDL_Window* &window, Inputs* inputs);
     static void Update(Inputs* inputs);
 
     Game(SDL_Window* &window, Inputs* inputs);
