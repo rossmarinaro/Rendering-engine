@@ -8,9 +8,6 @@
 	// const int m_WALKING_ANIMATION_FRAMES = 4;  
 	// SDL_Rect mSpriteClips[m_WALKING_ANIMATION_FRAMES];  
 
-//GLuint TextureID = 0;
-//const char* IMAGES_menu = "assets/images/menu2.png";
-//const char* IMAGES_swanky_velvet = "assets/images/swanky_velvet.png";
 
 class Game {
 
@@ -33,7 +30,7 @@ public:
 
     static void Update(Inputs* inputs);
 
-    Game(SDL_Window* &window, Inputs* inputs);
+    Game(SDL_Window* &window, Inputs* inputs, GLuint TextureID[]);
    ~Game();
 
 };

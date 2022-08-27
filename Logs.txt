@@ -1,671 +1,162 @@
 audio initialized
-Time stamp: Fri Aug 26 11:19:52 2022
+Time stamp: Sat Aug 27 12:55:07 2022
 
 window initialized
-Time stamp: Fri Aug 26 11:19:52 2022
+Time stamp: Sat Aug 27 12:55:08 2022
 
 Image created
-Time stamp: Fri Aug 26 11:19:52 2022
+Time stamp: Sat Aug 27 12:55:08 2022
+
+assets/images/menu2.png
+Time stamp: Sat Aug 27 12:55:08 2022
 
 1
-Time stamp: Fri Aug 26 11:19:52 2022
+Time stamp: Sat Aug 27 12:55:08 2022
 
 Sprite instantiated
-Time stamp: Fri Aug 26 11:19:52 2022
+Time stamp: Sat Aug 27 12:55:08 2022
 
 Image created
-Time stamp: Fri Aug 26 11:19:52 2022
+Time stamp: Sat Aug 27 12:55:08 2022
+
+assets/images/swanky_velvet.png
+Time stamp: Sat Aug 27 12:55:08 2022
 
 2
-Time stamp: Fri Aug 26 11:19:53 2022
+Time stamp: Sat Aug 27 12:55:08 2022
 
 Sprite instantiated
-Time stamp: Fri Aug 26 11:19:53 2022
+Time stamp: Sat Aug 27 12:55:08 2022
 
 GUI exited
-Time stamp: Fri Aug 26 11:19:58 2022
+Time stamp: Sat Aug 27 12:58:11 2022
 
 Application initialized
-Time stamp: Fri Aug 26 11:19:58 2022
+Time stamp: Sat Aug 27 12:58:11 2022
 
 audio closed
-Time stamp: Fri Aug 26 11:19:58 2022
+Time stamp: Sat Aug 27 12:58:11 2022
 
 audio initialized
-Time stamp: Fri Aug 26 11:28:14 2022
+Time stamp: Sat Aug 27 13:10:15 2022
 
 window initialized
-Time stamp: Fri Aug 26 11:28:14 2022
+Time stamp: Sat Aug 27 13:10:15 2022
 
 Image created
-Time stamp: Fri Aug 26 11:28:14 2022
+Time stamp: Sat Aug 27 13:10:15 2022
 
 1
-Time stamp: Fri Aug 26 11:28:14 2022
+Time stamp: Sat Aug 27 13:10:16 2022
 
 Sprite instantiated
-Time stamp: Fri Aug 26 11:28:14 2022
+Time stamp: Sat Aug 27 13:10:16 2022
 
 Image created
-Time stamp: Fri Aug 26 11:28:14 2022
+Time stamp: Sat Aug 27 13:10:16 2022
 
 2
-Time stamp: Fri Aug 26 11:28:14 2022
+Time stamp: Sat Aug 27 13:10:16 2022
 
 Sprite instantiated
-Time stamp: Fri Aug 26 11:28:14 2022
+Time stamp: Sat Aug 27 13:10:16 2022
 
-ErrorPPKc
 GUI exited
-Time stamp: Fri Aug 26 11:28:19 2022
+Time stamp: Sat Aug 27 13:10:26 2022
 
 Application initialized
-Time stamp: Fri Aug 26 11:28:19 2022
+Time stamp: Sat Aug 27 13:10:26 2022
 
 audio closed
-Time stamp: Fri Aug 26 11:28:19 2022
+Time stamp: Sat Aug 27 13:10:26 2022
 
 audio initialized
-Time stamp: Fri Aug 26 11:28:57 2022
+Time stamp: Sat Aug 27 13:17:05 2022
 
 window initialized
-Time stamp: Fri Aug 26 11:28:57 2022
+Time stamp: Sat Aug 27 13:17:05 2022
 
 Image created
-Time stamp: Fri Aug 26 11:28:57 2022
+Time stamp: Sat Aug 27 13:17:05 2022
 
 1
-Time stamp: Fri Aug 26 11:28:57 2022
+Time stamp: Sat Aug 27 13:17:05 2022
 
 Sprite instantiated
-Time stamp: Fri Aug 26 11:28:57 2022
+Time stamp: Sat Aug 27 13:17:05 2022
 
 Image created
-Time stamp: Fri Aug 26 11:28:57 2022
+Time stamp: Sat Aug 27 13:17:05 2022
 
 2
-Time stamp: Fri Aug 26 11:28:57 2022
+Time stamp: Sat Aug 27 13:17:05 2022
 
 Sprite instantiated
-Time stamp: Fri Aug 26 11:28:57 2022
-
-ErrorPPKc
-audio loaded
-Time stamp: Fri Aug 26 11:29:00 2022
-
-played
-Time stamp: Fri Aug 26 11:29:00 2022
-
-GUI exited
-Time stamp: Fri Aug 26 11:29:01 2022
-
-Application initialized
-Time stamp: Fri Aug 26 11:29:01 2022
-
-audio closed
-Time stamp: Fri Aug 26 11:29:01 2022
+Time stamp: Sat Aug 27 13:17:05 2022
 
 audio initialized
-Time stamp: Fri Aug 26 11:37:37 2022
+Time stamp: Sat Aug 27 13:19:22 2022
 
 window initialized
-Time stamp: Fri Aug 26 11:37:37 2022
+Time stamp: Sat Aug 27 13:19:22 2022
 
 Image created
-Time stamp: Fri Aug 26 11:37:38 2022
+Time stamp: Sat Aug 27 13:19:23 2022
 
 1
-Time stamp: Fri Aug 26 11:37:38 2022
+Time stamp: Sat Aug 27 13:19:23 2022
 
 Sprite instantiated
-Time stamp: Fri Aug 26 11:37:38 2022
+Time stamp: Sat Aug 27 13:19:23 2022
 
 Image created
-Time stamp: Fri Aug 26 11:37:38 2022
+Time stamp: Sat Aug 27 13:19:23 2022
 
 2
-Time stamp: Fri Aug 26 11:37:38 2022
+Time stamp: Sat Aug 27 13:19:23 2022
 
 Sprite instantiated
-Time stamp: Fri Aug 26 11:37:38 2022
+Time stamp: Sat Aug 27 13:19:23 2022
 
-ErrorPPKc
-ErrorPPKc
-ErrorPPKc
-audio loaded
-Time stamp: Fri Aug 26 11:37:43 2022
-
-played
-Time stamp: Fri Aug 26 11:37:43 2022
-
-ErrorPPKc
 GUI exited
-Time stamp: Fri Aug 26 11:37:44 2022
+Time stamp: Sat Aug 27 13:19:27 2022
 
 Application initialized
-Time stamp: Fri Aug 26 11:37:44 2022
+Time stamp: Sat Aug 27 13:19:27 2022
 
 audio closed
-Time stamp: Fri Aug 26 11:37:44 2022
+Time stamp: Sat Aug 27 13:19:27 2022
 
 audio initialized
-Time stamp: Fri Aug 26 11:39:23 2022
+Time stamp: Sat Aug 27 13:26:50 2022
 
 window initialized
-Time stamp: Fri Aug 26 11:39:23 2022
+Time stamp: Sat Aug 27 13:26:50 2022
 
 Image created
-Time stamp: Fri Aug 26 11:39:23 2022
+Time stamp: Sat Aug 27 13:26:50 2022
 
 1
-Time stamp: Fri Aug 26 11:39:23 2022
+Time stamp: Sat Aug 27 13:26:50 2022
 
 Sprite instantiated
-Time stamp: Fri Aug 26 11:39:23 2022
+Time stamp: Sat Aug 27 13:26:50 2022
 
 Image created
-Time stamp: Fri Aug 26 11:39:23 2022
+Time stamp: Sat Aug 27 13:26:50 2022
 
 2
-Time stamp: Fri Aug 26 11:39:23 2022
+Time stamp: Sat Aug 27 13:26:50 2022
 
 Sprite instantiated
-Time stamp: Fri Aug 26 11:39:23 2022
-
-ErrorPPKc
-GUI exited
-Time stamp: Fri Aug 26 11:39:31 2022
-
-Application initialized
-Time stamp: Fri Aug 26 11:39:31 2022
-
-audio closed
-Time stamp: Fri Aug 26 11:39:31 2022
-
-audio initialized
-Time stamp: Fri Aug 26 11:42:30 2022
-
-window initialized
-Time stamp: Fri Aug 26 11:42:30 2022
-
-Image created
-Time stamp: Fri Aug 26 11:42:30 2022
-
-1
-Time stamp: Fri Aug 26 11:42:30 2022
-
-Sprite instantiated
-Time stamp: Fri Aug 26 11:42:30 2022
-
-Image created
-Time stamp: Fri Aug 26 11:42:30 2022
-
-2
-Time stamp: Fri Aug 26 11:42:30 2022
-
-Sprite instantiated
-Time stamp: Fri Aug 26 11:42:30 2022
+Time stamp: Sat Aug 27 13:26:50 2022
 
 GUI exited
-Time stamp: Fri Aug 26 11:42:35 2022
+Time stamp: Sat Aug 27 13:29:19 2022
 
 Application initialized
-Time stamp: Fri Aug 26 11:42:35 2022
+Time stamp: Sat Aug 27 13:29:19 2022
 
 audio closed
-Time stamp: Fri Aug 26 11:42:35 2022
-
-audio initialized
-Time stamp: Fri Aug 26 11:43:41 2022
-
-window initialized
-Time stamp: Fri Aug 26 11:43:41 2022
-
-Image created
-Time stamp: Fri Aug 26 11:43:41 2022
-
-1
-Time stamp: Fri Aug 26 11:43:41 2022
-
-Sprite instantiated
-Time stamp: Fri Aug 26 11:43:41 2022
-
-Image created
-Time stamp: Fri Aug 26 11:43:41 2022
-
-2
-Time stamp: Fri Aug 26 11:43:41 2022
-
-Sprite instantiated
-Time stamp: Fri Aug 26 11:43:41 2022
-
-GUI exited
-Time stamp: Fri Aug 26 11:43:44 2022
-
-Application initialized
-Time stamp: Fri Aug 26 11:43:44 2022
-
-audio closed
-Time stamp: Fri Aug 26 11:43:44 2022
-
-audio initialized
-Time stamp: Fri Aug 26 11:44:21 2022
-
-window initialized
-Time stamp: Fri Aug 26 11:44:21 2022
-
-Image created
-Time stamp: Fri Aug 26 11:44:22 2022
-
-1
-Time stamp: Fri Aug 26 11:44:22 2022
-
-Sprite instantiated
-Time stamp: Fri Aug 26 11:44:22 2022
-
-Image created
-Time stamp: Fri Aug 26 11:44:22 2022
-
-2
-Time stamp: Fri Aug 26 11:44:22 2022
-
-Sprite instantiated
-Time stamp: Fri Aug 26 11:44:22 2022
-
-GUI exited
-Time stamp: Fri Aug 26 11:44:25 2022
-
-Application initialized
-Time stamp: Fri Aug 26 11:44:25 2022
-
-audio closed
-Time stamp: Fri Aug 26 11:44:25 2022
-
-audio initialized
-Time stamp: Fri Aug 26 11:45:15 2022
-
-window initialized
-Time stamp: Fri Aug 26 11:45:15 2022
-
-Image created
-Time stamp: Fri Aug 26 11:45:15 2022
-
-1
-Time stamp: Fri Aug 26 11:45:15 2022
-
-Sprite instantiated
-Time stamp: Fri Aug 26 11:45:15 2022
-
-Image created
-Time stamp: Fri Aug 26 11:45:15 2022
-
-2
-Time stamp: Fri Aug 26 11:45:15 2022
-
-Sprite instantiated
-Time stamp: Fri Aug 26 11:45:15 2022
-
-GUI exited
-Time stamp: Fri Aug 26 11:45:19 2022
-
-Application initialized
-Time stamp: Fri Aug 26 11:45:19 2022
-
-audio closed
-Time stamp: Fri Aug 26 11:45:19 2022
-
-audio initialized
-Time stamp: Fri Aug 26 11:46:06 2022
-
-window initialized
-Time stamp: Fri Aug 26 11:46:06 2022
-
-Image created
-Time stamp: Fri Aug 26 11:46:06 2022
-
-1
-Time stamp: Fri Aug 26 11:46:06 2022
-
-Sprite instantiated
-Time stamp: Fri Aug 26 11:46:06 2022
-
-Image created
-Time stamp: Fri Aug 26 11:46:06 2022
-
-2
-Time stamp: Fri Aug 26 11:46:06 2022
-
-Sprite instantiated
-Time stamp: Fri Aug 26 11:46:06 2022
-
-GUI exited
-Time stamp: Fri Aug 26 11:46:10 2022
-
-Application initialized
-Time stamp: Fri Aug 26 11:46:10 2022
-
-audio closed
-Time stamp: Fri Aug 26 11:46:10 2022
-
-audio initialized
-Time stamp: Fri Aug 26 11:50:59 2022
-
-window initialized
-Time stamp: Fri Aug 26 11:50:59 2022
-
-Image created
-Time stamp: Fri Aug 26 11:50:59 2022
-
-1
-Time stamp: Fri Aug 26 11:50:59 2022
-
-Sprite instantiated
-Time stamp: Fri Aug 26 11:50:59 2022
-
-Image created
-Time stamp: Fri Aug 26 11:50:59 2022
-
-2
-Time stamp: Fri Aug 26 11:50:59 2022
-
-Sprite instantiated
-Time stamp: Fri Aug 26 11:50:59 2022
-
-ErrorPPKc
-GUI exited
-Time stamp: Fri Aug 26 11:51:09 2022
-
-Application initialized
-Time stamp: Fri Aug 26 11:51:09 2022
-
-audio closed
-Time stamp: Fri Aug 26 11:51:09 2022
-
-audio initialized
-Time stamp: Fri Aug 26 12:14:23 2022
-
-window initialized
-Time stamp: Fri Aug 26 12:14:23 2022
-
-Image created
-Time stamp: Fri Aug 26 12:14:23 2022
-
-1
-Time stamp: Fri Aug 26 12:14:23 2022
-
-Sprite instantiated
-Time stamp: Fri Aug 26 12:14:23 2022
-
-Image created
-Time stamp: Fri Aug 26 12:14:23 2022
-
-2
-Time stamp: Fri Aug 26 12:14:23 2022
-
-Sprite instantiated
-Time stamp: Fri Aug 26 12:14:23 2022
-
-GUI exited
-Time stamp: Fri Aug 26 12:14:27 2022
-
-Application initialized
-Time stamp: Fri Aug 26 12:14:27 2022
-
-audio closed
-Time stamp: Fri Aug 26 12:14:27 2022
-
-audio initialized
-Time stamp: Fri Aug 26 12:15:21 2022
-
-window initialized
-Time stamp: Fri Aug 26 12:15:22 2022
-
-Image created
-Time stamp: Fri Aug 26 12:15:22 2022
-
-1
-Time stamp: Fri Aug 26 12:15:22 2022
-
-Sprite instantiated
-Time stamp: Fri Aug 26 12:15:22 2022
-
-Image created
-Time stamp: Fri Aug 26 12:15:22 2022
-
-2
-Time stamp: Fri Aug 26 12:15:22 2022
-
-Sprite instantiated
-Time stamp: Fri Aug 26 12:15:22 2022
-
-GUI exited
-Time stamp: Fri Aug 26 12:15:24 2022
-
-Application initialized
-Time stamp: Fri Aug 26 12:15:24 2022
-
-audio closed
-Time stamp: Fri Aug 26 12:15:24 2022
-
-audio initialized
-Time stamp: Fri Aug 26 12:27:06 2022
-
-window initialized
-Time stamp: Fri Aug 26 12:27:06 2022
-
-Image created
-Time stamp: Fri Aug 26 12:27:06 2022
-
-1
-Time stamp: Fri Aug 26 12:27:06 2022
-
-Sprite instantiated
-Time stamp: Fri Aug 26 12:27:06 2022
-
-Image created
-Time stamp: Fri Aug 26 12:27:06 2022
-
-2
-Time stamp: Fri Aug 26 12:27:06 2022
-
-Sprite instantiated
-Time stamp: Fri Aug 26 12:27:06 2022
-
-GUI exited
-Time stamp: Fri Aug 26 12:27:09 2022
-
-Application initialized
-Time stamp: Fri Aug 26 12:27:09 2022
-
-audio closed
-Time stamp: Fri Aug 26 12:27:09 2022
-
-audio initialized
-Time stamp: Fri Aug 26 12:32:55 2022
-
-window initialized
-Time stamp: Fri Aug 26 12:32:55 2022
-
-Image created
-Time stamp: Fri Aug 26 12:32:56 2022
-
-1
-Time stamp: Fri Aug 26 12:32:56 2022
-
-Sprite instantiated
-Time stamp: Fri Aug 26 12:32:56 2022
-
-Image created
-Time stamp: Fri Aug 26 12:32:56 2022
-
-2
-Time stamp: Fri Aug 26 12:32:56 2022
-
-Sprite instantiated
-Time stamp: Fri Aug 26 12:32:56 2022
-
-3
-Time stamp: Fri Aug 26 12:32:56 2022
-
-audio initialized
-Time stamp: Fri Aug 26 12:36:51 2022
-
-window initialized
-Time stamp: Fri Aug 26 12:36:51 2022
-
-Image created
-Time stamp: Fri Aug 26 12:36:51 2022
-
-1
-Time stamp: Fri Aug 26 12:36:51 2022
-
-Sprite instantiated
-Time stamp: Fri Aug 26 12:36:51 2022
-
-Image created
-Time stamp: Fri Aug 26 12:36:51 2022
-
-2
-Time stamp: Fri Aug 26 12:36:51 2022
-
-Sprite instantiated
-Time stamp: Fri Aug 26 12:36:51 2022
-
-audio initialized
-Time stamp: Fri Aug 26 12:38:57 2022
-
-window initialized
-Time stamp: Fri Aug 26 12:38:57 2022
-
-Image created
-Time stamp: Fri Aug 26 12:38:57 2022
-
-1
-Time stamp: Fri Aug 26 12:38:57 2022
-
-Sprite instantiated
-Time stamp: Fri Aug 26 12:38:57 2022
-
-Image created
-Time stamp: Fri Aug 26 12:38:57 2022
-
-2
-Time stamp: Fri Aug 26 12:38:57 2022
-
-Sprite instantiated
-Time stamp: Fri Aug 26 12:38:57 2022
-
-audio initialized
-Time stamp: Fri Aug 26 12:39:55 2022
-
-window initialized
-Time stamp: Fri Aug 26 12:39:55 2022
-
-Image created
-Time stamp: Fri Aug 26 12:39:55 2022
-
-1
-Time stamp: Fri Aug 26 12:39:55 2022
-
-Sprite instantiated
-Time stamp: Fri Aug 26 12:39:55 2022
-
-audio initialized
-Time stamp: Fri Aug 26 12:42:50 2022
-
-window initialized
-Time stamp: Fri Aug 26 12:42:50 2022
-
-Image created
-Time stamp: Fri Aug 26 12:42:50 2022
-
-Sprite instantiated
-Time stamp: Fri Aug 26 12:42:50 2022
-
-audio initialized
-Time stamp: Fri Aug 26 12:44:52 2022
-
-window initialized
-Time stamp: Fri Aug 26 12:44:52 2022
-
-Image created
-Time stamp: Fri Aug 26 12:44:52 2022
-
-1
-Time stamp: Fri Aug 26 12:44:52 2022
-
-Sprite instantiated
-Time stamp: Fri Aug 26 12:44:52 2022
-
-GUI exited
-Time stamp: Fri Aug 26 12:44:55 2022
-
-Application initialized
-Time stamp: Fri Aug 26 12:44:55 2022
-
-audio closed
-Time stamp: Fri Aug 26 12:44:55 2022
-
-audio initialized
-Time stamp: Fri Aug 26 12:46:07 2022
-
-window initialized
-Time stamp: Fri Aug 26 12:46:08 2022
-
-Image created
-Time stamp: Fri Aug 26 12:46:08 2022
-
-1
-Time stamp: Fri Aug 26 12:46:08 2022
-
-Sprite instantiated
-Time stamp: Fri Aug 26 12:46:08 2022
-
-GUI exited
-Time stamp: Fri Aug 26 12:46:10 2022
-
-Application initialized
-Time stamp: Fri Aug 26 12:46:10 2022
-
-audio closed
-Time stamp: Fri Aug 26 12:46:10 2022
-
-audio initialized
-Time stamp: Fri Aug 26 12:46:53 2022
-
-window initialized
-Time stamp: Fri Aug 26 12:46:53 2022
-
-Image created
-Time stamp: Fri Aug 26 12:46:53 2022
-
-1
-Time stamp: Fri Aug 26 12:46:53 2022
-
-Sprite instantiated
-Time stamp: Fri Aug 26 12:46:53 2022
-
-audio initialized
-Time stamp: Fri Aug 26 12:47:56 2022
-
-window initialized
-Time stamp: Fri Aug 26 12:47:56 2022
-
-Image created
-Time stamp: Fri Aug 26 12:47:56 2022
-
-1
-Time stamp: Fri Aug 26 12:47:56 2022
-
-Sprite instantiated
-Time stamp: Fri Aug 26 12:47:56 2022
-
-GUI exited
-Time stamp: Fri Aug 26 12:48:01 2022
-
-Application initialized
-Time stamp: Fri Aug 26 12:48:01 2022
-
-audio closed
-Time stamp: Fri Aug 26 12:48:01 2022
+Time stamp: Sat Aug 27 13:29:19 2022
 

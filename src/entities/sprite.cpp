@@ -54,11 +54,11 @@
         //     Animate("jump"); 
         // }
     
-        _render();
+       // _render();
 
     };
 
-    Sprite::Sprite(SDL_Window* &window, int _x, int _y, int _width, int _height, const char* filepath)
+    Sprite::Sprite(GLuint &id, SDL_Window* &window, float _x, float _y, const char* filepath)
     {
 
         mFilepath = filepath;
@@ -66,38 +66,38 @@
         mSrcQuad.y = _y;
         
     
-        _init( window, _x, _y, _width, _height);
+        _init( id, window, _x, _y );
 
 
-        if (filepath != "assets/images/menu2.png")
-        {
-            mSpriteClips[ 0 ].x =   0;
-            mSpriteClips[ 0 ].y =   0;
-            mSpriteClips[ 0 ].w =  196;
-            mSpriteClips[ 0 ].h = 250;
+        // if (filepath != "assets/images/menu2.png")
+        // {
+        //     mSpriteClips[ 0 ].x =   0;
+        //     mSpriteClips[ 0 ].y =   0;
+        //     mSpriteClips[ 0 ].w =  196;
+        //     mSpriteClips[ 0 ].h = 250;
 
-            mSpriteClips[ 1 ].x =  192;
-            mSpriteClips[ 1 ].y =   0;
-            mSpriteClips[ 1 ].w =  196;
-            mSpriteClips[ 1 ].h = 250;
+        //     mSpriteClips[ 1 ].x =  192;
+        //     mSpriteClips[ 1 ].y =   0;
+        //     mSpriteClips[ 1 ].w =  196;
+        //     mSpriteClips[ 1 ].h = 250;
             
-            mSpriteClips[ 2 ].x = 384;
-            mSpriteClips[ 2 ].y =   0;
-            mSpriteClips[ 2 ].w =  196;
-            mSpriteClips[ 2 ].h = 250;
+        //     mSpriteClips[ 2 ].x = 384;
+        //     mSpriteClips[ 2 ].y =   0;
+        //     mSpriteClips[ 2 ].w =  196;
+        //     mSpriteClips[ 2 ].h = 250;
 
-            mSpriteClips[ 3 ].x = 588;
-            mSpriteClips[ 3 ].y =   0;
-            mSpriteClips[ 3 ].w =  196;
-            mSpriteClips[ 3 ].h = 250;
-        }
-        else 
-        {
-            mSpriteClips[ 1 ].x = 0;
-            mSpriteClips[ 1 ].y =   0;
-            mSpriteClips[ 1 ].w =  640;
-            mSpriteClips[ 1 ].h = 480;
-        }
+        //     mSpriteClips[ 3 ].x = 588;
+        //     mSpriteClips[ 3 ].y =   0;
+        //     mSpriteClips[ 3 ].w =  196;
+        //     mSpriteClips[ 3 ].h = 250;
+        // }
+        // else 
+        // {
+        //     mSpriteClips[ 1 ].x = 0;
+        //     mSpriteClips[ 1 ].y =   0;
+        //     mSpriteClips[ 1 ].w =  640;
+        //     mSpriteClips[ 1 ].h = 480;
+        // }
             
         Log::write("Sprite instantiated");
     };

@@ -60,4 +60,13 @@
                 m_Log.close();
 
             }
+              static void _float(float _float)
+            {
+                std::ofstream m_Log;
+                std::time_t m_time_stamp = std::time(nullptr);
+                m_Log.open("Logs.txt", std::ofstream::app | std::ofstream::out);
+                m_Log << _float << "\n"<< "Time stamp: " << std::ctime(&m_time_stamp) << "\n";
+                m_Log.close();
+
+            }
     };

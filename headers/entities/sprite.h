@@ -33,7 +33,8 @@ class Sprite : public Image {
 
 		void Update(Inputs* inputs);
 		void Animate(std::string animKey);
-		Sprite(SDL_Window* &window, int _x, int _y, int _width, int _height, const char* filepath);
+		
+		Sprite(GLuint &id, SDL_Window* &window, float x, float y, const char* filepath);
 	   ~Sprite();
        
 };
