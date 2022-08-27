@@ -1,4 +1,6 @@
-UI built with SDL2 and DearIMGUI
+Rendering system with audio generation, texturing, and logging. May possibly become a game / content creation tool.
+
+UI built with SDL2, Opengl3 and DearIMGUI
 
 
 This project is linked against:
