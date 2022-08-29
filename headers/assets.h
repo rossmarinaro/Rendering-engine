@@ -3,42 +3,44 @@
 #include <map>
 #include "./entities/sprite.h"
 
-const char* IMAGES_menu = "assets/images/menu2.png";
-const char* IMAGES_swanky_velvet = "assets/images/swanky_velvet.png";
+namespace Assets {
 
+    namespace Images {
+            const char* menu[2] = { "menu", "assets/images/menu.png"};
+            const char* swanky_velvet[2] = { "swanky_velvet", "assets/images/swanky_velvet.png" };
+    }
+}
 
-/////singleton//
+// class Assets
+// {
+//     public:
 
-class Assets
-{
-    public:
+//         static Assets& get(){
+//             static Assets self;
+//             return self;
+//         } 
 
-        static Assets& get(){
-            static Assets self;
-            return self;
-        } 
+//         Assets(Assets const&) = delete;
 
-        Assets(Assets const&) = delete;
+//         void operator= (Assets const&) = delete;
 
-        void operator= (Assets const&) = delete;
+//         Sprite* getSprite(std::string name)
+//         {
+//             return m_mapAsset[name];
+//         }
 
-        Sprite* getSprite(std::string name)
-        {
-            return m_mapAsset[name];
-        }
+//         void loadAsset(Window* &window, int _x, int _y, int _width, int _height, const char* filepath)
+//         {
+//             auto load = [&](std::string name, const char* filepath/* std::wstring filename */)
+//             {
+//                 //Sprite* sprite = new Sprite(window, _x, _y, _width, _height, filepath );
+//                 //m_mapAsset[filepath] = sprite;
+//             };
+//         }
 
-        void loadAsset(Window* &window, int _x, int _y, int _width, int _height, const char* filepath)
-        {
-            auto load = [&](std::string name, const char* filepath/* std::wstring filename */)
-            {
-                //Sprite* sprite = new Sprite(window, _x, _y, _width, _height, filepath );
-                //m_mapAsset[filepath] = sprite;
-            };
-        }
+//     private: 
+//         Assets();
+//         ~Assets();
 
-    private: 
-        Assets();
-        ~Assets();
-
-        std::map<std::string, Sprite*> m_mapAsset;
-};
+//         std::map<std::string, Sprite*> m_mapAsset;
+// };

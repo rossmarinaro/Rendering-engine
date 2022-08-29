@@ -2,16 +2,16 @@
 #run mingw32-make.exe to compile
 
 #OBJS specifies which files to compile as part of the project
-OBJS = src/main.cpp src/app.cpp src/entities/image.cpp src/entities/sprite.cpp src/audio.cpp src/window.cpp src/gui.cpp src/game.cpp vendors/imgui/imgui.cpp vendors/imgui/imgui_demo.cpp vendors/imgui/imgui_widgets.cpp vendors/imgui/imgui_tables.cpp vendors/imgui/imgui_draw.cpp vendors/imgui/imgui_impl_sdl.cpp vendors/imgui/imgui_impl_opengl3.cpp 
+OBJS = src/main.cpp src/app.cpp src/entities/sprite.cpp src/audio.cpp src/window.cpp src/gui.cpp src/game.cpp vendors/imgui/imgui.cpp vendors/imgui/imgui_demo.cpp vendors/imgui/imgui_widgets.cpp vendors/imgui/imgui_tables.cpp vendors/imgui/imgui_draw.cpp vendors/imgui/imgui_impl_sdl.cpp vendors/imgui/imgui_impl_opengl3.cpp 
 
 #CC specifies which compiler we're using
-CC = g++
+CC = g++ #-D GLEW_STATIC
 
 #INCLUDE_PATHS specifies the additional include paths we'll need
 INCLUDE_PATHS = -IC:\libs\sdl_32\include\SDL2 -IC:\libs\glew-2.2.0-win32\glew-2.2.0\include\GL
 
 #LIBRARY_PATHS specifies the additional library paths we'll need
-LIBRARY_PATHS = -LC:\libs\sdl_32\lib -LC:\libs\glew-2.2.0-win32\glew-2.2.0\lib\Release\Win32 -lopengl32 
+LIBRARY_PATHS = -lopengl32 -LC:\libs\glew-2.2.0-win32\glew-2.2.0\lib\Release\Win32 -LC:\libs\sdl_32\lib
 
 #COMPILER_FLAGS specifies the additional compilation options we're using
 # -w suppresses all warnings

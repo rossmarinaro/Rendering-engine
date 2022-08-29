@@ -1,162 +1,33 @@
 audio initialized
-Time stamp: Sat Aug 27 12:55:07 2022
+Time stamp: Sun Aug 28 20:01:55 2022
 
 window initialized
-Time stamp: Sat Aug 27 12:55:08 2022
-
-Image created
-Time stamp: Sat Aug 27 12:55:08 2022
-
-assets/images/menu2.png
-Time stamp: Sat Aug 27 12:55:08 2022
-
-1
-Time stamp: Sat Aug 27 12:55:08 2022
+Time stamp: Sun Aug 28 20:01:55 2022
 
 Sprite instantiated
-Time stamp: Sat Aug 27 12:55:08 2022
+Time stamp: Sun Aug 28 20:01:56 2022
 
-Image created
-Time stamp: Sat Aug 27 12:55:08 2022
-
-assets/images/swanky_velvet.png
-Time stamp: Sat Aug 27 12:55:08 2022
-
-2
-Time stamp: Sat Aug 27 12:55:08 2022
+rgba enabled
+Time stamp: Sun Aug 28 20:01:56 2022
 
 Sprite instantiated
-Time stamp: Sat Aug 27 12:55:08 2022
+Time stamp: Sun Aug 28 20:01:56 2022
+
+audio loaded
+Time stamp: Sun Aug 28 20:01:57 2022
+
+played
+Time stamp: Sun Aug 28 20:01:57 2022
 
 GUI exited
-Time stamp: Sat Aug 27 12:58:11 2022
+Time stamp: Sun Aug 28 20:01:58 2022
 
-Application initialized
-Time stamp: Sat Aug 27 12:58:11 2022
+Sprite Destroyed
+Time stamp: Sun Aug 28 20:01:58 2022
 
-audio closed
-Time stamp: Sat Aug 27 12:58:11 2022
+Sprite Destroyed
+Time stamp: Sun Aug 28 20:01:58 2022
 
-audio initialized
-Time stamp: Sat Aug 27 13:10:15 2022
-
-window initialized
-Time stamp: Sat Aug 27 13:10:15 2022
-
-Image created
-Time stamp: Sat Aug 27 13:10:15 2022
-
-1
-Time stamp: Sat Aug 27 13:10:16 2022
-
-Sprite instantiated
-Time stamp: Sat Aug 27 13:10:16 2022
-
-Image created
-Time stamp: Sat Aug 27 13:10:16 2022
-
-2
-Time stamp: Sat Aug 27 13:10:16 2022
-
-Sprite instantiated
-Time stamp: Sat Aug 27 13:10:16 2022
-
-GUI exited
-Time stamp: Sat Aug 27 13:10:26 2022
-
-Application initialized
-Time stamp: Sat Aug 27 13:10:26 2022
-
-audio closed
-Time stamp: Sat Aug 27 13:10:26 2022
-
-audio initialized
-Time stamp: Sat Aug 27 13:17:05 2022
-
-window initialized
-Time stamp: Sat Aug 27 13:17:05 2022
-
-Image created
-Time stamp: Sat Aug 27 13:17:05 2022
-
-1
-Time stamp: Sat Aug 27 13:17:05 2022
-
-Sprite instantiated
-Time stamp: Sat Aug 27 13:17:05 2022
-
-Image created
-Time stamp: Sat Aug 27 13:17:05 2022
-
-2
-Time stamp: Sat Aug 27 13:17:05 2022
-
-Sprite instantiated
-Time stamp: Sat Aug 27 13:17:05 2022
-
-audio initialized
-Time stamp: Sat Aug 27 13:19:22 2022
-
-window initialized
-Time stamp: Sat Aug 27 13:19:22 2022
-
-Image created
-Time stamp: Sat Aug 27 13:19:23 2022
-
-1
-Time stamp: Sat Aug 27 13:19:23 2022
-
-Sprite instantiated
-Time stamp: Sat Aug 27 13:19:23 2022
-
-Image created
-Time stamp: Sat Aug 27 13:19:23 2022
-
-2
-Time stamp: Sat Aug 27 13:19:23 2022
-
-Sprite instantiated
-Time stamp: Sat Aug 27 13:19:23 2022
-
-GUI exited
-Time stamp: Sat Aug 27 13:19:27 2022
-
-Application initialized
-Time stamp: Sat Aug 27 13:19:27 2022
-
-audio closed
-Time stamp: Sat Aug 27 13:19:27 2022
-
-audio initialized
-Time stamp: Sat Aug 27 13:26:50 2022
-
-window initialized
-Time stamp: Sat Aug 27 13:26:50 2022
-
-Image created
-Time stamp: Sat Aug 27 13:26:50 2022
-
-1
-Time stamp: Sat Aug 27 13:26:50 2022
-
-Sprite instantiated
-Time stamp: Sat Aug 27 13:26:50 2022
-
-Image created
-Time stamp: Sat Aug 27 13:26:50 2022
-
-2
-Time stamp: Sat Aug 27 13:26:50 2022
-
-Sprite instantiated
-Time stamp: Sat Aug 27 13:26:50 2022
-
-GUI exited
-Time stamp: Sat Aug 27 13:29:19 2022
-
-Application initialized
-Time stamp: Sat Aug 27 13:29:19 2022
-
-audio closed
-Time stamp: Sat Aug 27 13:29:19 2022
+game closed.
+Time stamp: Sun Aug 28 20:01:58 2022
 

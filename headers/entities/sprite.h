@@ -9,7 +9,7 @@ class Sprite : public Image {
 
     private:
 
-	////anims enumerations / parsing
+	//anims enumerations / parsing
 
 		enum anims {
 			jump, 
@@ -31,10 +31,11 @@ class Sprite : public Image {
 		static const int m_WALKING_ANIMATION_FRAMES = 4;  
 		SDL_Rect mSpriteClips[m_WALKING_ANIMATION_FRAMES]; 
 
+		void Render();
 		void Update(Inputs* inputs);
 		void Animate(std::string animKey);
 		
-		Sprite(GLuint &id, SDL_Window* &window, float x, float y, const char* filepath);
+		Sprite(GLuint &id, float x, float y, const char* key[2]);
 	   ~Sprite();
        
 };

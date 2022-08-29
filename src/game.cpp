@@ -5,16 +5,12 @@
 Sprite* m_background;
 Sprite* m_sprite;
 
-// SDL_Rect* m_currentClip;
 
-Game::Game(SDL_Window* &window, Inputs* inputs, GLuint textures[])
+Game::Game(Inputs* inputs, GLuint textures[])
 {
- 
-    m_background = new Sprite(textures[0], window, -0.5, -0.5, IMAGES_menu);
-    m_sprite = new Sprite(textures[1], window, -0.3, -0.3, IMAGES_swanky_velvet);
-  //SDL_Rect* currentClip = &sprite->mSpriteClips[ sprite->mAnimFrame / 10 ];
 
-   //m_currentClip = currentClip;
+    m_background = new Sprite(textures[0], -0.5, -0.5, Assets::Images::menu);
+    m_sprite = new Sprite(textures[1], -0.3, -0.3, Assets::Images::swanky_velvet);
 
 }
 
@@ -23,17 +19,18 @@ Game::Game(SDL_Window* &window, Inputs* inputs, GLuint textures[])
 void Game::Update(Inputs* inputs)
 {
 
-    m_background->_render();//Update(inputs);
-    m_sprite->_render();//Update(inputs);
+    m_background->Render();//Update(inputs);
+    m_sprite->Render();//Update(inputs);
 
 }
 
 Game::~Game()
 {
-    // if (sprite != NULL)
-    //     delete sprite;
-    // if (background != NULL)
-    //     delete background;
+
+    delete m_sprite;
+    delete m_background;
+
+    Log::write("game closed.");
 }
 
 
