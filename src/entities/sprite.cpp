@@ -2,6 +2,7 @@
 #include "../../headers/entities/sprite.h"
 #include "../../headers/resources/spritesheets.h"
 
+using json = nlohmann::json;
 
 void Sprite::Animate(std::string animKey)
 {
@@ -62,33 +63,34 @@ void Sprite::Update(Inputs* inputs)
         Animate("jump"); 
     }
 
-    // _render();
+    // Render();
 
 };
 
-//-----------------render image as opengl texture
+//-----------------render sprite
 
 void Sprite::Render()
-{
+{ 
+
     if (m_texture != NULL)
     {
 
         glPixelStorei(GL_UNPACK_ROW_LENGTH, m_texture->w);
         glPixelStorei(GL_UNPACK_SKIP_PIXELS, m_currentFrameX);
         glPixelStorei(GL_UNPACK_SKIP_ROWS, m_currentFrameY);
-        
+
         glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, m_currentFrameWidth, m_currentFrameHeight, 0, GL_RGBA, GL_UNSIGNED_BYTE, m_texture->pixels);
         
         glPixelStorei(GL_UNPACK_ROW_LENGTH, 0);
         glPixelStorei(GL_UNPACK_SKIP_PIXELS, 0);
         glPixelStorei(GL_UNPACK_SKIP_ROWS, 0);
-        
+
         glBegin(GL_QUADS);
 
             glTexCoord2f(0, 1); glVertex3f(m_posX, m_posY, 0);
-            glTexCoord2f(1, 1); glVertex3f(m_posX + m_srcWidth * m_scale, m_posY, 0);
-            glTexCoord2f(1, 0); glVertex3f(m_posX + m_srcWidth * m_scale, m_posY + m_srcHeight * m_scale, 0);
-            glTexCoord2f(0, 0); glVertex3f(m_posX, m_posY + m_srcHeight * m_scale, 0); 
+            glTexCoord2f(1, 1); glVertex3f(m_posX + m_srcWidth * m_scaleX, m_posY, 0);
+            glTexCoord2f(1, 0); glVertex3f(m_posX + m_srcWidth * m_scaleX, m_posY + m_srcHeight * m_scaleY, 0);
+            glTexCoord2f(0, 0); glVertex3f(m_posX, m_posY + m_srcHeight * m_scaleY, 0); 
 
         glEnd();
     }
@@ -97,17 +99,19 @@ void Sprite::Render()
 
 Sprite::Sprite(GLuint &id, float x, float y, const char* key[2])
 {
-    std::vector<int*> frs/* frs */ = Assets::Spritesheets::GenerateFrames(key[0]); 
-Log::integer(frs[1][2]);
+    const char* jsonPath = Assets::Spritesheets::GetResource(key[0]);
+
+    std::ifstream file(jsonPath);
+    json data = json::parse(file);
+
     m_filepath = key[1];
-    m_currentFrameX = frs[1][0];
-    m_currentFrameY = frs[1][1];
-    m_currentFrameWidth = frs[1][2];
-    m_currentFrameHeight = frs[1][3];
+    m_currentFrameX = data["frame"]["x"];
+    m_currentFrameY = data["frame"]["y"];
+    m_currentFrameWidth = data["frame"]["w"];
+    m_currentFrameHeight = data["frame"]["h"]; 
 
-    // _init(id, x, y);
+    _init(id, x, y);
 
-        
     Log::write("Sprite instantiated");
 };
 

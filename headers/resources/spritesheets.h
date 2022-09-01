@@ -3,28 +3,38 @@
 #include <string>
 #include <vector>
 
+using string = std::string;
+
 namespace Assets {
 
     namespace Spritesheets {
 
-    
-        std::vector<int*> GenerateFrames(std::string key)
+
+
+        enum Options {
+            menu,
+            swanky_velvet
+        };
+
+        Options resolveString(string const &input)
         {
-            //if (key == "swanky_velvet")
-            //{
-               
-          
-                int fr1[4] = { 0, 0, 196, 250 },
-                    fr2[4] = { 192, 0, 196, 250 },
-                    fr3[4] = { 383, 0, 196, 250 },
-                    fr4[4] = { 588, 0, 196, 250 };
+            if (input == "swanky_velvet") 
+                return swanky_velvet;
+			if (input == "menu") 
+                return menu;
+        };
 
-                
-                return { fr1, fr2, fr3, fr4 };
+        const char* GetResource(string key)
+        {
+            switch (resolveString(key))
+            {
+                case swanky_velvet:
+                    return "assets/json/swanky_velvet.json";
 
-            //}
-         
+            }
         }
+
+        
     }
 }
 

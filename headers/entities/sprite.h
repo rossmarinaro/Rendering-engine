@@ -26,17 +26,15 @@ class Sprite : public Image {
 
 	public:  
 
-		int m_frame = 1, 
-			m_currentFrameX,
-			m_currentFrameY,
-			m_currentFrameWidth,
-			m_currentFrameHeight;
+		std::int64_t
+				m_frame = 1, 
+				m_currentFrameX,
+				m_currentFrameY,
+				m_currentFrameWidth,
+				m_currentFrameHeight;
 		
-		float m_scale = 0.5f;
-
-		std::vector<int*> m_frames;
-		//int m_frames[];
-		//std::vector<int*> operator= (std::vector<int *, std::allocator<int *>>);
+		float m_scaleX = 0.5f,
+			  m_scaleY = 0.5f;
 
 		void Render();
 		void Update(Inputs* inputs);

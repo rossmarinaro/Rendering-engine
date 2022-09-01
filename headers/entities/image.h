@@ -1,11 +1,14 @@
 #pragma once
-
+#include <iostream>
 #include <vector>
+#include <fstream>
 
 #include "../window.h"
 #include "../inputs.h"
 
+#include "../../vendors/nlohmann/json.hpp"
 #include "../../headers/entities/sprite.h"
+
 
 class Image {
 
@@ -19,9 +22,7 @@ class Image {
 			  m_srcHeight = 1.0;
 
 		double m_degrees = 0; 
-
 		const char* m_filepath; 
-		
 		SDL_Surface* m_texture;
 
 		void _init(GLuint &id, float x, float y)
@@ -33,12 +34,6 @@ class Image {
 
 			else 
 			{ 
-
-			//Get image dimensions and render
-
-				m_posX = x;
-				m_posY = y;
-				m_texture = image;
 
 			//render image as opengl texture
 			
@@ -54,6 +49,12 @@ class Image {
 
 				glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
 				glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+
+			//Get image dimensions and render
+
+				m_posX = x;
+				m_posY = y;
+				m_texture = image;
 			}
 		}
 

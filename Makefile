@@ -8,10 +8,10 @@ OBJS = src/main.cpp src/app.cpp src/entities/sprite.cpp src/audio.cpp src/window
 CC = g++ #-D GLEW_STATIC
 
 #INCLUDE_PATHS specifies the additional include paths we'll need
-INCLUDE_PATHS = -IC:\libs\sdl_32\include\SDL2 -IC:\libs\glew-2.2.0-win32\glew-2.2.0\include\GL
+INCLUDE_PATHS = -IC:\libs\sdl_32\include\SDL2 -IC:\libs\glew-2.2.0-win32\glew-2.2.0\include\GL 
 
 #LIBRARY_PATHS specifies the additional library paths we'll need
-LIBRARY_PATHS = -lopengl32 -LC:\libs\glew-2.2.0-win32\glew-2.2.0\lib\Release\Win32 -LC:\libs\sdl_32\lib
+LIBRARY_PATHS = -lopengl32 -LC:\libs\glew-2.2.0-win32\glew-2.2.0\lib\Release\Win32 -LC:\libs\sdl_32\lib 
 
 #COMPILER_FLAGS specifies the additional compilation options we're using
 # -w suppresses all warnings
