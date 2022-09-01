@@ -26,10 +26,17 @@ class Sprite : public Image {
 
 	public:  
 
-		int m_frame = 1;
-		int mAnimFrame = 0; 
-		static const int m_WALKING_ANIMATION_FRAMES = 4;  
-		SDL_Rect mSpriteClips[m_WALKING_ANIMATION_FRAMES]; 
+		int m_frame = 1, 
+			m_currentFrameX,
+			m_currentFrameY,
+			m_currentFrameWidth,
+			m_currentFrameHeight;
+		
+		float m_scale = 0.5f;
+
+		std::vector<int*> m_frames;
+		//int m_frames[];
+		//std::vector<int*> operator= (std::vector<int *, std::allocator<int *>>);
 
 		void Render();
 		void Update(Inputs* inputs);

@@ -20,10 +20,8 @@ namespace Assets {
                     fr4[4] = { 588, 0, 196, 250 };
 
                 
-                std::vector<int*> vec = { fr1, fr2, fr3, fr4 };
-                
-                return vec;
-               
+                return { fr1, fr2, fr3, fr4 };
+
             //}
          
         }

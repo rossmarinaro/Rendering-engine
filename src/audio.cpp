@@ -9,6 +9,7 @@
 
 
 /******************** GENERATE SINE *************/
+
     void Audio::sine_wave(Audio::BitDepth buffer[], double freq)
     { 
         Audio::BitDepth amplitude = std::numeric_limits<Audio::BitDepth>::max() * 0.5;
@@ -26,6 +27,7 @@
     }
 
 /************ WRITE FILE *********************/
+
     void Audio::write_file(const char* filename)
     {
         SetConsoleTitleA("PCM Audio Example");
@@ -52,6 +54,7 @@
     }
 
 /************** LOAD AUDIO *****************/
+
     Mix_Chunk* Audio::load_audio(const char* filePath)
     {
 		Mix_Chunk* sine = Mix_LoadWAV(filePath);
@@ -64,6 +67,7 @@
     }
     
 /************** PLAY SOUND *****************/
+
     void Audio::play_sound(Mix_Chunk* soundName)
     {
        // if (!load_audio("sine.wav")) Log::error(SDL_GetError());

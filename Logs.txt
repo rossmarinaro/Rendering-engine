@@ -1,33 +1,21 @@
 audio initialized
-Time stamp: Sun Aug 28 20:01:55 2022
+Time stamp: Wed Aug 31 21:58:25 2022
 
 window initialized
-Time stamp: Sun Aug 28 20:01:55 2022
+Time stamp: Wed Aug 31 21:58:25 2022
+
+196
+Time stamp: Wed Aug 31 21:58:25 2022
 
 Sprite instantiated
-Time stamp: Sun Aug 28 20:01:56 2022
-
-rgba enabled
-Time stamp: Sun Aug 28 20:01:56 2022
-
-Sprite instantiated
-Time stamp: Sun Aug 28 20:01:56 2022
-
-audio loaded
-Time stamp: Sun Aug 28 20:01:57 2022
-
-played
-Time stamp: Sun Aug 28 20:01:57 2022
+Time stamp: Wed Aug 31 21:58:25 2022
 
 GUI exited
-Time stamp: Sun Aug 28 20:01:58 2022
+Time stamp: Wed Aug 31 21:58:29 2022
 
 Sprite Destroyed
-Time stamp: Sun Aug 28 20:01:58 2022
-
-Sprite Destroyed
-Time stamp: Sun Aug 28 20:01:58 2022
+Time stamp: Wed Aug 31 21:58:29 2022
 
 game closed.
-Time stamp: Sun Aug 28 20:01:58 2022
+Time stamp: Wed Aug 31 21:58:29 2022
 

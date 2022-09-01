@@ -215,19 +215,19 @@ void InitializeWindow(Inputs* inputs)
 
     //Cleanup
 
-        CloseGui();
+        CloseGui();	
 
         SDL_DestroyWindow(m_window);
         SDL_GL_DeleteContext(m_gl_context);
 
-        delete game;
-        delete m_window; 
-        delete m_gl_context;   	
-
-        Log::write("window closed");
-
         IMG_Quit();
         SDL_Quit();
+
+        delete game;
+        delete m_window; 
+        delete m_gl_context;   
+        
+        Log::write("window closed");
     }
 }
 

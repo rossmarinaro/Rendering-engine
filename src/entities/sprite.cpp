@@ -16,9 +16,15 @@ void Sprite::Animate(std::string animKey)
         case walk:
 
             //Go to next frame 	/ Cycle animation
-                ++mAnimFrame;
-                if( mAnimFrame / 3 >= m_WALKING_ANIMATION_FRAMES )
-                    mAnimFrame = 0;
+                // ++m_animFrame;
+                // if ( m_animFrame / 3 >= 4 )
+                //     m_animFrame = 0;
+
+
+            // m_currentFrameX = frs[0][0],
+			// m_currentFrameY = frs[0][1],
+			// m_currentFrameWidth = frs[0][2],
+			// m_currentFrameHeight = frs[0][3];
         break;
     }
 };
@@ -35,83 +41,71 @@ void Sprite::Update(Inputs* inputs)
     
 
 
-    // if (inputs -> m_right == true)
-    // {
-    //     posX += 1;    
-    //     Animate("walk");
-    // }
-    // if (inputs -> m_left == true)
-    // {
-    //     posX -= 1;
-    //     Animate("walk");
-    // }
-    // if (inputs -> m_down == true)
-    // {
-    //     posY += 1; 
-    //     Animate("jump");
-    // }
-    // if (inputs -> m_up == true)
-    // {
-    //     posY -= 1;
-    //     Animate("jump"); 
-    // }
+    if (inputs -> m_right == true)
+    {
+        m_posX += 1;    
+        Animate("walk");
+    }
+    if (inputs -> m_left == true)
+    {
+        m_posX -= 1;
+        Animate("walk");
+    }
+    if (inputs -> m_down == true)
+    {
+        m_posY += 1; 
+        Animate("jump");
+    }
+    if (inputs -> m_up == true)
+    {
+        m_posY -= 1;
+        Animate("jump"); 
+    }
 
     // _render();
 
 };
 
-//render image as opengl texture
+//-----------------render image as opengl texture
 
 void Sprite::Render()
 {
-
     if (m_texture != NULL)
-        glTexImage2D(GL_TEXTURE_2D, 0, m_renderMode, m_texture->w, m_texture->h, 0, m_renderMode, GL_UNSIGNED_BYTE /* GL_UNSIGNED_SHORT_5_6_5 */, m_texture->pixels); 
+    {
 
-//full sheet
+        glPixelStorei(GL_UNPACK_ROW_LENGTH, m_texture->w);
+        glPixelStorei(GL_UNPACK_SKIP_PIXELS, m_currentFrameX);
+        glPixelStorei(GL_UNPACK_SKIP_ROWS, m_currentFrameY);
+        
+        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, m_currentFrameWidth, m_currentFrameHeight, 0, GL_RGBA, GL_UNSIGNED_BYTE, m_texture->pixels);
+        
+        glPixelStorei(GL_UNPACK_ROW_LENGTH, 0);
+        glPixelStorei(GL_UNPACK_SKIP_PIXELS, 0);
+        glPixelStorei(GL_UNPACK_SKIP_ROWS, 0);
+        
+        glBegin(GL_QUADS);
 
-    glBegin(GL_QUADS);
-        glTexCoord2f(0, 1); glVertex3f(m_posX, m_posY, 0);
-        glTexCoord2f(1, 1); glVertex3f(m_posX + m_srcWidth, m_posY, 0);
-        glTexCoord2f(1, 0); glVertex3f(m_posX + m_srcWidth, m_posY + m_srcHeight, 0);
-        glTexCoord2f(0, 0); glVertex3f(m_posX, m_posY + m_srcHeight, 0);
-    glEnd();
+            glTexCoord2f(0, 1); glVertex3f(m_posX, m_posY, 0);
+            glTexCoord2f(1, 1); glVertex3f(m_posX + m_srcWidth * m_scale, m_posY, 0);
+            glTexCoord2f(1, 0); glVertex3f(m_posX + m_srcWidth * m_scale, m_posY + m_srcHeight * m_scale, 0);
+            glTexCoord2f(0, 0); glVertex3f(m_posX, m_posY + m_srcHeight * m_scale, 0); 
 
-//full sheet w scale down
-
-    // glBegin(GL_QUADS);
-
-    //     glTexCoord2f(0, 1); glVertex3f(m_posX, m_posY, 0);
-    //     glTexCoord2f(1, 1); glVertex3f(m_posX + m_srcWidth * 0.196, m_posY, 0);
-    //     glTexCoord2f(1, 0); glVertex3f(m_posX + m_srcWidth * 0.196, m_posY + m_srcHeight * 0.25, 0);
-    //     glTexCoord2f(0, 0); glVertex3f(m_posX, m_posY + m_srcHeight * 0.25, 0);
-
-    // glEnd();
-
-
-
-//smthing m_frames
-
-    // glBegin(GL_QUADS);
-
-    //     glTexCoord2f(0, 0.1); glVertex3f(m_posX, m_posY, 0);
-    //     glTexCoord2f(1, 1); glVertex3f(m_posX + m_srcWidth, m_posY, 0);
-    //     glTexCoord2f(0.5, 0); glVertex3f(m_posX + m_srcWidth, m_posY + m_srcHeight, 0);
-    //     glTexCoord2f(0, 0); glVertex3f(m_posX, m_posY + m_srcHeight, 0);
-
-    // glEnd();
-
+        glEnd();
+    }
 
 }
 
 Sprite::Sprite(GLuint &id, float x, float y, const char* key[2])
 {
+    std::vector<int*> frs/* frs */ = Assets::Spritesheets::GenerateFrames(key[0]); 
+Log::integer(frs[1][2]);
+    m_filepath = key[1];
+    m_currentFrameX = frs[1][0];
+    m_currentFrameY = frs[1][1];
+    m_currentFrameWidth = frs[1][2];
+    m_currentFrameHeight = frs[1][3];
 
-    mFilepath = key[1];
-
-    std::vector<int*> frames = Assets::Spritesheets::GenerateFrames(key[0]);
-
-    _init( id, x, y, frames);
+    // _init(id, x, y);
 
         
     Log::write("Sprite instantiated");

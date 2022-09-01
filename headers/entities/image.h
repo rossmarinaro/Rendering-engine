@@ -11,26 +11,22 @@ class Image {
 
     public:       
 
-		int mX,
-			mY,
-			m_width,
-			m_height,
-			m_renderMode,
-			m_srcWidth = 1, 
-            m_srcHeight = 1;
+		int m_renderMode;
 
-		float m_posX, 
-              m_posY;
+		float m_posX, 	
+              m_posY,
+			  m_srcWidth = 1.0, 
+			  m_srcHeight = 1.0;
 
-		double mDegrees = 0; 
+		double m_degrees = 0; 
 
-		const char* mFilepath; 
+		const char* m_filepath; 
+		
 		SDL_Surface* m_texture;
-		std::vector<int*> m_frames;
 
-		void _init(GLuint &id, float x, float y, std::vector<int*> frames)
+		void _init(GLuint &id, float x, float y)
 		{
-			SDL_Surface* image = IMG_Load(mFilepath);
+			SDL_Surface* image = IMG_Load(m_filepath);
 
 			if (image == NULL) 
 				Log::error(SDL_GetError()); 
@@ -41,10 +37,8 @@ class Image {
 			//Get image dimensions and render
 
 				m_posX = x;
-				m_posY = y;	
-
+				m_posY = y;
 				m_texture = image;
-				m_frames = frames;
 
 			//render image as opengl texture
 			
@@ -60,8 +54,6 @@ class Image {
 
 				glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
 				glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-        		
-
 			}
 		}
 
@@ -78,8 +70,6 @@ class Image {
 		void _setBlendMode( SDL_BlendMode blending );
 		void _setAlpha(Uint8 alpha);
 	
-		int _getWidth() { return m_width; }
-		int _getHeight() { return m_height; }
 };
 
 
