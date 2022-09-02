@@ -28,7 +28,7 @@ namespace Assets {
             switch (resolveString(key))
             {
                 case swanky_velvet:
-                    return "assets/json/swanky_velvet.json";
+                    return "assets/json/anims/swanky_velvet.json";
 
             }
         }

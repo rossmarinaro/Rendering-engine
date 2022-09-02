@@ -2,78 +2,7 @@
 #include "../../headers/entities/sprite.h"
 #include "../../headers/resources/spritesheets.h"
 
-
-enum anims {
-    jump, 
-    walk,
-    idle
-};
-
-anims parseString(std::string const &string)
-{
-    if (string == "jump") return jump;
-    if (string == "walk") return walk;
-    if (string == "idle") return idle;
-}
-
-//-----------------------------------------------------------
-
-void Sprite::Animate(std::string animKey)
-{
-    switch (parseString(animKey))
-    {
-        case idle:
-
-        break;
-        case jump: 
-        
-        break;
-        case walk:
-
-            m_currentFrame++;
-    
-        break;
-    }
-}
-
-//---------------------------------------------------
-
-void Sprite::Update(Inputs* inputs)
-{
-    // Uint32 ticks = SDL_GetTicks();
-    // Uint32 seconds = ticks / 1000;
-    // Uint32 spriteFrame = seconds % 3;//4;          
-    // mSrcQuad.x = spriteFrame * 196; 
-    // if (mSrcQuad.x >= 784)
-    // 	mSrcQuad.x = 196;
-    
-
-    if (inputs->m_right == true)
-    {
-        m_posX += 0.1f;    
-        Animate("walk");
-    }
-    if (inputs->m_left == true)
-    {
-        m_posX -= 0.1f;
-        Animate("walk");
-    }
-    if (inputs->m_down == true)
-    {
-        m_posY += 0.1f; 
-        Animate("jump");
-    }
-    if (inputs->m_up == true)
-    {
-        m_posY -= 0.1f;
-        Animate("jump"); 
-    }
-
-    Render();
-
-}
-
-//-----------------render sprite
+using namespace Entities;
 
 void Sprite::Render()
 { 
@@ -111,18 +40,43 @@ Sprite::Sprite(GLuint &id, float x, float y, const char* key[2])
 {
     const char* jsonPath = Assets::Spritesheets::GetResource(key[0]);
 
-    std::ifstream file(jsonPath);
+    std::ifstream spritesheet(jsonPath);
 
-    m_resourceData = json::parse(file);
+    m_resourceData = json::parse(spritesheet);
     m_frames = m_resourceData["frames"].size() - 1;
     m_currentFrame = 0;
-    m_filepath = key[1];
-
     m_currentFrameY = m_resourceData["frames"][m_currentFrame]["y"];
     m_currentFrameWidth = m_resourceData["frames"][m_currentFrame]["w"];
     m_currentFrameHeight = m_resourceData["frames"][m_currentFrame]["h"]; 
 
-    _Init(id, x, y);
+    SDL_Surface* image = IMG_Load(key[1]);
+
+    if (image == NULL) 
+        Log::error(SDL_GetError()); 
+
+    else 
+    { 
+    //render image as opengl texture
+    
+        glBindTexture(GL_TEXTURE_2D, id);
+        
+        m_renderMode = GL_RGB;
+        
+        if (image->format->BytesPerPixel == 4) 
+        { 
+            m_renderMode = GL_RGBA; 
+            Log::write("rgba enabled"); 
+        }
+
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+
+    //Get image dimensions and render
+
+        m_posX = x;
+        m_posY = y;
+        m_texture = image;
+    }
 
     Log::write("Sprite instantiated");
 }
@@ -131,5 +85,6 @@ Sprite::Sprite(GLuint &id, float x, float y, const char* key[2])
 
 Sprite::~Sprite()
 {
+    SDL_FreeSurface(m_texture);
     Log::write("Sprite Destroyed");
 }

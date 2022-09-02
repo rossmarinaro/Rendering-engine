@@ -1,9 +1,16 @@
-	#pragma once
 
 	#include "../headers/app.h"
-	#include "../headers/entities/sprite.h"
 
+	
+	void Application::update(bool &isRunning)
+	{	
+		while( isRunning == true )
+		{			
 
+	
+
+		}
+	}
 
     Application::Application()
 	{
@@ -20,9 +27,8 @@
 		std::thread m_window_thread(&InitializeWindow, m_inputMgr); 
 		m_window_thread.join();
 
-												   
-		
-	};
+												
+	}
 
 	Application::~Application()
 	{
@@ -32,18 +38,5 @@
 		//std::terminate();
 
 		Log::write("Application terminated");
-	};
-
-
-
-//----------------------- update
-
-	void Application::update(bool &isRunning)
-	{	
-		while( isRunning == true )
-		{			
-
-	
-
-		}
 	}
+

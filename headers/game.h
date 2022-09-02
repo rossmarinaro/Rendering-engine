@@ -2,6 +2,9 @@
 
 #include "./window.h"
 
+#include "./entities/sprite.h"
+#include "./entities/player.h"
+
 //tmp
 	// int m_frame = 1;
 	// int mAnimFrame = 0; 
@@ -13,9 +16,6 @@ class Game {
     
 public: 
 
-    static Sprite* background;
-    static Sprite* sprite;
-    static SDL_Rect* currentClip;
     static Inputs* inputs;
 
     static void Update(Inputs* inputs);
