@@ -16,6 +16,7 @@ anims parseString(string const &string)
     if (string == "idle") return idle;
 }
 
+ 
 //-----------------------------------------------------------
 
 void Player::Animate(string animKey)
@@ -69,9 +70,3 @@ void Player::Update(Inputs* inputs)
 
 }
 
-
-// Player::Player(GLuint &id, float x, float y, const char* key[2])
-// {
-
-// }
-	   

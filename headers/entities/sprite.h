@@ -6,7 +6,7 @@
 
 #include "../window.h"
 
-#include "../../vendors/nlohmann/json.hpp"
+#include "../../vendors/nlohmann/json.hpp" 
 
 using string = std::string;
 using json = nlohmann::json;
@@ -19,6 +19,7 @@ namespace Entities {
     private:
 
 		int m_frames;
+		bool m_isSpritesheet = false;
 
 		std::int64_t 
 			m_currentFrameX,
@@ -27,7 +28,6 @@ namespace Entities {
 			m_currentFrameHeight;
 
 		json m_resourceData;
-
 		GLuint m_inst;
 
 		void _setColor(Uint8 red, Uint8 green, Uint8 blue);
@@ -43,13 +43,14 @@ namespace Entities {
               m_posY,
 			  m_srcWidth = 1.0, 
 			  m_srcHeight = 1.0,
-			  m_scaleX = 0.425f,
-			  m_scaleY = 0.85f;
+			  m_scaleX = 1.0,
+			  m_scaleY = 1.0;
 
 		double m_degrees = 0; 
 
 		SDL_Surface* m_texture;
 		void Render();
+		void SetScale(float scaleX, float scaleY);
 
        	Sprite(GLuint &id, float x, float y, const char* key[2]);
 	   ~Sprite();
