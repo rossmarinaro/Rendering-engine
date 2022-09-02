@@ -10,7 +10,6 @@ namespace Assets {
     namespace Spritesheets {
 
 
-
         enum Options {
             menu,
             swanky_velvet
@@ -34,7 +33,7 @@ namespace Assets {
             }
         }
 
-        
+
     }
 }
 

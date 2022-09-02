@@ -20,7 +20,7 @@ void Game::Update(Inputs* inputs)
 {
 
     //m_background->Render();//Update(inputs);
-    m_sprite->Render();//Update(inputs);
+    m_sprite->Update(inputs);
 
 }
 

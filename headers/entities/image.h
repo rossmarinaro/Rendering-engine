@@ -25,7 +25,7 @@ class Image {
 		const char* m_filepath; 
 		SDL_Surface* m_texture;
 
-		void _init(GLuint &id, float x, float y)
+		void _Init(GLuint &id, float x, float y)
 		{
 			SDL_Surface* image = IMG_Load(m_filepath);
 

@@ -2,39 +2,27 @@
 
 #include "./image.h"
 
-///------------------- Sprite 
-
+using json = nlohmann::json;
 
 class Sprite : public Image {
 
     private:
 
-	//anims enumerations / parsing
+		int m_frames,
+			m_currentFrame;
 
-		enum anims {
-			jump, 
-			walk,
-			idle
-		};
+		std::int64_t 
+			m_currentFrameX,
+			m_currentFrameY,
+			m_currentFrameWidth,
+			m_currentFrameHeight;
 
-		anims parseString(std::string const &string)
-		{
-			if (string == "jump") return jump;
-			if (string == "walk") return walk;
-			if (string == "idle") return idle;
-		}
+		json m_resourceData;
 
 	public:  
 
-		std::int64_t
-				m_frame = 1, 
-				m_currentFrameX,
-				m_currentFrameY,
-				m_currentFrameWidth,
-				m_currentFrameHeight;
-		
-		float m_scaleX = 0.5f,
-			  m_scaleY = 0.5f;
+		float m_scaleX = 0.425f,
+			  m_scaleY = 0.85f;
 
 		void Render();
 		void Update(Inputs* inputs);

@@ -2,7 +2,21 @@
 #include "../../headers/entities/sprite.h"
 #include "../../headers/resources/spritesheets.h"
 
-using json = nlohmann::json;
+
+enum anims {
+    jump, 
+    walk,
+    idle
+};
+
+anims parseString(std::string const &string)
+{
+    if (string == "jump") return jump;
+    if (string == "walk") return walk;
+    if (string == "idle") return idle;
+}
+
+//-----------------------------------------------------------
 
 void Sprite::Animate(std::string animKey)
 {
@@ -16,20 +30,13 @@ void Sprite::Animate(std::string animKey)
         break;
         case walk:
 
-            //Go to next frame 	/ Cycle animation
-                // ++m_animFrame;
-                // if ( m_animFrame / 3 >= 4 )
-                //     m_animFrame = 0;
-
-
-            // m_currentFrameX = frs[0][0],
-			// m_currentFrameY = frs[0][1],
-			// m_currentFrameWidth = frs[0][2],
-			// m_currentFrameHeight = frs[0][3];
+            m_currentFrame++;
+    
         break;
     }
-};
+}
 
+//---------------------------------------------------
 
 void Sprite::Update(Inputs* inputs)
 {
@@ -41,31 +48,30 @@ void Sprite::Update(Inputs* inputs)
     // 	mSrcQuad.x = 196;
     
 
-
-    if (inputs -> m_right == true)
+    if (inputs->m_right == true)
     {
-        m_posX += 1;    
+        m_posX += 0.1f;    
         Animate("walk");
     }
-    if (inputs -> m_left == true)
+    if (inputs->m_left == true)
     {
-        m_posX -= 1;
+        m_posX -= 0.1f;
         Animate("walk");
     }
-    if (inputs -> m_down == true)
+    if (inputs->m_down == true)
     {
-        m_posY += 1; 
+        m_posY += 0.1f; 
         Animate("jump");
     }
-    if (inputs -> m_up == true)
+    if (inputs->m_up == true)
     {
-        m_posY -= 1;
+        m_posY -= 0.1f;
         Animate("jump"); 
     }
 
-    // Render();
+    Render();
 
-};
+}
 
 //-----------------render sprite
 
@@ -74,9 +80,11 @@ void Sprite::Render()
 
     if (m_texture != NULL)
     {
+        if (m_currentFrame > m_frames)
+            m_currentFrame = 0;
 
         glPixelStorei(GL_UNPACK_ROW_LENGTH, m_texture->w);
-        glPixelStorei(GL_UNPACK_SKIP_PIXELS, m_currentFrameX);
+        glPixelStorei(GL_UNPACK_SKIP_PIXELS, m_resourceData["frames"][m_currentFrame]["x"]);
         glPixelStorei(GL_UNPACK_SKIP_ROWS, m_currentFrameY);
 
         glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, m_currentFrameWidth, m_currentFrameHeight, 0, GL_RGBA, GL_UNSIGNED_BYTE, m_texture->pixels);
@@ -97,25 +105,31 @@ void Sprite::Render()
 
 }
 
+//-----------------------------------------------------------
+
 Sprite::Sprite(GLuint &id, float x, float y, const char* key[2])
 {
     const char* jsonPath = Assets::Spritesheets::GetResource(key[0]);
 
     std::ifstream file(jsonPath);
-    json data = json::parse(file);
 
+    m_resourceData = json::parse(file);
+    m_frames = m_resourceData["frames"].size() - 1;
+    m_currentFrame = 0;
     m_filepath = key[1];
-    m_currentFrameX = data["frame"]["x"];
-    m_currentFrameY = data["frame"]["y"];
-    m_currentFrameWidth = data["frame"]["w"];
-    m_currentFrameHeight = data["frame"]["h"]; 
 
-    _init(id, x, y);
+    m_currentFrameY = m_resourceData["frames"][m_currentFrame]["y"];
+    m_currentFrameWidth = m_resourceData["frames"][m_currentFrame]["w"];
+    m_currentFrameHeight = m_resourceData["frames"][m_currentFrame]["h"]; 
+
+    _Init(id, x, y);
 
     Log::write("Sprite instantiated");
-};
+}
+
+//---------------------------------------------------
 
 Sprite::~Sprite()
 {
     Log::write("Sprite Destroyed");
-};
+}

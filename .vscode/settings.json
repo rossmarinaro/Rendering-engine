@@ -45,6 +45,14 @@
         "chrono": "cpp",
         "ratio": "cpp",
         "thread": "cpp",
-        "cstring": "cpp"
+        "cstring": "cpp",
+        "any": "cpp",
+        "codecvt": "cpp",
+        "forward_list": "cpp",
+        "functional": "cpp",
+        "iterator": "cpp",
+        "numeric": "cpp",
+        "iomanip": "cpp",
+        "valarray": "cpp"
     }
 }
