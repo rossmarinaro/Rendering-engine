@@ -5,7 +5,7 @@
 OBJS = src/main.cpp src/app.cpp src/entities/sprite.cpp src/entities/player.cpp src/audio.cpp src/window.cpp src/game.cpp vendors/imgui/imgui.cpp vendors/imgui/imgui_demo.cpp vendors/imgui/imgui_widgets.cpp vendors/imgui/imgui_tables.cpp vendors/imgui/imgui_draw.cpp vendors/imgui/imgui_impl_sdl.cpp vendors/imgui/imgui_impl_opengl3.cpp 
 
 #CC specifies which compiler we're using
-CC = g++ #-D GLEW_STATIC
+CC = g++ -std=c++17 #-D GLEW_STATIC
 
 #INCLUDE_PATHS specifies the additional include paths we'll need
 INCLUDE_PATHS = -IC:\libs\sdl_32\include\SDL2 -IC:\libs\glew-2.2.0-win32\glew-2.2.0\include\GL 

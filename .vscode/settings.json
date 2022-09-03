@@ -53,6 +53,15 @@
         "iterator": "cpp",
         "numeric": "cpp",
         "iomanip": "cpp",
-        "valarray": "cpp"
+        "valarray": "cpp",
+        "bit": "cpp",
+        "compare": "cpp",
+        "concepts": "cpp",
+        "set": "cpp",
+        "random": "cpp",
+        "numbers": "cpp",
+        "ranges": "cpp",
+        "semaphore": "cpp",
+        "stop_token": "cpp"
     }
 }

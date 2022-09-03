@@ -3,7 +3,7 @@
 #include <map>
 
 #include "../../vendors/nlohmann/json.hpp"
-
+#include "../../vendors/tileson/tileson.hpp"
 
 using string = std::string;
 using json = nlohmann::json; 
@@ -11,21 +11,13 @@ using json = nlohmann::json;
 
 namespace Assets {
 
-    std::ifstream file("assets/json/preload/main.json");
-    json data = json::parse(file);
-
-   
 
     namespace Images {
 
-        string __menu = data["assets"][0]["menu"]; 
-        string __swanky_velvet = data["assets"][1]["swanky_velvet"]; 
 
-        const char* _menu = __menu.c_str();
-        const char* _swanky_velvet = __swanky_velvet.c_str();
-
-        const char* menu[2] = {"menu", _menu};
-        const char* swanky_velvet[2] = {"swanky_velvet", _swanky_velvet};
+        const char* menu[2] = { "menu", "assets/images/menu.png" };
+        const char* swanky_velvet[2] = { "swanky_velvet", "assets/images/swanky_velvet.png" };
+            
         //std::map<const char*, string> asset {{"menu", _menu}};
     }
 }
