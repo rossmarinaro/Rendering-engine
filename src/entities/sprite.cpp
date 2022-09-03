@@ -57,7 +57,7 @@ Sprite::Sprite(GLuint &id, float x, float y, const char* key[2])
 {
     const char* jsonPath = Assets::Spritesheets::GetResource(key[0]);
     
-    if (jsonPath != "NO SPRITESHEET")
+    if (jsonPath != 0)
     {
         std::ifstream spritesheet(jsonPath);
         m_currentFrame = 0;

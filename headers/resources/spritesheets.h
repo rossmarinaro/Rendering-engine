@@ -29,10 +29,11 @@ namespace Assets {
             {
                 case swanky_velvet:
                     return "assets/json/anims/swanky_velvet.json";
-                case menu:
-                    return "NO SPRITESHEET";
+
+                //--------- no spritesheet
+                
                 default:
-                    return "NO SPRITESHEET";
+                    return 0;
 
             }
         }

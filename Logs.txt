@@ -1,366 +1,54 @@
 audio initialized
-Time stamp: Fri Sep 02 17:55:04 2022
+Time stamp: Fri Sep 02 18:45:12 2022
 
 window initialized
-Time stamp: Fri Sep 02 17:55:04 2022
+Time stamp: Fri Sep 02 18:45:12 2022
 
 Sprite instantiated
-Time stamp: Fri Sep 02 17:55:04 2022
+Time stamp: Fri Sep 02 18:45:12 2022
 
 rgba enabled
-Time stamp: Fri Sep 02 17:55:04 2022
+Time stamp: Fri Sep 02 18:45:12 2022
 
 Sprite instantiated
-Time stamp: Fri Sep 02 17:55:04 2022
-
-audio initialized
-Time stamp: Fri Sep 02 17:58:15 2022
-
-window initialized
-Time stamp: Fri Sep 02 17:58:15 2022
-
-Sprite instantiated
-Time stamp: Fri Sep 02 17:58:15 2022
-
-rgba enabled
-Time stamp: Fri Sep 02 17:58:15 2022
-
-Sprite instantiated
-Time stamp: Fri Sep 02 17:58:15 2022
-
-audio initialized
-Time stamp: Fri Sep 02 17:59:18 2022
-
-window initialized
-Time stamp: Fri Sep 02 17:59:18 2022
-
-Sprite instantiated
-Time stamp: Fri Sep 02 17:59:18 2022
-
-rgba enabled
-Time stamp: Fri Sep 02 17:59:18 2022
-
-Sprite instantiated
-Time stamp: Fri Sep 02 17:59:18 2022
-
-audio initialized
-Time stamp: Fri Sep 02 18:04:57 2022
-
-window initialized
-Time stamp: Fri Sep 02 18:04:57 2022
-
-Sprite instantiated
-Time stamp: Fri Sep 02 18:04:58 2022
-
-rgba enabled
-Time stamp: Fri Sep 02 18:04:58 2022
-
-Sprite instantiated
-Time stamp: Fri Sep 02 18:04:58 2022
-
-audio initialized
-Time stamp: Fri Sep 02 18:07:06 2022
-
-window initialized
-Time stamp: Fri Sep 02 18:07:06 2022
-
-Sprite instantiated
-Time stamp: Fri Sep 02 18:07:06 2022
-
-rgba enabled
-Time stamp: Fri Sep 02 18:07:06 2022
-
-Sprite instantiated
-Time stamp: Fri Sep 02 18:07:06 2022
-
-audio initialized
-Time stamp: Fri Sep 02 18:08:06 2022
-
-window initialized
-Time stamp: Fri Sep 02 18:08:06 2022
-
-Sprite instantiated
-Time stamp: Fri Sep 02 18:08:06 2022
-
-rgba enabled
-Time stamp: Fri Sep 02 18:08:06 2022
-
-Sprite instantiated
-Time stamp: Fri Sep 02 18:08:06 2022
-
-audio initialized
-Time stamp: Fri Sep 02 18:08:46 2022
-
-window initialized
-Time stamp: Fri Sep 02 18:08:46 2022
-
-Sprite instantiated
-Time stamp: Fri Sep 02 18:08:47 2022
-
-rgba enabled
-Time stamp: Fri Sep 02 18:08:47 2022
-
-Sprite instantiated
-Time stamp: Fri Sep 02 18:08:47 2022
-
-audio initialized
-Time stamp: Fri Sep 02 18:10:40 2022
-
-window initialized
-Time stamp: Fri Sep 02 18:10:40 2022
-
-Sprite instantiated
-Time stamp: Fri Sep 02 18:10:40 2022
-
-rgba enabled
-Time stamp: Fri Sep 02 18:10:40 2022
-
-Sprite instantiated
-Time stamp: Fri Sep 02 18:10:40 2022
-
-audio initialized
-Time stamp: Fri Sep 02 18:11:19 2022
-
-window initialized
-Time stamp: Fri Sep 02 18:11:19 2022
-
-Sprite instantiated
-Time stamp: Fri Sep 02 18:11:19 2022
-
-rgba enabled
-Time stamp: Fri Sep 02 18:11:19 2022
-
-Sprite instantiated
-Time stamp: Fri Sep 02 18:11:19 2022
+Time stamp: Fri Sep 02 18:45:12 2022
 
 GUI exited
-Time stamp: Fri Sep 02 18:11:24 2022
+Time stamp: Fri Sep 02 18:45:23 2022
 
 Sprite Destroyed
-Time stamp: Fri Sep 02 18:11:24 2022
+Time stamp: Fri Sep 02 18:45:23 2022
 
 Sprite Destroyed
-Time stamp: Fri Sep 02 18:11:24 2022
+Time stamp: Fri Sep 02 18:45:23 2022
 
 game closed.
-Time stamp: Fri Sep 02 18:11:24 2022
+Time stamp: Fri Sep 02 18:45:23 2022
 
 audio initialized
-Time stamp: Fri Sep 02 18:14:02 2022
+Time stamp: Fri Sep 02 22:10:59 2022
 
 window initialized
-Time stamp: Fri Sep 02 18:14:02 2022
+Time stamp: Fri Sep 02 22:10:59 2022
 
 Sprite instantiated
-Time stamp: Fri Sep 02 18:14:02 2022
+Time stamp: Fri Sep 02 22:10:59 2022
 
 rgba enabled
-Time stamp: Fri Sep 02 18:14:02 2022
+Time stamp: Fri Sep 02 22:10:59 2022
 
 Sprite instantiated
-Time stamp: Fri Sep 02 18:14:02 2022
+Time stamp: Fri Sep 02 22:10:59 2022
 
 GUI exited
-Time stamp: Fri Sep 02 18:14:10 2022
+Time stamp: Fri Sep 02 22:11:04 2022
 
 Sprite Destroyed
-Time stamp: Fri Sep 02 18:14:11 2022
+Time stamp: Fri Sep 02 22:11:05 2022
 
 Sprite Destroyed
-Time stamp: Fri Sep 02 18:14:11 2022
+Time stamp: Fri Sep 02 22:11:05 2022
 
 game closed.
-Time stamp: Fri Sep 02 18:14:11 2022
-
-audio initialized
-Time stamp: Fri Sep 02 18:18:39 2022
-
-window initialized
-Time stamp: Fri Sep 02 18:18:39 2022
-
-Sprite instantiated
-Time stamp: Fri Sep 02 18:18:40 2022
-
-rgba enabled
-Time stamp: Fri Sep 02 18:18:40 2022
-
-Sprite instantiated
-Time stamp: Fri Sep 02 18:18:40 2022
-
-GUI exited
-Time stamp: Fri Sep 02 18:19:25 2022
-
-Sprite Destroyed
-Time stamp: Fri Sep 02 18:19:25 2022
-
-Sprite Destroyed
-Time stamp: Fri Sep 02 18:19:25 2022
-
-game closed.
-Time stamp: Fri Sep 02 18:19:25 2022
-
-audio initialized
-Time stamp: Fri Sep 02 18:20:14 2022
-
-window initialized
-Time stamp: Fri Sep 02 18:20:14 2022
-
-Sprite instantiated
-Time stamp: Fri Sep 02 18:20:14 2022
-
-rgba enabled
-Time stamp: Fri Sep 02 18:20:14 2022
-
-Sprite instantiated
-Time stamp: Fri Sep 02 18:20:14 2022
-
-audio initialized
-Time stamp: Fri Sep 02 18:23:20 2022
-
-window initialized
-Time stamp: Fri Sep 02 18:23:20 2022
-
-Sprite instantiated
-Time stamp: Fri Sep 02 18:23:20 2022
-
-rgba enabled
-Time stamp: Fri Sep 02 18:23:20 2022
-
-Sprite instantiated
-Time stamp: Fri Sep 02 18:23:20 2022
-
-audio initialized
-Time stamp: Fri Sep 02 18:25:50 2022
-
-window initialized
-Time stamp: Fri Sep 02 18:25:50 2022
-
-Sprite instantiated
-Time stamp: Fri Sep 02 18:25:50 2022
-
-rgba enabled
-Time stamp: Fri Sep 02 18:25:50 2022
-
-Sprite instantiated
-Time stamp: Fri Sep 02 18:25:50 2022
-
-GUI exited
-Time stamp: Fri Sep 02 18:25:59 2022
-
-Sprite Destroyed
-Time stamp: Fri Sep 02 18:25:59 2022
-
-Sprite Destroyed
-Time stamp: Fri Sep 02 18:25:59 2022
-
-game closed.
-Time stamp: Fri Sep 02 18:25:59 2022
-
-audio initialized
-Time stamp: Fri Sep 02 18:26:28 2022
-
-window initialized
-Time stamp: Fri Sep 02 18:26:28 2022
-
-Sprite instantiated
-Time stamp: Fri Sep 02 18:26:29 2022
-
-rgba enabled
-Time stamp: Fri Sep 02 18:26:29 2022
-
-Sprite instantiated
-Time stamp: Fri Sep 02 18:26:29 2022
-
-GUI exited
-Time stamp: Fri Sep 02 18:26:42 2022
-
-Sprite Destroyed
-Time stamp: Fri Sep 02 18:26:42 2022
-
-Sprite Destroyed
-Time stamp: Fri Sep 02 18:26:42 2022
-
-game closed.
-Time stamp: Fri Sep 02 18:26:42 2022
-
-audio initialized
-Time stamp: Fri Sep 02 18:39:52 2022
-
-window initialized
-Time stamp: Fri Sep 02 18:39:52 2022
-
-Sprite instantiated
-Time stamp: Fri Sep 02 18:39:53 2022
-
-rgba enabled
-Time stamp: Fri Sep 02 18:39:53 2022
-
-Sprite instantiated
-Time stamp: Fri Sep 02 18:39:53 2022
-
-GUI exited
-Time stamp: Fri Sep 02 18:39:58 2022
-
-Sprite Destroyed
-Time stamp: Fri Sep 02 18:39:58 2022
-
-Sprite Destroyed
-Time stamp: Fri Sep 02 18:39:58 2022
-
-game closed.
-Time stamp: Fri Sep 02 18:39:58 2022
-
-audio initialized
-Time stamp: Fri Sep 02 18:40:48 2022
-
-window initialized
-Time stamp: Fri Sep 02 18:40:48 2022
-
-Sprite instantiated
-Time stamp: Fri Sep 02 18:40:49 2022
-
-rgba enabled
-Time stamp: Fri Sep 02 18:40:49 2022
-
-Sprite instantiated
-Time stamp: Fri Sep 02 18:40:49 2022
-
-GUI exited
-Time stamp: Fri Sep 02 18:41:09 2022
-
-Sprite Destroyed
-Time stamp: Fri Sep 02 18:41:09 2022
-
-Sprite Destroyed
-Time stamp: Fri Sep 02 18:41:09 2022
-
-game closed.
-Time stamp: Fri Sep 02 18:41:09 2022
-
-audio initialized
-Time stamp: Fri Sep 02 18:41:56 2022
-
-window initialized
-Time stamp: Fri Sep 02 18:41:56 2022
-
-Sprite instantiated
-Time stamp: Fri Sep 02 18:41:56 2022
-
-rgba enabled
-Time stamp: Fri Sep 02 18:41:56 2022
-
-Sprite instantiated
-Time stamp: Fri Sep 02 18:41:56 2022
-
-GUI exited
-Time stamp: Fri Sep 02 18:42:07 2022
-
-Sprite Destroyed
-Time stamp: Fri Sep 02 18:42:07 2022
-
-Sprite Destroyed
-Time stamp: Fri Sep 02 18:42:07 2022
-
-game closed.
-Time stamp: Fri Sep 02 18:42:07 2022
+Time stamp: Fri Sep 02 22:11:05 2022
 
