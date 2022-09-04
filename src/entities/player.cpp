@@ -1,5 +1,5 @@
-//#include "../../headers/entities/player.h"
-#include "../../headers/entities/sprite.h"
+
+#include "../../headers/entity.h"
 
 using namespace Entities;
 

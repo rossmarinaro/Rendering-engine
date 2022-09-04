@@ -1,7 +1,8 @@
 
 #pragma once
 
-#include "./entities/sprite.h"
+#include "./entity.h"
+#include "./game.h"
 
 class MapManager {
 
@@ -11,7 +12,8 @@ class MapManager {
     public:
 
         Entities::TileSprite* m_ts;
-        MapManager(GLuint textures[]);
+        MapManager(GLuint &textureID, AssetManager* assets);
         ~MapManager() = default;
 
 };
+

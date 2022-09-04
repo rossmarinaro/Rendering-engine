@@ -1,41 +1,45 @@
 
 #include "../headers/game.h"
-#include "../headers/tilemap.h"
+#include "../headers/resources/assets.h"
 
-Entities::Sprite* background;
-Entities::Player* player;
-MapManager* map;
-
+Sprite* background;
+Player* player;
+static std::vector<Sprite*> currentEntities;
 
 Game::Game(Inputs* inputs, GLuint textures[]) 
 {
- 
 
-    //MapManager* map = new MapManager(textures);
+    AssetManager* m_assMgr = new AssetManager();
+    MapManager* m_mapMgr = new MapManager(textures[0], m_assMgr);
 
-    //background = new Entities::Sprite(textures[0], -0.5, -0.5, Assets::Images::menu);
+    background = new Sprite(textures[1], -0.5, -0.5, m_assMgr->menu);
+    player = new Player(textures[2], -0.3, -0.3, m_assMgr->swanky_velvet);
+    player->SetScale(0.325f, 0.75f);
 
-    //player = new Entities::Player(textures[1], -0.3, -0.3, Assets::Images::swanky_velvet);
-    //player->SetScale(0.325f, 0.75f);
-
+    currentEntities.push_back(background);
+    currentEntities.push_back(player);
 }
 
 
 void Game::Update(Inputs* inputs)
 {
-
-    //background->Render();
-    //player->Update(inputs);
-    //map->m_ts->Render();
+    for (auto &ent : currentEntities)
+    {
+        Log::write(ent);
+        ent == player ? 
+            player->Update(inputs) : ent->Render();
+    }
+    
 }
 
 Game::~Game()
 {
+    for (auto &ent : currentEntities)
+        delete ent;
 
-    //delete player;
-    //delete background;
-    //delete ts;
-    delete map;
+    delete m_mapMgr;
+    delete m_assMgr;   
+    
     Log::write("game closed.");
 }
 

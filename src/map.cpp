@@ -1,13 +1,13 @@
+#include "../headers/game.h"
+#include "../headers/logs.h"
 #include "../headers/tilemap.h"
+
 #include "../vendors/nlohmann/json.hpp"
 #include "../vendors/tileson/tileson.hpp" 
-#include "../headers/resources/assets.h"
-#include "./logs.h"
-
 
 using json = nlohmann::json;
 
-MapManager::MapManager(GLuint textures[])
+MapManager::MapManager(GLuint &textureID, AssetManager* assets)
 {
     tson::Tileson t;
     std::unique_ptr<tson::Map> map = t.parse("assets/json/preload/maps/cave.json"/* tson_files::_ULTIMATE_TEST_JSON, tson_files::_ULTIMATE_TEST_JSON_SIZE */);
@@ -101,14 +101,14 @@ MapManager::MapManager(GLuint textures[])
                 int sizeX = 10, 
                     sizeY = 10;
 
-                float r = 0.1;
+                float r = 0.5;
 
             // for (int y = 0; y < sizeY; y++)
                 //{
                     for (int x = 0; x < sizeX; x++)
                     {
                         //AddTile(atoi(&tile), x * 32, y * 32);
-                        m_ts = new Entities::TileSprite(textures[0], 1, 0 - r, 0 - r, Assets::Images::brick);
+                        m_ts = new Entities::TileSprite(textureID, 1, 0 - r, 0 - r, assets->brick);
                         r += 0.1f;
                     }
                 //}

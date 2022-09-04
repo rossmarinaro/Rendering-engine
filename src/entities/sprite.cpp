@@ -1,5 +1,5 @@
 
-#include "../../headers/entities/sprite.h"
+#include "../../headers/entity.h"
 #include "../../headers/resources/spritesheets.h"
 
 using namespace Entities;

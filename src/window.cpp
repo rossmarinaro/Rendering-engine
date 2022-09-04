@@ -1,14 +1,5 @@
 #include "../headers/window.h"
 
-
-SDL_Window* m_window; 
-SDL_GLContext m_gl_context;
-SDL_Renderer* m_renderer;
-	
-GLuint TextureID[3];
-
-ImGuiIO io;
-
 bool isRunning = true,
      show_demo_window = true,
      show_another_window = false;
@@ -16,11 +7,16 @@ bool isRunning = true,
 static const int SCREEN_WIDTH = 640;
 static const int SCREEN_HEIGHT = 480; 
 
+SDL_Window* window; 
+SDL_GLContext context;
+SDL_Renderer* renderer;
+
+GLuint TextureID[3];
+ImGuiIO io;
 ImVec4 clear_color;
 
-//-------------------------------------
 
-
+ 
 void LaunchGui(const char* glsl_version, Inputs* inputs, SDL_Event event)
 {
     // Load Fonts
@@ -59,7 +55,7 @@ void LaunchGui(const char* glsl_version, Inputs* inputs, SDL_Event event)
 
 // Setup Platform/Renderer backends
 
-    ImGui_ImplSDL2_InitForOpenGL(m_window, m_gl_context);
+    ImGui_ImplSDL2_InitForOpenGL(window, context);
     ImGui_ImplOpenGL3_Init(glsl_version);
 
     clear_color = ImVec4(0.55f, 0.25f, 0.60f, 1.00f);//ImVec4(255 / 255.0f, 170 / 255.0f, 7 / 255.0f, 1.00f);
@@ -151,7 +147,7 @@ bool CloseGui()
 void InitializeWindow(Inputs* inputs)
 {
 
-   // SDL_Window* m_window;
+   // SDL_Window* window;
 
     if(SDL_Init( SDL_INIT_EVERYTHING) < 0) 
         Log::error(SDL_GetError());
@@ -193,11 +189,11 @@ void InitializeWindow(Inputs* inputs)
 
             SDL_WindowFlags window_flags = (SDL_WindowFlags)(SDL_WINDOW_OPENGL | SDL_WINDOW_RESIZABLE | SDL_WINDOW_ALLOW_HIGHDPI);
             
-            m_window = SDL_CreateWindow("Spaghet about it!", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 1280, 720, window_flags);
-            m_gl_context = SDL_GL_CreateContext(m_window);
-            m_renderer = SDL_CreateRenderer( m_window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC );
+            window = SDL_CreateWindow("Spaghet about it!", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 1280, 720, window_flags);
+            context = SDL_GL_CreateContext(window);
+            renderer = SDL_CreateRenderer( window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC );
 
-            SDL_GL_MakeCurrent(m_window, m_gl_context);
+            SDL_GL_MakeCurrent(window, context);
             SDL_GL_SetSwapInterval(1); // Enable vsync
 
             glEnable(GL_TEXTURE_2D);
@@ -223,7 +219,7 @@ void InitializeWindow(Inputs* inputs)
             {
                 while (SDL_PollEvent(&event))
                 {
-                    bool res = inputs->pollInput(event, m_window);
+                    bool res = inputs->pollInput(event, window);
 
                     if (res == false)
                         isRunning = false;
@@ -231,7 +227,7 @@ void InitializeWindow(Inputs* inputs)
                     GuiPreUpdate(event);
                     game->Update(inputs);
                     RenderGui();
-                    SDL_GL_SwapWindow(m_window);  
+                    SDL_GL_SwapWindow(window);  
                 }
                         
             }
@@ -240,16 +236,16 @@ void InitializeWindow(Inputs* inputs)
 
         CloseGui();	
 
-        SDL_DestroyWindow(m_window);
-        SDL_GL_DeleteContext(m_gl_context);
+        SDL_DestroyWindow(window);
+        SDL_GL_DeleteContext(context);
 
         //SDL_Delay( 2000 );
         IMG_Quit();
         SDL_Quit();
 
         delete game;
-        delete m_window; 
-        delete m_gl_context;   
+        delete window; 
+        delete context;   
         
         Log::write("window closed");
     }
