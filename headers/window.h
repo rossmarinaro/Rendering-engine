@@ -17,7 +17,6 @@
 #include <SDL_opengl.h>
 #endif
 
-#include "./app.h"
 #include "./inputs.h"
 #include "./logs.h"
 #include "./game.h"

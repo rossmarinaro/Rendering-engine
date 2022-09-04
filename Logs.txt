@@ -1,0 +1,399 @@
+audio initialized
+Time stamp: Sun Sep 04 14:11:50 2022
+
+window initialized
+Time stamp: Sun Sep 04 14:11:50 2022
+
+rgba enabled
+Time stamp: Sun Sep 04 14:11:50 2022
+
+Sprite instantiated
+Time stamp: Sun Sep 04 14:11:50 2022
+
+X:
+Time stamp: Sun Sep 04 14:11:50 2022
+
+-0.1
+Time stamp: Sun Sep 04 14:11:50 2022
+
+rgba enabled
+Time stamp: Sun Sep 04 14:11:50 2022
+
+Sprite instantiated
+Time stamp: Sun Sep 04 14:11:50 2022
+
+X:
+Time stamp: Sun Sep 04 14:11:50 2022
+
+-0.2
+Time stamp: Sun Sep 04 14:11:50 2022
+
+rgba enabled
+Time stamp: Sun Sep 04 14:11:50 2022
+
+Sprite instantiated
+Time stamp: Sun Sep 04 14:11:50 2022
+
+X:
+Time stamp: Sun Sep 04 14:11:50 2022
+
+-0.3
+Time stamp: Sun Sep 04 14:11:50 2022
+
+rgba enabled
+Time stamp: Sun Sep 04 14:11:50 2022
+
+Sprite instantiated
+Time stamp: Sun Sep 04 14:11:50 2022
+
+X:
+Time stamp: Sun Sep 04 14:11:50 2022
+
+-0.4
+Time stamp: Sun Sep 04 14:11:50 2022
+
+rgba enabled
+Time stamp: Sun Sep 04 14:11:50 2022
+
+Sprite instantiated
+Time stamp: Sun Sep 04 14:11:50 2022
+
+X:
+Time stamp: Sun Sep 04 14:11:50 2022
+
+-0.5
+Time stamp: Sun Sep 04 14:11:50 2022
+
+rgba enabled
+Time stamp: Sun Sep 04 14:11:50 2022
+
+Sprite instantiated
+Time stamp: Sun Sep 04 14:11:50 2022
+
+X:
+Time stamp: Sun Sep 04 14:11:50 2022
+
+-0.6
+Time stamp: Sun Sep 04 14:11:50 2022
+
+rgba enabled
+Time stamp: Sun Sep 04 14:11:50 2022
+
+Sprite instantiated
+Time stamp: Sun Sep 04 14:11:50 2022
+
+X:
+Time stamp: Sun Sep 04 14:11:50 2022
+
+-0.7
+Time stamp: Sun Sep 04 14:11:50 2022
+
+rgba enabled
+Time stamp: Sun Sep 04 14:11:50 2022
+
+Sprite instantiated
+Time stamp: Sun Sep 04 14:11:50 2022
+
+X:
+Time stamp: Sun Sep 04 14:11:50 2022
+
+-0.8
+Time stamp: Sun Sep 04 14:11:50 2022
+
+rgba enabled
+Time stamp: Sun Sep 04 14:11:50 2022
+
+Sprite instantiated
+Time stamp: Sun Sep 04 14:11:50 2022
+
+X:
+Time stamp: Sun Sep 04 14:11:50 2022
+
+-0.9
+Time stamp: Sun Sep 04 14:11:50 2022
+
+rgba enabled
+Time stamp: Sun Sep 04 14:11:50 2022
+
+Sprite instantiated
+Time stamp: Sun Sep 04 14:11:50 2022
+
+X:
+Time stamp: Sun Sep 04 14:11:50 2022
+
+-1
+Time stamp: Sun Sep 04 14:11:50 2022
+
+GUI exited
+Time stamp: Sun Sep 04 14:11:53 2022
+
+Sprite Destroyed
+Time stamp: Sun Sep 04 14:11:53 2022
+
+game closed.
+Time stamp: Sun Sep 04 14:11:53 2022
+
+audio initialized
+Time stamp: Sun Sep 04 14:49:14 2022
+
+window initialized
+Time stamp: Sun Sep 04 14:49:14 2022
+
+rgba enabled
+Time stamp: Sun Sep 04 14:49:14 2022
+
+Sprite instantiated
+Time stamp: Sun Sep 04 14:49:14 2022
+
+X:
+Time stamp: Sun Sep 04 14:49:14 2022
+
+-0.1
+Time stamp: Sun Sep 04 14:49:14 2022
+
+rgba enabled
+Time stamp: Sun Sep 04 14:49:14 2022
+
+Sprite instantiated
+Time stamp: Sun Sep 04 14:49:14 2022
+
+X:
+Time stamp: Sun Sep 04 14:49:14 2022
+
+-0.2
+Time stamp: Sun Sep 04 14:49:14 2022
+
+rgba enabled
+Time stamp: Sun Sep 04 14:49:14 2022
+
+Sprite instantiated
+Time stamp: Sun Sep 04 14:49:14 2022
+
+X:
+Time stamp: Sun Sep 04 14:49:14 2022
+
+-0.3
+Time stamp: Sun Sep 04 14:49:14 2022
+
+rgba enabled
+Time stamp: Sun Sep 04 14:49:14 2022
+
+Sprite instantiated
+Time stamp: Sun Sep 04 14:49:14 2022
+
+X:
+Time stamp: Sun Sep 04 14:49:14 2022
+
+-0.4
+Time stamp: Sun Sep 04 14:49:14 2022
+
+rgba enabled
+Time stamp: Sun Sep 04 14:49:14 2022
+
+Sprite instantiated
+Time stamp: Sun Sep 04 14:49:14 2022
+
+X:
+Time stamp: Sun Sep 04 14:49:14 2022
+
+-0.5
+Time stamp: Sun Sep 04 14:49:14 2022
+
+rgba enabled
+Time stamp: Sun Sep 04 14:49:14 2022
+
+Sprite instantiated
+Time stamp: Sun Sep 04 14:49:14 2022
+
+X:
+Time stamp: Sun Sep 04 14:49:14 2022
+
+-0.6
+Time stamp: Sun Sep 04 14:49:14 2022
+
+rgba enabled
+Time stamp: Sun Sep 04 14:49:14 2022
+
+Sprite instantiated
+Time stamp: Sun Sep 04 14:49:14 2022
+
+X:
+Time stamp: Sun Sep 04 14:49:14 2022
+
+-0.7
+Time stamp: Sun Sep 04 14:49:14 2022
+
+rgba enabled
+Time stamp: Sun Sep 04 14:49:14 2022
+
+Sprite instantiated
+Time stamp: Sun Sep 04 14:49:14 2022
+
+X:
+Time stamp: Sun Sep 04 14:49:14 2022
+
+-0.8
+Time stamp: Sun Sep 04 14:49:14 2022
+
+rgba enabled
+Time stamp: Sun Sep 04 14:49:14 2022
+
+Sprite instantiated
+Time stamp: Sun Sep 04 14:49:14 2022
+
+X:
+Time stamp: Sun Sep 04 14:49:14 2022
+
+-0.9
+Time stamp: Sun Sep 04 14:49:14 2022
+
+rgba enabled
+Time stamp: Sun Sep 04 14:49:14 2022
+
+Sprite instantiated
+Time stamp: Sun Sep 04 14:49:14 2022
+
+X:
+Time stamp: Sun Sep 04 14:49:14 2022
+
+-1
+Time stamp: Sun Sep 04 14:49:14 2022
+
+audio initialized
+Time stamp: Sun Sep 04 15:20:28 2022
+
+window initialized
+Time stamp: Sun Sep 04 15:20:28 2022
+
+rgba enabled
+Time stamp: Sun Sep 04 15:20:28 2022
+
+Sprite instantiated
+Time stamp: Sun Sep 04 15:20:28 2022
+
+X:
+Time stamp: Sun Sep 04 15:20:28 2022
+
+-0.1
+Time stamp: Sun Sep 04 15:20:28 2022
+
+rgba enabled
+Time stamp: Sun Sep 04 15:20:28 2022
+
+Sprite instantiated
+Time stamp: Sun Sep 04 15:20:28 2022
+
+X:
+Time stamp: Sun Sep 04 15:20:28 2022
+
+-0.2
+Time stamp: Sun Sep 04 15:20:28 2022
+
+rgba enabled
+Time stamp: Sun Sep 04 15:20:28 2022
+
+Sprite instantiated
+Time stamp: Sun Sep 04 15:20:28 2022
+
+X:
+Time stamp: Sun Sep 04 15:20:28 2022
+
+-0.3
+Time stamp: Sun Sep 04 15:20:28 2022
+
+rgba enabled
+Time stamp: Sun Sep 04 15:20:28 2022
+
+Sprite instantiated
+Time stamp: Sun Sep 04 15:20:28 2022
+
+X:
+Time stamp: Sun Sep 04 15:20:28 2022
+
+-0.4
+Time stamp: Sun Sep 04 15:20:28 2022
+
+rgba enabled
+Time stamp: Sun Sep 04 15:20:28 2022
+
+Sprite instantiated
+Time stamp: Sun Sep 04 15:20:28 2022
+
+X:
+Time stamp: Sun Sep 04 15:20:28 2022
+
+-0.5
+Time stamp: Sun Sep 04 15:20:28 2022
+
+rgba enabled
+Time stamp: Sun Sep 04 15:20:28 2022
+
+Sprite instantiated
+Time stamp: Sun Sep 04 15:20:28 2022
+
+X:
+Time stamp: Sun Sep 04 15:20:28 2022
+
+-0.6
+Time stamp: Sun Sep 04 15:20:28 2022
+
+rgba enabled
+Time stamp: Sun Sep 04 15:20:28 2022
+
+Sprite instantiated
+Time stamp: Sun Sep 04 15:20:28 2022
+
+X:
+Time stamp: Sun Sep 04 15:20:28 2022
+
+-0.7
+Time stamp: Sun Sep 04 15:20:28 2022
+
+rgba enabled
+Time stamp: Sun Sep 04 15:20:28 2022
+
+Sprite instantiated
+Time stamp: Sun Sep 04 15:20:28 2022
+
+X:
+Time stamp: Sun Sep 04 15:20:28 2022
+
+-0.8
+Time stamp: Sun Sep 04 15:20:28 2022
+
+rgba enabled
+Time stamp: Sun Sep 04 15:20:28 2022
+
+Sprite instantiated
+Time stamp: Sun Sep 04 15:20:28 2022
+
+X:
+Time stamp: Sun Sep 04 15:20:28 2022
+
+-0.9
+Time stamp: Sun Sep 04 15:20:28 2022
+
+rgba enabled
+Time stamp: Sun Sep 04 15:20:28 2022
+
+Sprite instantiated
+Time stamp: Sun Sep 04 15:20:28 2022
+
+X:
+Time stamp: Sun Sep 04 15:20:28 2022
+
+-1
+Time stamp: Sun Sep 04 15:20:28 2022
+
+audio initialized
+Time stamp: Sun Sep 04 15:25:53 2022
+
+window initialized
+Time stamp: Sun Sep 04 15:25:53 2022
+
+GUI exited
+Time stamp: Sun Sep 04 15:25:57 2022
+
+game closed.
+Time stamp: Sun Sep 04 15:25:57 2022
+

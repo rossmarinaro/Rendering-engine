@@ -2,13 +2,6 @@
 
 #include <map>
 
-#include "../../vendors/nlohmann/json.hpp"
-#include "../../vendors/tileson/tileson.hpp"
-
-using string = std::string;
-using json = nlohmann::json; 
-
-
 namespace Assets {
 
 
@@ -17,7 +10,8 @@ namespace Assets {
 
         const char* menu[2] = { "menu", "assets/images/menu.png" };
         const char* swanky_velvet[2] = { "swanky_velvet", "assets/images/swanky_velvet.png" };
-            
+        const char* map[2] = { "map", "assets/images/platformer.png" };
+        const char* brick[2] = { "brick", "assets/images/brick.png" };
         //std::map<const char*, string> asset {{"menu", _menu}};
     }
 }

@@ -6,8 +6,6 @@
 
 #include "./logs.h"
 #include "./audio.h"
-#include "./window.h"
-
 
 class Inputs{
 

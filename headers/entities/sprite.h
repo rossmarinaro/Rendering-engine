@@ -5,6 +5,7 @@
 #include <fstream>
 
 #include "../window.h"
+#include "../inputs.h"
 
 #include "../../vendors/nlohmann/json.hpp" 
 
@@ -43,8 +44,8 @@ namespace Entities {
               m_posY,
 			  m_srcWidth = 1.0, 
 			  m_srcHeight = 1.0,
-			  m_scaleX = 1.0,
-			  m_scaleY = 1.0;
+			  m_scaleX = 0.2,
+			  m_scaleY = 0.2;
 
 		double m_degrees = 0; 
 
@@ -53,7 +54,11 @@ namespace Entities {
 		void SetScale(float scaleX, float scaleY);
 
        	Sprite(GLuint &id, float x, float y, const char* key[2]);
-	   ~Sprite();
+	    ~Sprite()
+		{
+			SDL_FreeSurface(m_texture);
+			Log::write("Sprite Destroyed");
+		}
 	};
 
 
@@ -66,5 +71,27 @@ namespace Entities {
 
 			Player(GLuint &id, float x, float y, const char* key[2]) : Sprite(id, x, y, key){};
 			//~Player();
+	};
+
+
+	class TileSprite : public Sprite {
+
+		private:
+
+			int type;
+
+			float width = 64, 
+				  height = 64;
+
+		public:
+
+			TileSprite(GLuint &id, int tileType, float x, float y, const char* key[2]) : Sprite(id, x, y, key)
+			{
+				Log::write("X:"); Log::write(x);//this-> SetScale();
+			};
+
+			void ShowTile();
+			int GetType();
+			SDL_Rect GetBox();
 	};
 }

@@ -101,10 +101,5 @@ Sprite::Sprite(GLuint &id, float x, float y, const char* key[2])
     Log::write("Sprite instantiated");
 }
 
-//---------------------------------------------------
 
-Sprite::~Sprite()
-{
-    SDL_FreeSurface(m_texture);
-    Log::write("Sprite Destroyed");
-}
+

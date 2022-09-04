@@ -7,11 +7,9 @@
 #include <chrono>
 #include <thread>
 
-
 #include "./audio.h"
 #include "./window.h"       
 #include "./inputs.h"
-#include "./entities/sprite.h"
 
 
 /****** Application *****/
@@ -26,13 +24,28 @@ class Application
 		Audio* m_audioMgr;
 		Inputs* m_inputMgr;
 
-		std::thread m_window_thread;
-
-	public:		
+		std::thread m_window_thread;	
 			
-		Application();
-	   ~Application();
+		Application()
+		{
 
-		void update(bool &isRunning);
+			m_audioMgr = new Audio();
+			m_inputMgr = new Inputs();
+
+		//new thread for window / gui
+		
+			std::thread m_window_thread(&InitializeWindow, m_inputMgr); 
+			m_window_thread.join();
+	
+		}
+	   ~Application()
+	   {
+			delete m_audioMgr;
+			delete m_inputMgr;
+			//delete s_instance;
+			//std::terminate();
+
+			Log::write("Application terminated");
+	   };
 
 };

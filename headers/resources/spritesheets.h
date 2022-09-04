@@ -12,7 +12,8 @@ namespace Assets {
 
         enum Options {
             menu,
-            swanky_velvet
+            swanky_velvet,
+            map
         };
 
         Options resolveString(string const &input)
@@ -21,6 +22,8 @@ namespace Assets {
                 return swanky_velvet;
 			if (input == "menu") 
                 return menu;
+            if (input == "map") 
+                return map;
         };
 
         const char* GetResource(string key)

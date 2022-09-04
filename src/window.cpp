@@ -5,7 +5,7 @@ SDL_Window* m_window;
 SDL_GLContext m_gl_context;
 SDL_Renderer* m_renderer;
 	
-GLuint TextureID[2];
+GLuint TextureID[3];
 
 ImGuiIO io;
 
@@ -16,7 +16,7 @@ bool isRunning = true,
 static const int SCREEN_WIDTH = 640;
 static const int SCREEN_HEIGHT = 480; 
 
-
+ImVec4 clear_color;
 
 //-------------------------------------
 
@@ -62,7 +62,7 @@ void LaunchGui(const char* glsl_version, Inputs* inputs, SDL_Event event)
     ImGui_ImplSDL2_InitForOpenGL(m_window, m_gl_context);
     ImGui_ImplOpenGL3_Init(glsl_version);
 
-    //ImVec4 clear_color = ImVec4(0.55f, 0.25f, 0.60f, 1.00f);
+    clear_color = ImVec4(0.55f, 0.25f, 0.60f, 1.00f);//ImVec4(255 / 255.0f, 170 / 255.0f, 7 / 255.0f, 1.00f);
 
    
 };
@@ -126,7 +126,7 @@ void RenderGui()
 {
     ImGui::Render();
     glViewport(0, 0, (int)io.DisplaySize.x, (int)io.DisplaySize.y);
-    //glClearColor(clear_color.x * clear_color.w, clear_color.y * clear_color.w, clear_color.z * clear_color.w, clear_color.w);
+    glClearColor(clear_color.x * clear_color.w, clear_color.y * clear_color.w, clear_color.z * clear_color.w, clear_color.w);
     //glClear(GL_COLOR_BUFFER_BIT);
     ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 }
