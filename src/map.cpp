@@ -11,7 +11,7 @@ MapManager::MapManager(GLuint &textureID, AssetManager* assets)
 {
     tson::Tileson t;
     std::unique_ptr<tson::Map> map = t.parse("assets/json/preload/maps/cave.json"/* tson_files::_ULTIMATE_TEST_JSON, tson_files::_ULTIMATE_TEST_JSON_SIZE */);
-
+std::cout << "coool" << std::endl;
     if(map->getStatus() == tson::ParseStatus::OK)
     {
         //Get color as an rgba color object
@@ -98,31 +98,25 @@ MapManager::MapManager(GLuint &textureID, AssetManager* assets)
 
         //add tile images
 
-                int sizeX = 10, 
-                    sizeY = 10;
-
-                float r = 0.5;
-
-            // for (int y = 0; y < sizeY; y++)
-                //{
-                    for (int x = 0; x < sizeX; x++)
-                    {
-                        //AddTile(atoi(&tile), x * 32, y * 32);
-                        m_ts = new Entities::TileSprite(textureID, 1, 0 - r, 0 - r, assets->brick);
-                        r += 0.1f;
-                    }
-                //}
-
+            float x = -1.2, 
+                  y = 0.9; //top right
 
             //You can of course also loop through every tile!
                 for (const auto &[id, tile] : tileData)
                 {
-                    
-
+                    x += 0.16f;
+                    //y += 0.064f;
+                    x;
                     //Must check for nullptr, due to how we got the first invalid tile (pos: 0, 4)
                     //Would be unnecessary otherwise.
                     if(tile != nullptr)
+                    {
                         int tileId = tile->getId(); //A bit verbose, as this is the same as id from the key, but you get the idea.
+                        Entities::TileSprite* ts = new Entities::TileSprite(textureID, id, x, y, assets->brick);
+                        ts->SetScale(0.16f, 0.1f);
+                        m_tilesprites.push_back(ts);
+                    
+                    }
                 }
             }
         }

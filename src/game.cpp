@@ -4,7 +4,9 @@
 
 Sprite* background;
 Player* player;
+
 static std::vector<Sprite*> currentEntities;
+static std::vector<std::vector<TileSprite*>> map;
 
 Game::Game(Inputs* inputs, GLuint textures[]) 
 {
@@ -18,18 +20,19 @@ Game::Game(Inputs* inputs, GLuint textures[])
 
     currentEntities.push_back(background);
     currentEntities.push_back(player);
+    map.push_back(m_mapMgr->m_tilesprites);
 }
 
 
 void Game::Update(Inputs* inputs)
 {
+    for (auto &layer : map)
+        for (auto &tile : layer)
+            tile->Render();
+
     for (auto &ent : currentEntities)
-    {
-        Log::write(ent);
         ent == player ? 
             player->Update(inputs) : ent->Render();
-    }
-    
 }
 
 Game::~Game()

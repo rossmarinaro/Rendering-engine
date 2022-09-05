@@ -16,10 +16,10 @@ class Game {
         const char* m_currentStage;
      
         Game* s_instance;
-     
+   
 
     public: 
-  
+    //static Player* m_player;
         AssetManager* m_assMgr;
         MapManager* m_mapMgr;
 

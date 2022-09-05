@@ -8,10 +8,15 @@ class MapManager {
 
     private:
 
+        int m_tileWidth = 64,
+            m_tileHeight = 64,
+            m_mapWidth = 10, 
+            m_mapHeight = 10;
 
     public:
 
-        Entities::TileSprite* m_ts;
+        std::vector<Entities::TileSprite*> m_tilesprites;
+        
         MapManager(GLuint &textureID, AssetManager* assets);
         ~MapManager() = default;
 

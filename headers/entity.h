@@ -88,9 +88,10 @@ namespace Entities {
 			int GetType();
 			SDL_Rect GetBox();
 			
-			TileSprite(GLuint &id, int tileType, float x, float y, const char* key[2]) : Sprite(id, x, y, key)
+			TileSprite(GLuint &id, std::tuple<int, int> tileType, float x, float y, const char* key[2]) 
+			: Sprite(id, x, y, key)
 			{
-				Log::write("X:"); Log::write(x);//this-> SetScale();
+				//Log::write("X:"); Log::write(x);//this-> SetScale();
 			}
 			~TileSprite() = default;
 	};
