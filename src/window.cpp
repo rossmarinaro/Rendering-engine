@@ -58,7 +58,7 @@ void LaunchGui(const char* glsl_version, Inputs* inputs, SDL_Event event)
     ImGui_ImplSDL2_InitForOpenGL(window, context);
     ImGui_ImplOpenGL3_Init(glsl_version);
 
-    clear_color = ImVec4(0.55f, 0.25f, 0.60f, 1.00f);//ImVec4(255 / 255.0f, 170 / 255.0f, 7 / 255.0f, 1.00f);
+    clear_color = ImVec4(0.34f, 0.34f, 0.34f, 1.00f);//ImVec4(255 / 255.0f, 170 / 255.0f, 7 / 255.0f, 1.00f);
 
    
 };

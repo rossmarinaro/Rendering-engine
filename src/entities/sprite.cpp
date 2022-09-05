@@ -4,40 +4,18 @@
 
 using namespace Entities;
 
-//-----------------------------------------------------
-
-void Sprite::SetScale(float scaleX, float scaleY)
-{
-    m_scaleX = scaleX;
-    m_scaleY = scaleY;
-}
-
-//------------------------------------------------------
-
 
 void Sprite::Render()
 { 
-
+    
     if (m_texture != NULL)
     {
-        if (m_isSpritesheet == true)
-        {
-            if (m_currentFrame > m_frames)
-                m_currentFrame = 0;
+    
+       // if (m_isAtlas == true || m_isSpritesheet == true)
+            _storePixel();
 
-            glPixelStorei(GL_UNPACK_ROW_LENGTH, m_texture->w);
-            glPixelStorei(GL_UNPACK_SKIP_PIXELS, m_resourceData["frames"][m_currentFrame]["x"]);
-            glPixelStorei(GL_UNPACK_SKIP_ROWS, m_currentFrameY);
-
-            glTexImage2D(GL_TEXTURE_2D, 0, m_renderMode, m_currentFrameWidth, m_currentFrameHeight, 0, m_renderMode, GL_UNSIGNED_BYTE, m_texture->pixels);
-            
-            glPixelStorei(GL_UNPACK_ROW_LENGTH, 0);
-            glPixelStorei(GL_UNPACK_SKIP_PIXELS, 0);
-            glPixelStorei(GL_UNPACK_SKIP_ROWS, 0);
-
-        }
-        else
-            glTexImage2D(GL_TEXTURE_2D, 0, m_renderMode, m_texture->w, m_texture->h, 0, m_renderMode, GL_UNSIGNED_BYTE, m_texture->pixels);
+       // else
+           // glTexImage2D(GL_TEXTURE_2D, 0, m_renderMode, m_texture->w, m_texture->h, 0, m_renderMode, GL_UNSIGNED_BYTE, m_texture->pixels);
 
     //render surface as open gl texture
     
@@ -53,21 +31,46 @@ void Sprite::Render()
 
 //-----------------------------------------------------------
 
+
 Sprite::Sprite(GLuint &id, float x, float y, const char* key[2])
 {
-    const char* jsonPath = Assets::Spritesheets::GetResource(key[0]);
+    const char* jsonPath = Assets::Spritesheets::GetResource(key[0]); 
     
-    if (jsonPath != 0)
-    {
-        std::ifstream spritesheet(jsonPath);
-        m_currentFrame = 0;
-        m_isSpritesheet = true;
-        m_resourceData = json::parse(spritesheet);
-        m_frames = m_resourceData["frames"].size() - 1;
-        m_currentFrameY = m_resourceData["frames"][m_currentFrame]["y"];
-        m_currentFrameWidth = m_resourceData["frames"][m_currentFrame]["w"];
-        m_currentFrameHeight = m_resourceData["frames"][m_currentFrame]["h"]; 
-    }  
+    // if (jsonPath != 0) //isSpritesheet = true
+    // {
+    //     std::ifstream spritesheet(jsonPath);
+    //     m_resourceData = json::parse(spritesheet);
+    //     m_frames = m_resourceData["frames"].size() - 1;
+    //     m_currentFrame = 0;
+    //     m_isSpritesheet = true;
+    //     m_currentFrameX = m_resourceData["frames"][m_currentFrame]["x"];
+    //     m_currentFrameY = m_resourceData["frames"][m_currentFrame]["y"];
+    //     m_currentFrameWidth = m_resourceData["frames"][m_currentFrame]["w"];
+    //     m_currentFrameHeight = m_resourceData["frames"][m_currentFrame]["h"]; 
+        
+    // }  
+    //else 
+    //{
+        // if (key[0] != "map") //no data
+        // {Log::write("ok2");
+        
+        //     m_currentFrameX = 0;
+        //     m_currentFrameY = 0;
+        // }
+        // else //isAtlas = true;
+        // {    Log::write("ok3");
+            // m_isAtlas = true;  
+            // m_currentFrameX = 620;
+            // m_currentFrameY = 620;
+            // m_currentFrameWidth = 64;
+            // m_currentFrameHeight = 64; 
+        //}
+    //}
+            m_isAtlas = true;  
+            m_currentFrameX = 600;
+            m_currentFrameY = 600;
+            m_currentFrameWidth = 64;
+            m_currentFrameHeight = 64; 
   
     SDL_Surface* image = IMG_Load(key[1]);
 

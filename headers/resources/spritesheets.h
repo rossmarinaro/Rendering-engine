@@ -20,10 +20,7 @@ namespace Assets {
         {
             if (input == "swanky_velvet") 
                 return swanky_velvet;
-			if (input == "menu") 
-                return menu;
-            if (input == "map") 
-                return map;
+
         };
 
         const char* GetResource(string key)
@@ -32,6 +29,7 @@ namespace Assets {
             {
                 case swanky_velvet:
                     return "assets/json/anims/swanky_velvet.json";
+   
 
                 //--------- no spritesheet
                 

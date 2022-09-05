@@ -32,7 +32,8 @@ void Player::Animate(string animKey)
         case walk:
 
             m_currentFrame++;
-    
+            if (m_currentFrame > m_frames)
+                m_currentFrame = 0;
         break;
     }
 }

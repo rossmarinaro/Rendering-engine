@@ -18,8 +18,10 @@ namespace Entities {
 
 		private:
 
-			int m_frames;
 			bool m_isSpritesheet = false;
+			bool m_isAtlas = false;
+
+			int m_renderMode;
 
 			std::int64_t 
 				m_currentFrameX,
@@ -33,10 +35,22 @@ namespace Entities {
 			void _setColor(Uint8 red, Uint8 green, Uint8 blue);
 			void _setBlendMode( SDL_BlendMode blending );
 			void _setAlpha(Uint8 alpha);
+			void _storePixel()
+			{
+				glPixelStorei(GL_UNPACK_ROW_LENGTH, m_texture->w);
+				glPixelStorei(GL_UNPACK_SKIP_PIXELS, m_currentFrameX);
+				glPixelStorei(GL_UNPACK_SKIP_ROWS, m_currentFrameY);
+
+				glTexImage2D(GL_TEXTURE_2D, 0, m_renderMode, m_currentFrameWidth, m_currentFrameHeight, 0, m_renderMode, GL_UNSIGNED_BYTE, m_texture->pixels);
+				
+				glPixelStorei(GL_UNPACK_ROW_LENGTH, 0);
+				glPixelStorei(GL_UNPACK_SKIP_PIXELS, 0);
+				glPixelStorei(GL_UNPACK_SKIP_ROWS, 0);
+			};
 
 		public:  
 
-			int m_renderMode,
+			int m_frames,
 				m_currentFrame;
 
 			float m_posX, 	
@@ -44,13 +58,21 @@ namespace Entities {
 				m_srcWidth = 1.0, 
 				m_srcHeight = 1.0,
 				m_scaleX = 1.0,
-				m_scaleY = 1.0;
-
-			double m_degrees = 0; 
+				m_scaleY = 1.0,
+				m_degrees = 0; 
 
 			SDL_Surface* m_texture;
+
 			void Render();
-			void SetScale(float scaleX, float scaleY);
+			void SetScale(float scaleX, float scaleY)
+			{
+				m_scaleX = scaleX;
+				m_scaleY = scaleY;
+			}
+			void SetRotation(float degrees)
+			{
+				m_degrees = degrees;
+			}
 
 			Sprite(GLuint &id, float x, float y, const char* key[2]);
 			~Sprite()
@@ -91,7 +113,7 @@ namespace Entities {
 			TileSprite(GLuint &id, std::tuple<int, int> tileType, float x, float y, const char* key[2]) 
 			: Sprite(id, x, y, key)
 			{
-				//Log::write("X:"); Log::write(x);//this-> SetScale();
+				//this->SetScale(0.5f, 0.5f);
 			}
 			~TileSprite() = default;
 	};
