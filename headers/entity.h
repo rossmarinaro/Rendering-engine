@@ -13,15 +13,26 @@ using json = nlohmann::json;
 
 namespace Entities {
 
-
 	class Sprite {
 
-		private:
+		public:  
 
 			bool m_isSpritesheet = false;
 			bool m_isAtlas = false;
 
-			int m_renderMode;
+			int m_frames,
+				m_currentFrame;
+
+			float 
+				m_posX, 	
+				m_posY,
+				m_srcWidth = 1, 
+				m_srcHeight = 1,
+				m_scaleX = 1,
+				m_scaleY = 1,
+				m_degrees = 0; 
+
+			SDL_Surface* m_texture;
 
 			std::int64_t 
 				m_currentFrameX,
@@ -30,40 +41,10 @@ namespace Entities {
 				m_currentFrameHeight;
 
 			json m_resourceData;
-			GLuint m_inst;
-
-			void _setColor(Uint8 red, Uint8 green, Uint8 blue);
-			void _setBlendMode( SDL_BlendMode blending );
-			void _setAlpha(Uint8 alpha);
-			void _storePixel()
-			{
-				glPixelStorei(GL_UNPACK_ROW_LENGTH, m_texture->w);
-				glPixelStorei(GL_UNPACK_SKIP_PIXELS, m_currentFrameX);
-				glPixelStorei(GL_UNPACK_SKIP_ROWS, m_currentFrameY);
-
-				glTexImage2D(GL_TEXTURE_2D, 0, m_renderMode, m_currentFrameWidth, m_currentFrameHeight, 0, m_renderMode, GL_UNSIGNED_BYTE, m_texture->pixels);
-				
-				glPixelStorei(GL_UNPACK_ROW_LENGTH, 0);
-				glPixelStorei(GL_UNPACK_SKIP_PIXELS, 0);
-				glPixelStorei(GL_UNPACK_SKIP_ROWS, 0);
-			};
-
-		public:  
-
-			int m_frames,
-				m_currentFrame;
-
-			float m_posX, 	
-				m_posY,
-				m_srcWidth = 1.0, 
-				m_srcHeight = 1.0,
-				m_scaleX = 1.0,
-				m_scaleY = 1.0,
-				m_degrees = 0; 
-
-			SDL_Surface* m_texture;
 
 			void Render();
+			void SetColor(Uint8 red, Uint8 green, Uint8 blue);
+			void SetAlpha(Uint8 alpha);
 			void SetScale(float scaleX, float scaleY)
 			{
 				m_scaleX = scaleX;
@@ -73,6 +54,11 @@ namespace Entities {
 			{
 				m_degrees = degrees;
 			}
+			void SetPosition(float x, float y)
+			{
+				m_posX = -x * 0.001;
+				m_posY = -y * 0.001;
+			}
 
 			Sprite(GLuint &id, float x, float y, const char* key[2]);
 			~Sprite()
@@ -80,6 +66,12 @@ namespace Entities {
 				SDL_FreeSurface(m_texture);
 				Log::write("Sprite Destroyed");
 			}
+
+		private:
+
+			int m_renderMode;
+			GLuint m_inst;
+			void _SetSubTexture();
 	};
 
 
@@ -99,21 +91,38 @@ namespace Entities {
 
 		private:
 
-			int type;
-
-			float width = 64, 
-				  height = 64;
-
-		public:
+			int 
+				m_type;
+				GLsizei m_tileWidth = 64,
+				m_tileHeight = 64;
 
 			void ShowTile();
 			int GetType();
-			SDL_Rect GetBox();
+
+		public:
 			
-			TileSprite(GLuint &id, std::tuple<int, int> tileType, float x, float y, const char* key[2]) 
-			: Sprite(id, x, y, key)
+			TileSprite (
+				GLuint &id, 
+				//std::tuple<int, int> tileType, 
+				float posX, 
+				float posY, 
+				int frX, 
+				int frY, 
+				const char* key[2]
+			) 
+			:Sprite(id, posX, posY, key)
 			{
-				//this->SetScale(0.5f, 0.5f);
+				SetScale(0.1f, 0.1f);
+
+				int64_t frameX = frX;
+				int64_t frameY = frY;
+
+				m_currentFrameX = 0;//frameX;
+                m_currentFrameY = 0;//frameY; 
+                m_currentFrameWidth = 64;//m_tileWidth;
+                m_currentFrameHeight = 64;//m_tileHeight;
+				m_isAtlas = true;
+		
 			}
 			~TileSprite() = default;
 	};

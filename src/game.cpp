@@ -9,24 +9,24 @@ static std::vector<Sprite*> currentEntities;
 static std::vector<std::vector<TileSprite*>> map;
 
 Game::Game(Inputs* inputs, GLuint textures[]) 
-{
+{ 
 
 //init base systems
 
     AssetManager* m_assMgr = new AssetManager();
-    MapManager* m_mapMgr = new MapManager(textures[0], m_assMgr);
+    MapManager* m_mapMgr = new MapManager(textures[0], textures[1], m_assMgr);
 
 //init entities
 
-    //background = new Sprite(textures[1], -0.5, -0.5, m_assMgr->menu);
-    //player = new Player(textures[2], -0.3, -0.3, m_assMgr->swanky_velvet);
-    //player->SetScale(0.325f, 0.75f);
+    //background = new Sprite(textures[1], 640, 360, m_assMgr->menu);
+    player = new Player(textures[2], 640, 360, m_assMgr->swanky_velvet);
+    player->SetScale(0.325f, 0.75f);
 
 //add entities to update queue
 
     map.push_back(m_mapMgr->m_tilesprites);
     //currentEntities.push_back(background);
-    //currentEntities.push_back(player);
+    currentEntities.push_back(player);
    
 }
 

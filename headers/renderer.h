@@ -1,6 +1,6 @@
 #include <windows.h>
 #include <string>
-#include <SDL.h>
+#include <SDL.h>   
 #include <stdio.h>
 #include <SDL_mixer.h>
 #include <SDL_image.h>

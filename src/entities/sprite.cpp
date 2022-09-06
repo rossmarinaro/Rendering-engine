@@ -4,18 +4,22 @@
 
 using namespace Entities;
 
-
 void Sprite::Render()
 { 
-    
     if (m_texture != NULL)
     {
-    
-       // if (m_isAtlas == true || m_isSpritesheet == true)
-            _storePixel();
+        if (m_isSpritesheet == true)
+        {
+            m_currentFrameX = m_resourceData["frames"][m_currentFrame]["x"]; 
+            if (m_currentFrame > m_frames)
+                m_currentFrame = 0;
+        }
 
-       // else
-           // glTexImage2D(GL_TEXTURE_2D, 0, m_renderMode, m_texture->w, m_texture->h, 0, m_renderMode, GL_UNSIGNED_BYTE, m_texture->pixels);
+        if (m_isAtlas == true || m_isSpritesheet == true)
+            _SetSubTexture();
+
+        else
+           glTexImage2D(GL_TEXTURE_2D, 0, m_renderMode, m_texture->w, m_texture->h, 0, m_renderMode, GL_UNSIGNED_BYTE, m_texture->pixels);
 
     //render surface as open gl texture
     
@@ -25,58 +29,37 @@ void Sprite::Render()
             glTexCoord2f(1, 0); glVertex3f(m_posX + m_srcWidth * m_scaleX, m_posY + m_srcHeight * m_scaleY, 0);
             glTexCoord2f(0, 0); glVertex3f(m_posX, m_posY + m_srcHeight * m_scaleY, 0); 
         glEnd();
+
     }
 
 }
 
 //-----------------------------------------------------------
 
+void Sprite::_SetSubTexture()
+{
+    glPixelStorei(GL_UNPACK_ROW_LENGTH, m_texture->w);
+    glPixelStorei(GL_UNPACK_SKIP_PIXELS, m_currentFrameX);
+    glPixelStorei(GL_UNPACK_SKIP_ROWS, m_currentFrameY);
+
+    glTexImage2D(GL_TEXTURE_2D, 0, m_renderMode, m_currentFrameWidth, m_currentFrameHeight, 0, m_renderMode, GL_UNSIGNED_BYTE, m_texture->pixels);
+    
+    glPixelStorei(GL_UNPACK_ROW_LENGTH, 0);
+    glPixelStorei(GL_UNPACK_SKIP_PIXELS, 0);
+    glPixelStorei(GL_UNPACK_SKIP_ROWS, 0);
+}
+
+
+//-----------------------------------------------------------
+
 
 Sprite::Sprite(GLuint &id, float x, float y, const char* key[2])
 {
-    const char* jsonPath = Assets::Spritesheets::GetResource(key[0]); 
-    
-    // if (jsonPath != 0) //isSpritesheet = true
-    // {
-    //     std::ifstream spritesheet(jsonPath);
-    //     m_resourceData = json::parse(spritesheet);
-    //     m_frames = m_resourceData["frames"].size() - 1;
-    //     m_currentFrame = 0;
-    //     m_isSpritesheet = true;
-    //     m_currentFrameX = m_resourceData["frames"][m_currentFrame]["x"];
-    //     m_currentFrameY = m_resourceData["frames"][m_currentFrame]["y"];
-    //     m_currentFrameWidth = m_resourceData["frames"][m_currentFrame]["w"];
-    //     m_currentFrameHeight = m_resourceData["frames"][m_currentFrame]["h"]; 
-        
-    // }  
-    //else 
-    //{
-        // if (key[0] != "map") //no data
-        // {Log::write("ok2");
-        
-        //     m_currentFrameX = 0;
-        //     m_currentFrameY = 0;
-        // }
-        // else //isAtlas = true;
-        // {    Log::write("ok3");
-            // m_isAtlas = true;  
-            // m_currentFrameX = 620;
-            // m_currentFrameY = 620;
-            // m_currentFrameWidth = 64;
-            // m_currentFrameHeight = 64; 
-        //}
-    //}
-            m_isAtlas = true;  
-            m_currentFrameX = 600;
-            m_currentFrameY = 600;
-            m_currentFrameWidth = 64;
-            m_currentFrameHeight = 64; 
-  
+    const char* spritesheet = Assets::Spritesheets::GetResource(key[0]); 
     SDL_Surface* image = IMG_Load(key[1]);
 
     if (image == NULL) 
         Log::error(SDL_GetError()); 
-
     else 
     { 
     //render image as opengl texture
@@ -94,11 +77,26 @@ Sprite::Sprite(GLuint &id, float x, float y, const char* key[2])
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 
-    //Get image dimensions and render
+    //Get image dimensions / position
 
-        m_posX = x;
-        m_posY = y;
+        SetPosition(x, y);
+
+        if (spritesheet != 0) 
+        {
+            std::ifstream data(spritesheet);
+            m_resourceData = json::parse(data);
+            m_frames = m_resourceData["frames"].size() - 1;
+            m_currentFrame = 0;
+            m_currentFrameY = m_resourceData["frames"][m_currentFrame]["y"];
+            m_currentFrameWidth = m_resourceData["frames"][m_currentFrame]["w"];
+            m_currentFrameHeight = m_resourceData["frames"][m_currentFrame]["h"]; 
+            m_isSpritesheet = true;
+        }  
+  
+
         m_texture = image;
+        
+    
     }
 
     Log::write("Sprite instantiated");

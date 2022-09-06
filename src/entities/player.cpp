@@ -32,8 +32,8 @@ void Player::Animate(string animKey)
         case walk:
 
             m_currentFrame++;
-            if (m_currentFrame > m_frames)
-                m_currentFrame = 0;
+           
+
         break;
     }
 }
@@ -44,7 +44,8 @@ void Player::Update(Inputs* inputs)
 {
     // Uint32 ticks = SDL_GetTicks();
     // Uint32 seconds = ticks / 1000;
-    // Uint32 spriteFrame = seconds % 3;//4;          
+    // Uint32 spriteFrame = seconds % 3;//4;       
+  
 
     if (inputs->m_right == true)
     {

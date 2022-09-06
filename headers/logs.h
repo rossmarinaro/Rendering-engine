@@ -28,12 +28,12 @@
 
         /**** Log generic ****/
         
-            template <typename T> static void write(T var)
+            template <typename T> static void write(T arg)
             {
                 std::ofstream m_Log;
                 std::time_t m_time_stamp = std::time(nullptr);
                 m_Log.open("Logs.txt", std::ofstream::app | std::ofstream::out);
-                m_Log << var << "\n"<< "Time stamp: " << std::ctime(&m_time_stamp) << "\n";
+                m_Log << arg << "\n"<< "Time stamp: " << std::ctime(&m_time_stamp) << "\n";
                 m_Log.close();
             } 
     };
