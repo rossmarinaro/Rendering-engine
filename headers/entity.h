@@ -91,10 +91,9 @@ namespace Entities {
 
 		private:
 
-			int 
-				m_type;
-				GLsizei m_tileWidth = 64,
-				m_tileHeight = 64;
+			int m_type;
+			GLsizei m_tileWidth = 64,
+					m_tileHeight = 64;
 
 			void ShowTile();
 			int GetType();
@@ -106,23 +105,21 @@ namespace Entities {
 				//std::tuple<int, int> tileType, 
 				float posX, 
 				float posY, 
-				int frX, 
-				int frY, 
+				int64_t frameX, 
+				int64_t frameY, 
 				const char* key[2]
 			) 
 			:Sprite(id, posX, posY, key)
 			{
 				SetScale(0.1f, 0.1f);
 
-				int64_t frameX = frX;
-				int64_t frameY = frY;
-
-				m_currentFrameX = 0;//frameX;
-                m_currentFrameY = 0;//frameY; 
-                m_currentFrameWidth = 64;//m_tileWidth;
-                m_currentFrameHeight = 64;//m_tileHeight;
+				m_currentFrameX = frameX; 
+				m_currentFrameY = frameY;
+                m_currentFrameWidth = m_tileWidth; 
+                m_currentFrameHeight = m_tileHeight; 
 				m_isAtlas = true;
-		
+		        
+      
 			}
 			~TileSprite() = default;
 	};

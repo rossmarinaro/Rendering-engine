@@ -92,7 +92,7 @@ Sprite::Sprite(GLuint &id, float x, float y, const char* key[2])
             m_currentFrameHeight = m_resourceData["frames"][m_currentFrame]["h"]; 
             m_isSpritesheet = true;
         }  
-  
+
         m_texture = image;
     
     }

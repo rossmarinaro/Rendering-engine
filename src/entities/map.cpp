@@ -26,12 +26,11 @@ MapManager::MapManager(GLuint &textureID, GLuint &textureID2, AssetManager* asse
             {
     
                 //std::tuple<int, int> id = {1, 1};
-                m_textureMap['T'] = new Entities::TileSprite(textureID, /* id, */ posX, posY, 640, 640, assets->map);
-                m_textureMap['X'] = new Entities::TileSprite(textureID2, /* id, */ posX, posY, 0, 0, assets->menu);
+                m_textureMap['T'] = new Entities::TileSprite(textureID, /* id, */-0.5, -0.5, 600, 600, assets->map);
+                //m_textureMap['X'] = new Entities::TileSprite(textureID2, /* id, */ -0.3, -0.3, 0, 0, assets->map);
 
                 m_tilesprites.push_back(m_textureMap['T']); 
-                m_tilesprites.push_back(m_textureMap['X']);
-                //Log::write(posX);
+                //m_tilesprites.push_back(m_textureMap['X']);
   
             }
           
