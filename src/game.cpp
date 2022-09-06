@@ -4,9 +4,11 @@
 
 Sprite* background;
 Player* player;
-
+//TileSprite* l1;
+//TileSprite* l2;
 static std::vector<Sprite*> currentEntities;
 static std::vector<std::vector<TileSprite*>> map;
+//static std::vector<TileSprite*> map;
 
 Game::Game(Inputs* inputs, GLuint textures[]) 
 { 
@@ -15,11 +17,15 @@ Game::Game(Inputs* inputs, GLuint textures[])
 
     AssetManager* m_assMgr = new AssetManager();
     MapManager* m_mapMgr = new MapManager(textures[0], textures[1], m_assMgr);
+    //l1 = new TileSprite(textures[0], /* id, */ 640, 360,/* -0.5, -0.5, */ 0, 0, m_assMgr->map);
+    //l2 = new TileSprite(textures[1], /* id, */ 500, 360,/* -0.3, -0.2, */ 600, 600, m_assMgr->map);
+    //map.push_back(l1);
+    //map.push_back(l2);
 
 //init entities
 
     player = new Player(textures[2], 640, 360, m_assMgr->swanky_velvet);
-    player->SetScale(0.325f, 0.75f);
+    player->SetScale(0.325f, 0.75f); 
 
 //add entities to update queue
 
@@ -31,6 +37,8 @@ Game::Game(Inputs* inputs, GLuint textures[])
 
 void Game::Update(Inputs* inputs)
 {
+    //  for (auto &layer : map)
+    //         layer->Render();
     for (auto &layer : map)
         for (auto &tile : layer)
             tile->Render();
@@ -42,6 +50,8 @@ void Game::Update(Inputs* inputs)
 
 Game::~Game()
 {
+    //    for (auto &layer : map)
+    //     delete layer;
     for (auto &layer : map)
         for (auto &tile : layer)
             delete tile;
