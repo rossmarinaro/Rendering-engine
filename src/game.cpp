@@ -18,14 +18,12 @@ Game::Game(Inputs* inputs, GLuint textures[])
 
 //init entities
 
-    //background = new Sprite(textures[1], 640, 360, m_assMgr->menu);
     player = new Player(textures[2], 640, 360, m_assMgr->swanky_velvet);
     player->SetScale(0.325f, 0.75f);
 
 //add entities to update queue
 
     map.push_back(m_mapMgr->m_tilesprites);
-    //currentEntities.push_back(background);
     currentEntities.push_back(player);
    
 }

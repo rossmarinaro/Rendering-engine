@@ -10,9 +10,9 @@ void Sprite::Render()
     {
         if (m_isSpritesheet == true)
         {
-            m_currentFrameX = m_resourceData["frames"][m_currentFrame]["x"]; 
             if (m_currentFrame > m_frames)
                 m_currentFrame = 0;
+            m_currentFrameX = m_resourceData["frames"][m_currentFrame]["x"]; 
         }
 
         if (m_isAtlas == true || m_isSpritesheet == true)
@@ -93,9 +93,7 @@ Sprite::Sprite(GLuint &id, float x, float y, const char* key[2])
             m_isSpritesheet = true;
         }  
   
-
         m_texture = image;
-        
     
     }
 
