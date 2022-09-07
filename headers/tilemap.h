@@ -9,7 +9,7 @@ class MapManager {
     private:
 
         const char* m_mapTiles = {
-            "T, T, X X X X X X X X"
+            "T T X X X X X X X X"
             "X X X X X X X X X X"
             "X X X X X X X X X X"
             "X X X X X X X X X X"

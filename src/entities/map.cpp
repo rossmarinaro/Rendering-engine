@@ -20,16 +20,19 @@ MapManager::MapManager(GLuint &textureID, GLuint &textureID2, AssetManager* asse
                   posY = y - m_mapHeight / 2.0f;
                     
             if (m_textureMap.find(tileType) != m_textureMap.end())
-                m_textureMap[tileType];
-
+            {
+                //m_textureMap[tileType];
+                m_textureMap['X'] = new Entities::TileSprite(textureID2, /* id, */posX -10, posY-10 /* 540, 360 */, 0, 0, assets->map);
+                m_tilesprites.push_back(m_textureMap['X']);
+            }
             else 
             {
     
                 //std::tuple<int, int> id = {1, 1};
-                m_textureMap['T'] = new Entities::TileSprite(textureID, /* id, */640, 360, 600, 600, assets->map);
-                m_textureMap['X'] = new Entities::TileSprite(textureID2, /* id, */ 540, 360, 0, 0, assets->map);
+                m_textureMap['T'] = new Entities::TileSprite(textureID, /* id, */posX, posY/* 640, 360 */, 576, 576, assets->map);
+                //m_textureMap['X'] = new Entities::TileSprite(textureID2, /* id, */posX -10, posY-10 /* 540, 360 */, 0, 0, assets->map);
                 m_tilesprites.push_back(m_textureMap['T']); 
-                m_tilesprites.push_back(m_textureMap['X']);
+                //m_tilesprites.push_back(m_textureMap['X']);
        
   
             }
