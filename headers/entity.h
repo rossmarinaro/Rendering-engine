@@ -56,8 +56,8 @@ namespace Entities {
 			}
 			void SetPosition(float x, float y)
 			{
-				m_posX = -x * 0.001;
-				m_posY = -y * 0.001;
+				m_posX = x;//-x * 0.001;
+				m_posY = y;//-y * 0.001;
 			}
 
 			Sprite(GLuint &id, float x, float y, const char* key[2]);

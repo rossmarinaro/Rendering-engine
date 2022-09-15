@@ -4,8 +4,8 @@ bool isRunning = true,
      show_demo_window = true,
      show_another_window = false;
 
-static const int SCREEN_WIDTH = 640;
-static const int SCREEN_HEIGHT = 480; 
+static const int WIDTH = 1280; 
+static const int HEIGHT = 720; 
 
 SDL_Window* window; 
 SDL_GLContext context;
@@ -122,6 +122,8 @@ void RenderGui()
 {
     ImGui::Render();
     glViewport(0, 0, (int)io.DisplaySize.x, (int)io.DisplaySize.y);
+    glMatrixMode(GL_PROJECTION);
+    glOrtho(0, WIDTH, HEIGHT, 0, -1, 1);
     glClearColor(clear_color.x * clear_color.w, clear_color.y * clear_color.w, clear_color.z * clear_color.w, clear_color.w);
     //glClear(GL_COLOR_BUFFER_BIT);
     ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
@@ -189,7 +191,7 @@ void InitializeWindow(Inputs* inputs)
 
             SDL_WindowFlags window_flags = (SDL_WindowFlags)(SDL_WINDOW_OPENGL | SDL_WINDOW_RESIZABLE | SDL_WINDOW_ALLOW_HIGHDPI);
             
-            window = SDL_CreateWindow("Spaghet about it!", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 1280, 720, window_flags);
+            window = SDL_CreateWindow("Spaghet about it!", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, WIDTH, HEIGHT, window_flags);
             context = SDL_GL_CreateContext(window);
             renderer = SDL_CreateRenderer( window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC );
 
@@ -200,7 +202,7 @@ void InitializeWindow(Inputs* inputs)
             glEnable(GL_BLEND);
             //glBlendEquation(GL_FUNC_ADD);
             glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-            glGenTextures(2, TextureID/* &m_inst */); 
+            glGenTextures(3, TextureID/* &m_inst */); 
    
 
         //-----------main event stream
